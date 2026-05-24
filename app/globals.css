@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #F5EFE6; /* brand.cream */
+    color: #1C110A; /* brand.charcoal */
+    font-family: var(--font-body), Inter, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Hide default cursor on desktop when custom cursor is used */
+  @media (min-width: 1024px) {
+    .has-custom-cursor,
+    .has-custom-cursor * {
+      cursor: none !important;
+    }
+  }
+}
+
+/* Elegant scrollbar using brand colors */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #6B3A1F; /* brand.deepBrown */
+}
+::-webkit-scrollbar-thumb {
+  background: #C4843A; /* brand.copper */
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C9973A; /* brand.gold */
+}
+
+/* Responsive Typographic Utility Clamps */
+@layer utilities {
+  .text-display-hero {
+    font-family: var(--font-display), Playfair Display, serif;
+    font-size: clamp(3.5rem, 7.5vw, 6rem); /* Scaled from 56px up to 96px */
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+  
+  .text-section-h2 {
+    font-family: var(--font-display), Playfair Display, serif;
+    font-size: clamp(2.25rem, 5vw, 3.5rem); /* Scaled from 36px up to 56px */
+    font-weight: 600;
+    line-height: 1.15;
+  }
+
+  .text-section-h3 {
+    font-family: var(--font-body), Inter, sans-serif;
+    font-size: clamp(1.15rem, 2.5vw, 1.5rem); /* Scaled from 18px up to 24px */
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  
+  .text-body-custom {
+    font-family: var(--font-body), Inter, sans-serif;
+    font-size: clamp(1rem, 2vw, 1.125rem); /* Scaled from 16px up to 18px */
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
+  .text-label-caps {
+    font-family: var(--font-body), Inter, sans-serif;
+    font-size: clamp(0.68rem, 1.5vw, 0.8125rem); /* Scaled from 11px up to 13px */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .text-stat-number {
+    font-family: var(--font-display), Playfair Display, serif;
+    font-size: clamp(3rem, 6.5vw, 5rem); /* Scaled from 48px up to 80px */
+    font-weight: 700;
+  }
+}
