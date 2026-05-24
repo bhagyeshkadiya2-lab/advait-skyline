@@ -117,7 +117,7 @@ export default function Hero() {
 
       {/* LAYER 3: Pinned Foreground Text Content (speed 0) */}
       <div className="relative w-full min-h-[100dvh] lg:min-h-0 lg:h-full flex flex-col justify-between z-30 max-w-7xl mx-auto px-6 pt-28 pb-12 lg:pt-32 lg:pb-8">
-        <div className="my-auto flex flex-col items-start max-w-3xl">
+        <div className="flex-1 flex flex-col justify-center items-start max-w-3xl py-12 lg:py-0">
           {/* MAHA RERA Badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -207,12 +207,33 @@ export default function Hero() {
               </motion.button>
             </a>
           </motion.div>
+
+          {/* Mobile Stat Pills Grid (Inline on mobile, hidden on desktop) */}
+          <div className="grid grid-cols-2 gap-3 mt-8 w-full lg:hidden">
+            {STAT_PILLS.map((pill, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.6,
+                  ease: [0.16, 1, 0.3, 1] as const,
+                  delay: 1.15 + pill.delay,
+                }}
+                className="bg-white/10 border border-white/20 backdrop-blur-sm rounded-full px-4 py-2.5 text-center"
+              >
+                <span className="text-white font-body text-xs font-semibold tracking-wider">
+                  {pill.label}
+                </span>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
-        {/* Bottom Elements: Scroll Mouse & Stat Pills Strip */}
-        <div className="w-full flex flex-col md:flex-row items-center justify-between gap-6 pt-4 border-t border-white/10 z-40">
+        {/* Bottom Elements: Scroll Mouse & Stat Pills Strip (Shown only on Desktop) */}
+        <div className="hidden lg:flex w-full items-center justify-between gap-6 pt-4 border-t border-white/10 z-40">
           {/* Scroll Mouse Indicator */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="flex items-center gap-3">
             <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center p-1.5">
               <motion.div
                 animate={{
@@ -232,7 +253,7 @@ export default function Hero() {
           </div>
 
           {/* Stat Pills Strip */}
-          <div className="flex flex-wrap items-center justify-center gap-3 w-full md:w-auto">
+          <div className="flex flex-wrap items-center justify-center gap-3">
             {STAT_PILLS.map((pill, idx) => (
               <motion.div
                 key={idx}
@@ -240,7 +261,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.6,
-                  ease: [0.16, 1, 0.3, 1],
+                  ease: [0.16, 1, 0.3, 1] as const,
                   delay: 1.3 + pill.delay,
                 }}
                 className="bg-white/10 border border-white/20 backdrop-blur rounded-full px-5 py-2 hover:bg-white/15 transition-colors"
