@@ -1,9 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Sparkles, Dumbbell, Users, ShieldCheck, Check } from "lucide-react";
 import RevealLine from "@/components/motion/RevealLine";
 import FloatingEntrance from "@/components/motion/FloatingEntrance";
 import { useReducedMotion } from "@/lib/hooks/useReducedMotion";
@@ -26,65 +26,96 @@ const FEATURED_AMENITIES = [
   },
 ];
 
-const CHIP_AMENITIES = [
-  "Swimming Pool",
-  "AC Gym (Male)",
-  "AC Gym (Female)",
-  "Club House",
-  "Library & Lounge",
-  "Basketball Court",
-  "Box Cricket Arena",
-  "Children's Play Area",
-  "Toddler Play Zone",
-  "Ganesha Temple",
-  "Indoor Games Area",
-  "Party Lawn",
-  "Mini Theater",
-  "Senior Citizen Sitting",
-  "24×7 CCTV Security",
-  "AC Community Theater",
-  "Landscaped Garden Area",
-  "Yoga & Meditation Space",
-  "Emergency Power Backup",
-  "Music in Garden",
-  "Jogging & Cycling Track",
-  "EV Charging Stations",
-  "Sewage Treatment Plant",
-  "Rainwater Harvesting",
-  "Ample Double Basement Parking",
-  "Grand Entrance Gate",
-  "High-speed Branded Lifts",
-  "Service/Stretcher Elevator",
-  "Fire Fighting System",
-  "Solar Water Heating",
-  "Intercom Connectivity",
-  "Paved Jogging Tracks",
-  "Solar Common Streetlights",
-  "Gazebo Seating Areas",
-  "Organic Waste Converter",
-  "Automated Security Gates",
-  "Reflexology Walkway",
-  "Grocery & Daily Shop Arcade",
-  "Basement Ventilation Fans",
-  "Internal Decorative Trees",
-  "Fountain Feature Wall"
+const CATEGORIZED_AMENITIES = [
+  {
+    id: "sports-wellness",
+    label: "Sports & Wellness",
+    icon: Dumbbell,
+    items: [
+      "Swimming Pool",
+      "AC Gym (Male)",
+      "AC Gym (Female)",
+      "Basketball Court",
+      "Box Cricket Arena",
+      "Yoga & Meditation Space",
+      "Jogging & Cycling Track",
+      "Reflexology Walkway",
+      "Paved Jogging Tracks",
+      "Indoor Games Area",
+    ],
+  },
+  {
+    id: "social-leisure",
+    label: "Social & Family",
+    icon: Users,
+    items: [
+      "Club House",
+      "Library & Lounge",
+      "Children's Play Area",
+      "Toddler Play Zone",
+      "Ganesha Temple",
+      "Party Lawn",
+      "Mini Theater",
+      "AC Community Theater",
+      "Senior Citizen Sitting",
+      "Landscaped Garden Area",
+      "Music in Garden",
+      "Gazebo Seating Areas",
+      "Fountain Feature Wall",
+      "Internal Decorative Trees",
+    ],
+  },
+  {
+    id: "comfort-safety",
+    label: "Safety & Utilities",
+    icon: ShieldCheck,
+    items: [
+      "24×7 CCTV Security",
+      "EV Charging Stations",
+      "Emergency Power Backup",
+      "Ample Double Basement Parking",
+      "Grand Entrance Gate",
+      "High-speed Branded Lifts",
+      "Service/Stretcher Elevator",
+      "Fire Fighting System",
+      "Solar Water Heating",
+      "Intercom Connectivity",
+      "Solar Common Streetlights",
+      "Sewage Treatment Plant",
+      "Rainwater Harvesting",
+      "Organic Waste Converter",
+      "Automated Security Gates",
+      "Basement Ventilation Fans",
+      "Grocery & Daily Shop Arcade",
+    ],
+  },
 ];
 
 export default function Amenities() {
   const isReduced = useReducedMotion();
+  const [activeTab, setActiveTab] = useState("sports-wellness");
 
-  // Badge grid parent variant to orchestrate children stagger
-  const gridContainerVariants = {
-    hidden: {},
+  // Filter items based on activeTab
+  const activeCategory = CATEGORIZED_AMENITIES.find((cat) => cat.id === activeTab) || CATEGORIZED_AMENITIES[0];
+
+  // Grid list parent-child stagger configurations
+  const containerVariants = {
+    hidden: { opacity: 0 },
     visible: {
+      opacity: 1,
       transition: {
-        staggerChildren: 0.03,
+        staggerChildren: 0.04,
       },
+    },
+    exit: {
+      opacity: 0,
+      y: -15,
+      transition: { duration: 0.2, ease: "easeIn" as const },
     },
   };
 
   const badgeVariants = {
-    hidden: { opacity: 0, y: 15 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -117,7 +148,7 @@ export default function Amenities() {
         </div>
 
         {/* 3 Large Featured Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
           {FEATURED_AMENITIES.map((amen, idx) => (
             <FloatingEntrance key={idx} delay={0.1 + idx * 0.15}>
               <motion.div
@@ -162,33 +193,78 @@ export default function Amenities() {
           ))}
         </div>
 
-        {/* 39+ Badges Grid */}
-        <div className="bg-brand-cream/40 rounded-[2rem] border border-brand-copper/15 p-8 md:p-12">
-          <FloatingEntrance delay={0.2} className="mb-8">
-            <h4 className="text-brand-primaryBrown font-body text-sm font-bold uppercase tracking-wider text-center">
-              Discover the Complete 39+ Amenities Catalog
-            </h4>
-          </FloatingEntrance>
+        {/* CURATED INTERACTIVE CATALOG ZONE */}
+        <div className="bg-brand-cream/45 rounded-[2.5rem] border border-brand-copper/15 p-8 md:p-12 shadow-sm relative overflow-hidden">
+          {/* Subtle amber background glows */}
+          <div className="absolute top-0 left-1/4 w-80 h-80 bg-brand-gold/5 rounded-full blur-[80px] pointer-events-none" />
+          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-brand-copper/5 rounded-full blur-[80px] pointer-events-none" />
 
-          {/* Staggered badge rendering */}
-          <motion.div
-            variants={gridContainerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            className="flex flex-wrap items-center justify-center gap-3.5"
-          >
-            {CHIP_AMENITIES.map((badge, idx) => (
+          {/* Interactive Category Selector Tabs */}
+          <div className="flex flex-col items-center mb-12 relative z-10">
+            <FloatingEntrance delay={0.1} className="mb-8">
+              <h4 className="text-brand-primaryBrown font-body text-xs md:text-sm font-bold uppercase tracking-[0.15em] text-center">
+                Discover the Complete 39+ Amenities Catalog
+              </h4>
+            </FloatingEntrance>
+
+            {/* Pill selector buttons */}
+            <div className="flex flex-wrap items-center justify-center gap-3 bg-brand-primaryBrown/10 border border-brand-copper/15 p-2 rounded-full md:rounded-full">
+              {CATEGORIZED_AMENITIES.map((cat) => {
+                const IconComponent = cat.icon;
+                const isActive = activeTab === cat.id;
+                return (
+                  <button
+                    key={cat.id}
+                    onClick={() => setActiveTab(cat.id)}
+                    className={`flex items-center gap-2 px-6 py-3 rounded-full font-body text-xs md:text-sm font-bold uppercase tracking-wider transition-all duration-300 hover-trigger relative ${
+                      isActive
+                        ? "bg-brand-primaryBrown text-white shadow-md"
+                        : "text-brand-primaryBrown/70 hover:text-brand-primaryBrown hover:bg-brand-primaryBrown/5"
+                    }`}
+                  >
+                    <IconComponent size={14} className={isActive ? "text-brand-gold" : "text-brand-copper"} />
+                    {cat.label}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Staggered Badge Grid with AnimatePresence */}
+          <div className="min-h-[220px] relative z-10">
+            <AnimatePresence mode="wait">
               <motion.div
-                key={idx}
-                variants={badgeVariants}
-                whileHover={{ scale: 1.04, backgroundColor: "#FFFFFF" }}
-                className="bg-brand-cream text-brand-charcoal font-body text-xs font-semibold px-4.5 py-2.5 rounded-full border border-brand-copper/25 cursor-pointer shadow-sm hover:shadow transition-shadow hover:text-brand-copper"
+                key={activeTab}
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                className="flex flex-wrap items-center justify-center gap-3.5"
               >
-                {badge}
+                {activeCategory.items.map((badge) => (
+                  <motion.div
+                    key={badge}
+                    variants={badgeVariants}
+                    whileHover={{
+                      scale: isReduced ? 1 : 1.05,
+                      borderColor: "#C4843A", // brand.copper
+                      color: "#C4843A", // brand.copper
+                      backgroundColor: "#FFFFFF",
+                      boxShadow: "0 4px 12px rgba(196, 132, 58, 0.1)",
+                    }}
+                    transition={{ type: "spring", stiffness: 400, damping: 22 }}
+                    className="flex items-center gap-2 bg-white text-brand-charcoal font-body text-xs font-semibold px-5 py-3 rounded-full border border-brand-copper/20 cursor-pointer shadow-sm transition-all duration-300"
+                  >
+                    {/* Sparkling mini icon */}
+                    <div className="text-brand-gold">
+                      <Check size={12} strokeWidth={3} />
+                    </div>
+                    <span>{badge}</span>
+                  </motion.div>
+                ))}
               </motion.div>
-            ))}
-          </motion.div>
+            </AnimatePresence>
+          </div>
         </div>
       </div>
     </section>
