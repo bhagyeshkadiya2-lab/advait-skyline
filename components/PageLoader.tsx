@@ -26,7 +26,7 @@ export default function PageLoader() {
         <motion.div
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, transition: { duration: 0.4, ease: "easeInOut" } }}
-          className="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-brand-deepBrown"
+          className="hidden lg:flex fixed inset-0 z-[99999] flex-col items-center justify-center bg-brand-deepBrown"
         >
           <div className="text-center flex flex-col items-center max-w-sm px-6">
             {/* Logo image styled as a premium gold-rimmed textured plaque */}

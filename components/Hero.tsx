@@ -63,9 +63,9 @@ export default function Hero() {
       {/* LAYER 1: Parallax Background Atmosphere (speed 0.3) */}
       <ParallaxLayer speed={0.3} className="absolute inset-0 w-full h-full z-0 pointer-events-none">
         <div className="absolute inset-0 bg-[#2C180E] opacity-70" />
-        {/* Subtle abstract gold dust overlay (Optimized sizing for mobile performance) */}
+        {/* Subtle abstract gold dust overlay (Optimized sizing for mobile performance) - Disabled on mobile (hidden lg:block) to prevent bandwidth downloads */}
         <div 
-          className="absolute inset-0 bg-cover bg-center mix-blend-overlay opacity-30" 
+          className="hidden lg:block absolute inset-0 bg-cover bg-center mix-blend-overlay opacity-30" 
           style={{ backgroundImage: `url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=1200&q=75')` }}
         />
       </ParallaxLayer>
@@ -77,7 +77,7 @@ export default function Hero() {
           alt="Advait Skyline Premium Residential Skyscraper Render"
           fill
           priority
-          sizes="100vw"
+          sizes="(max-width: 768px) 480px, 100vw"
           className="object-cover object-center"
         />
         {/* Ambient Gradient Overlay: Darker deep brown at bottom, fading to transparent at top */}
