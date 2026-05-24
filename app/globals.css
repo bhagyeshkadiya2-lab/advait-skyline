@@ -44,7 +44,7 @@
 @layer utilities {
   .text-display-hero {
     font-family: var(--font-display), Playfair Display, serif;
-    font-size: clamp(3.5rem, 7.5vw, 6rem); /* Scaled from 56px up to 96px */
+    font-size: clamp(2.25rem, 7.5vw, 6rem); /* Scaled from 36px up to 96px */
     font-weight: 700;
     line-height: 1.05;
     letter-spacing: -0.02em;

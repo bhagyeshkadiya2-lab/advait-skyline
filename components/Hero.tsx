@@ -59,7 +59,7 @@ export default function Hero() {
   return (
     <section
       id="overview"
-      className="relative w-full h-[100dvh] overflow-hidden bg-brand-charcoal flex flex-col justify-between"
+      className="relative w-full min-h-[100dvh] lg:h-[100dvh] overflow-hidden bg-brand-charcoal flex flex-col justify-between"
     >
       {/* LAYER 1: Parallax Background Atmosphere (speed 0.3) */}
       <ParallaxLayer speed={0.3} className="absolute inset-0 w-full h-full z-0 pointer-events-none">
@@ -116,7 +116,7 @@ export default function Hero() {
       )}
 
       {/* LAYER 3: Pinned Foreground Text Content (speed 0) */}
-      <div className="relative w-full h-full flex flex-col justify-between z-30 max-w-7xl mx-auto px-6 pt-32 pb-8">
+      <div className="relative w-full min-h-[100dvh] lg:min-h-0 lg:h-full flex flex-col justify-between z-30 max-w-7xl mx-auto px-6 pt-28 pb-12 lg:pt-32 lg:pb-8">
         <div className="my-auto flex flex-col items-start max-w-3xl">
           {/* MAHA RERA Badge */}
           <motion.div

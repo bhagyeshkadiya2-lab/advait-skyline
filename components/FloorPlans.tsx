@@ -189,21 +189,21 @@ export default function FloorPlans() {
                 </div>
 
                 {/* Smaller 2D Layout Blueprint */}
-                <div className="flex items-center gap-6 w-full pt-6 border-t border-brand-copper/15">
-                  <div className="flex flex-col items-start">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 w-full pt-6 border-t border-brand-copper/15">
+                  <div className="flex flex-col items-start max-w-sm">
                     <span className="text-brand-primaryBrown font-body text-xs font-bold uppercase tracking-wider mb-2">
                       2D Blueprint
                     </span>
-                    <p className="text-brand-charcoal/70 font-body text-xs leading-relaxed max-w-[200px]">
+                    <p className="text-brand-charcoal/70 font-body text-xs leading-relaxed">
                       Optimized layout prioritizing natural cross-ventilation & spacious foyer entry.
                     </p>
                   </div>
-                  <div className="relative w-36 h-24 rounded-lg overflow-hidden border border-brand-copper/20 shadow-sm ml-auto bg-white">
+                  <div className="relative w-full sm:w-36 h-36 sm:h-24 rounded-xl overflow-hidden border border-brand-copper/20 shadow-sm sm:ml-auto bg-white aspect-[16/9] sm:aspect-auto">
                     <Image
                       src={activeData.layoutImage}
                       alt={`${activeData.title} 2D Layout Blueprint`}
                       fill
-                      sizes="144px"
+                      sizes="(max-width: 640px) 100vw, 144px"
                       className="object-cover opacity-90 hover:opacity-100 transition-opacity"
                     />
                   </div>
