@@ -6,6 +6,7 @@ import ScrollProgressBar from "@/components/ScrollProgressBar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageLoader from "@/components/PageLoader";
+import ScrollToTop from "@/components/ScrollToTop";
 
 // Optimize and declare fonts to avoid layout shift
 const playfair = Playfair_Display({
@@ -67,6 +68,7 @@ export default function RootLayout({
         <PageLoader />
         <ScrollProgressBar />
         <CustomCursor />
+        <ScrollToTop />
         <Navbar />
         <main>{children}</main>
         <Footer />
