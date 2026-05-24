@@ -116,21 +116,25 @@ export default function Specifications() {
         </div>
 
         {/* Brand Logos Strip */}
-        <div className="pt-12 border-t border-brand-cream border-2 rounded-3xl p-8 bg-brand-cream/35">
+        <div className="pt-12 border-t border-brand-cream border-2 rounded-3xl p-6 md:p-8 bg-brand-cream/35">
           <FloatingEntrance delay={0.2} className="mb-8">
             <h4 className="text-brand-primaryBrown/80 font-body text-xs font-bold uppercase tracking-[0.2em] text-center">
               Our Trusted Material & Construction Partners
             </h4>
           </FloatingEntrance>
 
-          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:flex md:flex-wrap items-center justify-center gap-3 md:gap-6 max-w-5xl mx-auto">
             {BRAND_PARTNERS.map((brand, idx) => (
-              <FloatingEntrance key={idx} delay={0.25 + idx * 0.06}>
+              <FloatingEntrance 
+                key={idx} 
+                delay={0.25 + idx * 0.05}
+                className={idx === 6 ? "col-span-2 sm:col-span-1" : ""}
+              >
                 <motion.div
-                  whileHover={{ scale: isReduced ? 1 : 1.08 }}
-                  className="flex items-center justify-center px-4 py-2 hover-trigger"
+                  whileHover={{ scale: isReduced ? 1 : 1.04, y: -2 }}
+                  className="flex items-center justify-center bg-white/70 backdrop-blur-sm border border-brand-copper/15 hover:border-brand-copper/40 rounded-xl px-4 py-4 shadow-sm hover:shadow transition-all duration-300 h-14 w-full md:w-auto md:min-w-[150px] hover-trigger"
                 >
-                  <span className="text-brand-charcoal font-display text-sm md:text-lg font-extrabold tracking-widest opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer">
+                  <span className="text-brand-primaryBrown font-display text-xs md:text-sm font-extrabold tracking-widest text-center opacity-80 hover:opacity-100 transition-opacity">
                     {brand.name}
                   </span>
                 </motion.div>

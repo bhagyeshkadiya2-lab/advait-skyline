@@ -31,21 +31,20 @@ const STAT_PILLS = [
 export default function Hero() {
   const isReduced = useReducedMotion();
 
-  // Words for the stagger animation
-  const line1Words = ["Elevate", "Your"];
-  const line2Words = ["Everyday"];
+  // Individual words to animate staggered entrance
+  const words = ["Elevate", "Your", "Everyday"];
 
   const wordContainerVariants = {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.15,
+        staggerChildren: 0.12,
       },
     },
   };
 
   const wordVariants = {
-    hidden: { y: 80, opacity: 0 },
+    hidden: { y: 60, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
@@ -116,51 +115,42 @@ export default function Hero() {
       )}
 
       {/* LAYER 3: Pinned Foreground Text Content (speed 0) */}
-      <div className="relative w-full min-h-[100dvh] lg:min-h-0 lg:h-full flex flex-col justify-between z-30 max-w-7xl mx-auto px-6 pt-28 pb-12 lg:pt-32 lg:pb-8">
-        <div className="flex-1 flex flex-col justify-center items-start max-w-3xl py-12 lg:py-0">
+      <div className="relative w-full min-h-[100dvh] lg:min-h-0 lg:h-full flex flex-col justify-between z-30 max-w-7xl mx-auto px-6 pt-24 pb-8 lg:pt-32 lg:pb-8">
+        <div className="flex-1 flex flex-col justify-center items-start max-w-3xl py-2 lg:py-0">
           {/* MAHA RERA Badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-            className="mb-6 bg-brand-primaryBrown/40 border border-brand-gold/30 backdrop-blur px-4 py-1.5 rounded-full inline-flex items-center"
+            className="mb-4 lg:mb-6 bg-brand-primaryBrown/40 border border-brand-gold/30 backdrop-blur px-4 py-1.5 rounded-full inline-flex items-center"
           >
             <span className="text-brand-gold font-body text-[10px] md:text-xs font-bold uppercase tracking-[0.15em]">
               MAHA RERA · PM3000002600013
             </span>
           </motion.div>
 
-          {/* Staggered Heading */}
+          {/* Staggered Heading with natural word-level overflow masking */}
           <motion.h1
             variants={wordContainerVariants}
             initial="hidden"
             animate="visible"
-            className="text-white text-display-hero mb-6 text-left"
+            className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-display-hero mb-4 lg:mb-6 text-left leading-[1.1] tracking-tight font-display font-bold flex flex-wrap"
           >
-            {/* Line 1 */}
-            <span className="block overflow-hidden pb-1">
-              {line1Words.map((word, index) => (
+            {words.map((word, index) => (
+              <span 
+                key={index} 
+                className="inline-block overflow-hidden pb-1 mr-3 md:mr-4"
+              >
                 <motion.span
-                  key={index}
                   variants={wordVariants}
-                  className="inline-block mr-4 font-display font-bold"
+                  className={`inline-block font-display font-bold ${
+                    word === "Everyday" ? "text-brand-cream" : ""
+                  }`}
                 >
                   {word}
                 </motion.span>
-              ))}
-            </span>
-            {/* Line 2 */}
-            <span className="block overflow-hidden pb-1">
-              {line2Words.map((word, index) => (
-                <motion.span
-                  key={index}
-                  variants={wordVariants}
-                  className="inline-block font-display font-bold text-brand-cream"
-                >
-                  {word}
-                </motion.span>
-              ))}
-            </span>
+              </span>
+            ))}
           </motion.h1>
 
           {/* Sublines & Taglines */}
@@ -168,7 +158,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
-            className="text-brand-cream font-body text-lg md:text-2xl font-medium tracking-wide mb-2"
+            className="text-brand-cream font-body text-base md:text-xl lg:text-2xl font-medium tracking-wide mb-1 lg:mb-2"
           >
             1 & 2 BHK Premium Homes & Shops
           </motion.p>
@@ -177,7 +167,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.95 }}
-            className="text-brand-copper font-body text-sm md:text-lg font-semibold tracking-widest uppercase mb-8"
+            className="text-brand-copper font-body text-xs md:text-sm lg:text-lg font-semibold tracking-widest uppercase mb-6 lg:mb-8"
           >
             Peaceful Living, Smart Investment
           </motion.p>
@@ -187,12 +177,12 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 1.1 }}
-            className="flex flex-wrap gap-4"
+            className="flex flex-wrap gap-3 lg:gap-4"
           >
             <a href="#about" className="hover-trigger">
               <motion.button
                 whileHover={{ y: -4, scale: 1.03 }}
-                className="bg-brand-copper hover:bg-brand-copper/90 text-white font-body text-xs md:text-sm font-bold uppercase tracking-wider px-8 py-3.5 rounded-full shadow-xl transition-all duration-300"
+                className="bg-brand-copper hover:bg-brand-copper/90 text-white font-body text-xs md:text-sm font-bold uppercase tracking-wider px-6 py-3 lg:px-8 lg:py-3.5 rounded-full shadow-xl transition-all duration-300"
               >
                 Explore Project
               </motion.button>
@@ -201,7 +191,7 @@ export default function Hero() {
             <a href="#floorplans" className="hover-trigger">
               <motion.button
                 whileHover={{ y: -4, scale: 1.03 }}
-                className="border border-brand-cream text-brand-cream hover:bg-white/10 font-body text-xs md:text-sm font-bold uppercase tracking-wider px-8 py-3.5 rounded-full transition-all duration-300 backdrop-blur-sm"
+                className="border border-brand-cream text-brand-cream hover:bg-white/10 font-body text-xs md:text-sm font-bold uppercase tracking-wider px-6 py-3 lg:px-8 lg:py-3.5 rounded-full transition-all duration-300 backdrop-blur-sm"
               >
                 View Floor Plans
               </motion.button>
@@ -209,7 +199,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Mobile Stat Pills Grid (Inline on mobile, hidden on desktop) */}
-          <div className="grid grid-cols-2 gap-3 mt-8 w-full lg:hidden">
+          <div className="grid grid-cols-2 gap-2 mt-6 w-full lg:hidden">
             {STAT_PILLS.map((pill, idx) => (
               <motion.div
                 key={idx}
@@ -220,7 +210,7 @@ export default function Hero() {
                   ease: [0.16, 1, 0.3, 1] as const,
                   delay: 1.15 + pill.delay,
                 }}
-                className="bg-white/10 border border-white/20 backdrop-blur-sm rounded-full px-4 py-2.5 text-center"
+                className="bg-white/10 border border-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-center"
               >
                 <span className="text-white font-body text-xs font-semibold tracking-wider">
                   {pill.label}
