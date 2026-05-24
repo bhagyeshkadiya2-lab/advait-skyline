@@ -115,7 +115,7 @@ export default function Navbar() {
 
           {/* Right CTA Button & Hamburger */}
           <div className="flex items-center gap-4">
-            <a href="tel:+919909062363" className="hover-trigger">
+            <a href="tel:+919909062363" className="hover-trigger" aria-label="Call to book a site visit at Advait Skyline">
               <motion.button
                 whileHover={{ scale: isReduced ? 1 : 1.05 }}
                 whileTap={{ scale: isReduced ? 1 : 0.97 }}
@@ -160,7 +160,7 @@ export default function Navbar() {
                   </motion.div>
                 ))}
                 <motion.div variants={itemVariants} className="pt-2">
-                  <a href="tel:+919909062363" onClick={() => setIsMobileOpen(false)}>
+                  <a href="tel:+919909062363" onClick={() => setIsMobileOpen(false)} aria-label="Call to book a site visit at Advait Skyline">
                     <button className="w-full flex items-center justify-center gap-3 bg-brand-copper text-white font-body text-sm font-bold uppercase tracking-widest rounded-full py-3.5 shadow-md">
                       <PhoneCall size={16} />
                       Book a Visit

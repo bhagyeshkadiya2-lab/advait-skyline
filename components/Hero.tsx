@@ -129,45 +129,46 @@ export default function Hero() {
             </span>
           </motion.div>
 
-          {/* Staggered Heading with natural word-level overflow masking */}
-          <motion.h1
+          {/* Styled Brand Tagline Sub-header */}
+          <motion.h2
             variants={wordContainerVariants}
             initial="hidden"
             animate="visible"
-            className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-display-hero mb-4 lg:mb-6 text-left leading-[1.1] tracking-tight font-display font-bold flex flex-wrap"
+            className="text-brand-cream text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-bold leading-tight mb-2 tracking-tight flex flex-wrap"
           >
             {words.map((word, index) => (
               <span 
                 key={index} 
-                className="inline-block overflow-hidden pb-1 mr-3 md:mr-4"
+                className="inline-block overflow-hidden pb-1 mr-2 md:mr-3"
               >
                 <motion.span
                   variants={wordVariants}
                   className={`inline-block font-display font-bold ${
-                    word === "Everyday" ? "text-brand-cream" : ""
+                    word === "Everyday" ? "text-brand-gold" : ""
                   }`}
                 >
                   {word}
                 </motion.span>
               </span>
             ))}
-          </motion.h1>
+          </motion.h2>
 
-          {/* Sublines & Taglines */}
-          <motion.p
+          {/* High-Impact SEO H1 Main Header */}
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
-            className="text-brand-cream font-body text-base md:text-xl lg:text-2xl font-medium tracking-wide mb-1 lg:mb-2"
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
+            className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-extrabold tracking-tight leading-[1.15] mb-6 text-left"
           >
-            1 & 2 BHK Premium Homes & Shops
-          </motion.p>
+            Premium 1 & 2 BHK Homes & Shops <br className="hidden md:inline" />
+            <span className="text-brand-copper">at Naroli–Bhilad, Dadra & Nagar Haveli</span>
+          </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.95 }}
-            className="text-brand-copper font-body text-xs md:text-sm lg:text-lg font-semibold tracking-widest uppercase mb-6 lg:mb-8"
+            className="text-brand-cream font-body text-xs md:text-sm lg:text-base font-semibold tracking-widest uppercase mb-6 lg:mb-8"
           >
             Peaceful Living, Smart Investment
           </motion.p>

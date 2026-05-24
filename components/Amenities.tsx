@@ -166,7 +166,8 @@ export default function Amenities() {
                     src={amen.image}
                     alt={amen.title}
                     fill
-                    sizes="(max-width: 768px) 100vw, 380px"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    loading="lazy"
                     className="object-cover transition-all"
                   />
                 </motion.div>

@@ -68,6 +68,7 @@ export default function Commercial() {
                 alt="Advait Skyline Premium Commercial Shopfront Render"
                 fill
                 sizes="(max-width: 768px) 100vw, 420px"
+                loading="lazy"
                 className="object-cover"
               />
               {/* Golden metallic gradient tint */}

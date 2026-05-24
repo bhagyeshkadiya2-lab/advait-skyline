@@ -2,10 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
 import RevealLine from "@/components/motion/RevealLine";
 import FloatingEntrance from "@/components/motion/FloatingEntrance";
-import { useReducedMotion } from "@/lib/hooks/useReducedMotion";
 
 type TabType = "1bhk" | "2bhk";
 
@@ -44,40 +42,10 @@ const FLOOR_PLANS_DATA = {
 
 export default function FloorPlans() {
   const [activeTab, setActiveTab] = useState<TabType>("1bhk");
-  const [direction, setDirection] = useState(1); // 1 = right, -1 = left
-  const isReduced = useReducedMotion();
 
   const handleTabChange = (tab: TabType) => {
-    if (tab === activeTab) return;
-    setDirection(tab === "2bhk" ? 1 : -1);
     setActiveTab(tab);
   };
-
-  // Sliding configurations for tab content transition
-  const tabVariants = {
-    enter: (dir: number) => ({
-      x: dir > 0 ? 100 : -100,
-      opacity: 0,
-    }),
-    center: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        x: { type: "spring" as const, stiffness: 300, damping: 28 },
-        opacity: { duration: 0.3 },
-      },
-    },
-    exit: (dir: number) => ({
-      x: dir < 0 ? 100 : -100,
-      opacity: 0,
-      transition: {
-        x: { type: "spring" as const, stiffness: 300, damping: 28 },
-        opacity: { duration: 0.2 },
-      },
-    }),
-  };
-
-  const activeData = FLOOR_PLANS_DATA[activeTab];
 
   return (
     <section id="floorplans" className="py-24 bg-brand-cream relative overflow-hidden">
@@ -91,10 +59,18 @@ export default function FloorPlans() {
             </h2>
           </FloatingEntrance>
 
-          {/* Toggle pills */}
+          {/* Toggle pills using ARIA tabs specification */}
           <FloatingEntrance delay={0.2} className="relative z-10">
-            <div className="bg-brand-primaryBrown/10 border border-brand-copper/20 p-1.5 rounded-full inline-flex">
+            <div 
+              role="tablist" 
+              aria-label="Advait Skyline Floor Plan Configurator" 
+              className="bg-brand-primaryBrown/10 border border-brand-copper/20 p-1.5 rounded-full inline-flex"
+            >
               <button
+                role="tab"
+                aria-selected={activeTab === "1bhk"}
+                aria-controls="panel-1bhk"
+                id="tab-1bhk"
                 onClick={() => handleTabChange("1bhk")}
                 className={`px-8 py-2.5 rounded-full font-body text-xs md:text-sm font-bold uppercase tracking-wider transition-all duration-300 hover-trigger ${
                   activeTab === "1bhk"
@@ -105,6 +81,10 @@ export default function FloorPlans() {
                 1 BHK
               </button>
               <button
+                role="tab"
+                aria-selected={activeTab === "2bhk"}
+                aria-controls="panel-2bhk"
+                id="tab-2bhk"
                 onClick={() => handleTabChange("2bhk")}
                 className={`px-8 py-2.5 rounded-full font-body text-xs md:text-sm font-bold uppercase tracking-wider transition-all duration-300 hover-trigger ${
                   activeTab === "2bhk"
@@ -118,27 +98,32 @@ export default function FloorPlans() {
           </FloatingEntrance>
         </div>
 
-        {/* Tab Content wrapped in AnimatePresence for slide animations */}
-        <div className="min-h-[580px] relative">
-          <AnimatePresence mode="wait" custom={direction}>
-            <motion.div
-              key={activeTab}
-              custom={direction}
-              variants={isReduced ? {} : tabVariants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
-            >
+        {/* Tab Content Panels - Rendered simultaneously in the DOM for SSR crawler indexing */}
+        <div className="relative min-h-[580px] w-full">
+          
+          {/* Panel 1 BHK */}
+          <div
+            id="panel-1bhk"
+            role="tabpanel"
+            aria-labelledby="tab-1bhk"
+            aria-hidden={activeTab !== "1bhk"}
+            className={`w-full transition-all duration-500 ease-in-out ${
+              activeTab === "1bhk"
+                ? "opacity-100 scale-100 pointer-events-auto relative z-10 block"
+                : "opacity-0 scale-95 pointer-events-none absolute top-0 left-0 h-0 overflow-hidden z-0 hidden lg:hidden"
+            }`}
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               {/* 3D Plan (7 cols on Desktop) */}
               <div className="lg:col-span-7 flex flex-col items-center">
                 <FloatingEntrance delay={0.15} className="w-full">
                   <div className="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden shadow-xl bg-white border border-brand-copper/15">
                     <Image
-                      src={activeData.isometricImage}
-                      alt={`${activeData.title} 3D Isometric Rendering`}
+                      src={FLOOR_PLANS_DATA["1bhk"].isometricImage}
+                      alt="Advait Skyline Premium 1 BHK 3D Isometric Rendering"
                       fill
-                      sizes="(max-width: 768px) 100vw, 680px"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      loading="lazy"
                       className="object-cover"
                     />
                     <div className="absolute top-4 left-4 bg-brand-primaryBrown text-white px-4 py-1.5 rounded-full">
@@ -153,15 +138,15 @@ export default function FloorPlans() {
               {/* Specs & Dimensions (5 cols on Desktop) */}
               <div className="lg:col-span-5 flex flex-col items-start">
                 <span className="text-brand-copper text-label-caps text-xs tracking-widest font-bold mb-2">
-                  Carpet Area: {activeData.carpetArea}
+                  Carpet Area: {FLOOR_PLANS_DATA["1bhk"].carpetArea}
                 </span>
                 <h3 className="text-brand-primaryBrown font-display text-3xl font-bold mb-6">
-                  {activeData.title}
+                  {FLOOR_PLANS_DATA["1bhk"].title}
                 </h3>
 
                 {/* Dimensions List with Left copper borders */}
                 <div className="w-full flex flex-col gap-4 mb-8">
-                  {activeData.dimensions.map((dim, idx) => (
+                  {FLOOR_PLANS_DATA["1bhk"].dimensions.map((dim, idx) => (
                     <div
                       key={idx}
                       className="pl-4 border-l-2 border-brand-copper/60 flex items-center justify-between py-1 bg-white/30 rounded-r-lg hover:bg-white/50 transition-colors"
@@ -178,7 +163,7 @@ export default function FloorPlans() {
 
                 {/* Badges strip below */}
                 <div className="flex flex-wrap gap-2.5 mb-10 w-full">
-                  {activeData.features.map((feat, idx) => (
+                  {FLOOR_PLANS_DATA["1bhk"].features.map((feat, idx) => (
                     <span
                       key={idx}
                       className="bg-white text-brand-charcoal border border-brand-copper/20 rounded-full px-4 py-1.5 font-body text-[10px] md:text-xs font-semibold shadow-sm hover:border-brand-copper transition-colors"
@@ -200,17 +185,116 @@ export default function FloorPlans() {
                   </div>
                   <div className="relative w-full sm:w-36 h-36 sm:h-24 rounded-xl overflow-hidden border border-brand-copper/20 shadow-sm sm:ml-auto bg-white aspect-[16/9] sm:aspect-auto">
                     <Image
-                      src={activeData.layoutImage}
-                      alt={`${activeData.title} 2D Layout Blueprint`}
+                      src={FLOOR_PLANS_DATA["1bhk"].layoutImage}
+                      alt="Advait Skyline Premium 1 BHK 2D Layout Blueprint"
                       fill
                       sizes="(max-width: 640px) 100vw, 144px"
+                      loading="lazy"
                       className="object-cover opacity-90 hover:opacity-100 transition-opacity"
                     />
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </AnimatePresence>
+            </div>
+          </div>
+
+          {/* Panel 2 BHK */}
+          <div
+            id="panel-2bhk"
+            role="tabpanel"
+            aria-labelledby="tab-2bhk"
+            aria-hidden={activeTab !== "2bhk"}
+            className={`w-full transition-all duration-500 ease-in-out ${
+              activeTab === "2bhk"
+                ? "opacity-100 scale-100 pointer-events-auto relative z-10 block"
+                : "opacity-0 scale-95 pointer-events-none absolute top-0 left-0 h-0 overflow-hidden z-0 hidden lg:hidden"
+            }`}
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+              {/* 3D Plan (7 cols on Desktop) */}
+              <div className="lg:col-span-7 flex flex-col items-center">
+                <FloatingEntrance delay={0.15} className="w-full">
+                  <div className="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden shadow-xl bg-white border border-brand-copper/15">
+                    <Image
+                      src={FLOOR_PLANS_DATA["2bhk"].isometricImage}
+                      alt="Advait Skyline Luxury 2 BHK 3D Isometric Rendering"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      loading="lazy"
+                      className="object-cover"
+                    />
+                    <div className="absolute top-4 left-4 bg-brand-primaryBrown text-white px-4 py-1.5 rounded-full">
+                      <span className="text-[10px] md:text-xs font-semibold tracking-wider font-body uppercase">
+                        3D Perspective View
+                      </span>
+                    </div>
+                  </div>
+                </FloatingEntrance>
+              </div>
+
+              {/* Specs & Dimensions (5 cols on Desktop) */}
+              <div className="lg:col-span-5 flex flex-col items-start">
+                <span className="text-brand-copper text-label-caps text-xs tracking-widest font-bold mb-2">
+                  Carpet Area: {FLOOR_PLANS_DATA["2bhk"].carpetArea}
+                </span>
+                <h3 className="text-brand-primaryBrown font-display text-3xl font-bold mb-6">
+                  {FLOOR_PLANS_DATA["2bhk"].title}
+                </h3>
+
+                {/* Dimensions List with Left copper borders */}
+                <div className="w-full flex flex-col gap-4 mb-8">
+                  {FLOOR_PLANS_DATA["2bhk"].dimensions.map((dim, idx) => (
+                    <div
+                      key={idx}
+                      className="pl-4 border-l-2 border-brand-copper/60 flex items-center justify-between py-1 bg-white/30 rounded-r-lg hover:bg-white/50 transition-colors"
+                    >
+                      <span className="text-brand-charcoal font-body text-sm font-semibold">
+                        {dim.name}
+                      </span>
+                      <span className="text-brand-primaryBrown font-body text-xs md:text-sm font-bold pr-4">
+                        {dim.size}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Badges strip below */}
+                <div className="flex flex-wrap gap-2.5 mb-10 w-full">
+                  {FLOOR_PLANS_DATA["2bhk"].features.map((feat, idx) => (
+                    <span
+                      key={idx}
+                      className="bg-white text-brand-charcoal border border-brand-copper/20 rounded-full px-4 py-1.5 font-body text-[10px] md:text-xs font-semibold shadow-sm hover:border-brand-copper transition-colors"
+                    >
+                      {feat}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Smaller 2D Layout Blueprint */}
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 w-full pt-6 border-t border-brand-copper/15">
+                  <div className="flex flex-col items-start max-w-sm">
+                    <span className="text-brand-primaryBrown font-body text-xs font-bold uppercase tracking-wider mb-2">
+                      2D Blueprint
+                    </span>
+                    <p className="text-brand-charcoal/70 font-body text-xs leading-relaxed">
+                      Optimized layout prioritizing natural cross-ventilation & spacious foyer entry.
+                    </p>
+                  </div>
+                  <div className="relative w-full sm:w-36 h-36 sm:h-24 rounded-xl overflow-hidden border border-brand-copper/20 shadow-sm sm:ml-auto bg-white aspect-[16/9] sm:aspect-auto">
+                    <Image
+                      src={FLOOR_PLANS_DATA["2bhk"].layoutImage}
+                      alt="Advait Skyline Luxury 2 BHK 2D Layout Blueprint"
+                      fill
+                      sizes="(max-width: 640px) 100vw, 144px"
+                      loading="lazy"
+                      className="object-cover opacity-90 hover:opacity-100 transition-opacity"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

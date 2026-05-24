@@ -18,7 +18,7 @@ const STATS_DATA = [
     label: "Sleek Skyscraper Floors",
   },
   {
-    value: 20,
+    value: 12,
     suffix: "+",
     prefix: "",
     label: "Commercial Retail Shops",

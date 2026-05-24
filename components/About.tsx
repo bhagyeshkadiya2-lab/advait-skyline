@@ -112,6 +112,7 @@ export default function About() {
                 alt="Advait Skyline Majestic Aerial View Render"
                 fill
                 sizes="(max-width: 768px) 100vw, 420px"
+                loading="lazy"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-deepBrown/50 via-transparent to-transparent" />

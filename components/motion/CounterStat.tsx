@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { useInView } from "framer-motion";
 
 interface CounterStatProps {
   value: number;
@@ -15,17 +14,37 @@ export default function CounterStat({
   value,
   suffix = "",
   prefix = "",
-  duration = 1800,
+  duration = 1500, // optimized 1500ms duration for high-end scrolling
   className = "",
 }: CounterStatProps) {
   const [count, setCount] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [hasIntersected, setHasIntersected] = useState(false);
+  const elementRef = useRef<HTMLSpanElement>(null);
   const animatedRef = useRef(false);
 
   useEffect(() => {
-    if (!isInView || animatedRef.current) return;
-    
+    if (typeof window === "undefined") return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setHasIntersected(true);
+          observer.disconnect(); // Trigger animation once
+        }
+      },
+      { threshold: 0.3 } // triggers when 30% of the element is visible
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!hasIntersected || animatedRef.current) return;
+
     animatedRef.current = true;
     let startTimestamp: number | null = null;
 
@@ -33,11 +52,11 @@ export default function CounterStat({
       if (!startTimestamp) startTimestamp = timestamp;
       const progress = timestamp - startTimestamp;
       const percentage = Math.min(progress / duration, 1);
-      
-      // easeOutQuad easing
-      const easeValue = percentage * (2 - percentage);
+
+      // easeOutQuart easing formula: 1 - (1 - x)^4
+      const easeValue = 1 - Math.pow(1 - percentage, 4);
       const current = Math.floor(easeValue * value);
-      
+
       setCount(current);
 
       if (percentage < 1) {
@@ -48,10 +67,10 @@ export default function CounterStat({
     };
 
     requestAnimationFrame(step);
-  }, [isInView, value, duration]);
+  }, [hasIntersected, value, duration]);
 
   return (
-    <span ref={ref} className={className}>
+    <span ref={elementRef} className={className}>
       {prefix}
       {count}
       {suffix}
