@@ -70,7 +70,7 @@ export default function About() {
               <p>
                 Whether you want to build a peaceful sanctuary for your family or establish a
                 high-visibility storefront at a bustling intersection, this project matches your
-                highest goals. Discover a rich, active community complete with 39+ world-class amenities,
+                highest goals. Discover a rich, active community complete with 39 lifestyle amenities,
                 designed with durability, beauty, and absolute precision.
               </p>
             </div>

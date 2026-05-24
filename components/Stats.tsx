@@ -9,7 +9,7 @@ const STATS_DATA = [
     value: 39,
     suffix: "+",
     prefix: "",
-    label: "World-Class Amenities",
+    label: "Lifestyle Amenities",
   },
   {
     value: 14,

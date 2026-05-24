@@ -136,7 +136,7 @@ export default function Amenities() {
           
           <FloatingEntrance delay={0.1}>
             <h2 className="text-brand-primaryBrown text-section-h2 mb-4 font-display font-semibold">
-              39+ World-Class Amenities
+              39 Lifestyle Amenities
             </h2>
           </FloatingEntrance>
           
@@ -203,7 +203,7 @@ export default function Amenities() {
           <div className="flex flex-col items-center mb-12 relative z-10">
             <FloatingEntrance delay={0.1} className="mb-8">
               <h4 className="text-brand-primaryBrown font-body text-xs md:text-sm font-bold uppercase tracking-[0.15em] text-center">
-                Discover the Complete 39+ Amenities Catalog
+                Discover the Complete 39 Lifestyle Amenities Catalog
               </h4>
             </FloatingEntrance>
 

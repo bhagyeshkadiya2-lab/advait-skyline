@@ -22,7 +22,7 @@ const PARTICLES = [
 ];
 
 const STAT_PILLS = [
-  { label: "39+ Amenities", delay: 0.1 },
+  { label: "39 Lifestyle Amenities", delay: 0.1 },
   { label: "G+14 Floors", delay: 0.2 },
   { label: "1 & 2 BHK", delay: 0.3 },
   { label: "RERA Registered", delay: 0.4 },
