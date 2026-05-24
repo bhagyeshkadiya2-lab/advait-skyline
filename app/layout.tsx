@@ -64,6 +64,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
+      <head>
+        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
+      </head>
       <body className="bg-brand-cream text-brand-charcoal font-body antialiased selection:bg-brand-copper selection:text-white">
         <PageLoader />
         <ScrollProgressBar />

@@ -10,10 +10,10 @@ export default function PageLoader() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // 2.2s total splash screen duration (1.2s logo animation + 0.3s delay + 0.7s display/fade-out)
+    // Optimized 1.0s splash screen duration to drastically improve mobile PageSpeed LCP/FCP metrics
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2200);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -25,7 +25,7 @@ export default function PageLoader() {
       {loading && (
         <motion.div
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
+          exit={{ opacity: 0, transition: { duration: 0.4, ease: "easeInOut" } }}
           className="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-brand-deepBrown"
         >
           <div className="text-center flex flex-col items-center max-w-sm px-6">
@@ -33,7 +33,7 @@ export default function PageLoader() {
             <motion.div
               initial={{ scale: 0.6, opacity: 0, y: -30, rotateX: 25 }}
               animate={{ scale: 1, opacity: 1, y: 0, rotateX: 0 }}
-              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] as const }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
               className="relative w-[220px] h-[200px] mb-6 rounded-3xl overflow-hidden border-2 border-brand-gold shadow-2xl bg-brand-charcoal"
             >
               <Image
@@ -46,11 +46,11 @@ export default function PageLoader() {
               />
             </motion.div>
 
-            {/* Tagline fading up with a 0.3s delay after logo settles */}
+            {/* Tagline fading up with a 0.8s delay after logo settles */}
             <motion.p
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 1.5 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
               className="text-brand-copper font-body text-xs font-semibold uppercase tracking-[0.25em]"
             >
               Elevate Your Everyday

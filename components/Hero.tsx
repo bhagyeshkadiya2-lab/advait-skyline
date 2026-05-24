@@ -63,17 +63,17 @@ export default function Hero() {
       {/* LAYER 1: Parallax Background Atmosphere (speed 0.3) */}
       <ParallaxLayer speed={0.3} className="absolute inset-0 w-full h-full z-0 pointer-events-none">
         <div className="absolute inset-0 bg-[#2C180E] opacity-70" />
-        {/* Subtle abstract gold dust overlay */}
+        {/* Subtle abstract gold dust overlay (Optimized sizing for mobile performance) */}
         <div 
           className="absolute inset-0 bg-cover bg-center mix-blend-overlay opacity-30" 
-          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=1920&q=80')` }}
+          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=1200&q=75')` }}
         />
       </ParallaxLayer>
 
       {/* LAYER 2: Parallax Building Render (speed 0.15) */}
       <ParallaxLayer speed={0.15} className="absolute inset-0 w-full h-full z-10 pointer-events-none">
         <Image
-          src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1920&q=80"
+          src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=75"
           alt="Advait Skyline Premium Residential Skyscraper Render"
           fill
           priority
@@ -84,9 +84,9 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-brand-deepBrown via-brand-deepBrown/40 to-transparent z-15" />
       </ParallaxLayer>
 
-      {/* FLOATING PARTICLES (staggered weightless dots) */}
+      {/* FLOATING PARTICLES (staggered weightless dots) - Disabled on mobile (hidden lg:block) to optimize CPU/Speed Index */}
       {!isReduced && (
-        <div className="absolute inset-0 w-full h-full z-20 pointer-events-none">
+        <div className="hidden lg:block absolute inset-0 w-full h-full z-20 pointer-events-none">
           {PARTICLES.map((p, idx) => (
             <motion.div
               key={idx}
