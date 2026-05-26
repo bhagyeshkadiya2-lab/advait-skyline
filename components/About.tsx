@@ -108,7 +108,7 @@ export default function About() {
               className="relative w-full aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/50"
             >
               <Image
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+                src="/about-bg.jpg"
                 alt="Advait Skyline Majestic Aerial View Render"
                 fill
                 sizes="(max-width: 768px) 100vw, 420px"

@@ -11,17 +11,17 @@ import { useReducedMotion } from "@/lib/hooks/useReducedMotion";
 const FEATURED_AMENITIES = [
   {
     title: "Swimming Pool",
-    image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80",
+    image: "/pool-bg.jpg",
     desc: "Oasis of tranquility with a separate toddlers' pool.",
   },
   {
     title: "Gym & Fitness",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80",
+    image: "/gym-bg.jpg",
     desc: "Fully equipped separate wings for male and female fitness.",
   },
   {
     title: "Club House",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
+    image: "/clubhouse-bg.jpg",
     desc: "Ultra-premium community lounge and multi-purpose hall.",
   },
 ];

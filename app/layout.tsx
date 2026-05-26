@@ -7,6 +7,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageLoader from "@/components/PageLoader";
 import ScrollToTop from "@/components/ScrollToTop";
+import WhatsAppButton from '@/components/WhatsAppButton';
+import Script from "next/script";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -167,6 +169,17 @@ export default function RootLayout({
   return (
     <html lang="en-IN" className={`${playfair.variable} ${inter.variable}`}>
       <head>
+        <Script
+          id="gtm-head"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WBBMP8KS');`,
+          }}
+        />
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
         
         {/* Inject JSON-LD Schema Scripts in Head */}
@@ -184,6 +197,14 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-brand-cream text-brand-charcoal font-body antialiased selection:bg-brand-copper selection:text-white">
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-WBBMP8KS"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         {/* Skip to main content link for keyboard accessibility (WCAG 2.1 compliance) */}
         <a 
           href="#overview" 
@@ -196,6 +217,7 @@ export default function RootLayout({
         <ScrollProgressBar />
         <CustomCursor />
         <ScrollToTop />
+        <WhatsAppButton />
         <Navbar />
         <main>{children}</main>
         <Footer />

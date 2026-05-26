@@ -3,15 +3,51 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
-import { Menu, X, PhoneCall } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
 import { useReducedMotion } from "@/lib/hooks/useReducedMotion";
 
+const Instagram = ({ size = 20 }: { size?: number }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+  </svg>
+);
+
+const Facebook = ({ size = 20 }: { size?: number }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M18 2h-3a5 5 0 0 0 -5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+  </svg>
+);
+
 const NAV_ITEMS = [
-  { label: "Overview", href: "#overview" },
-  { label: "Amenities", href: "#amenities" },
-  { label: "Floor Plans", href: "#floorplans" },
-  { label: "Location", href: "#location" },
-  { label: "Contact", href: "#contact" },
+  { label: "Overview", href: "/#overview" },
+  { label: "Amenities", href: "/#amenities" },
+  { label: "Floor Plans", href: "/#floorplans" },
+  { label: "Location", href: "/#location" },
+  { label: "About Us", href: "/about-us" },
+  { label: "Contact Us", href: "/contact-us" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -114,15 +150,59 @@ export default function Navbar() {
           </div>
 
           {/* Right CTA Button & Hamburger */}
-          <div className="flex items-center gap-4">
-            <a href="tel:+919909062363" className="hover-trigger" aria-label="Call to book a site visit at Advait Skyline">
+          <div className="flex items-center gap-3 md:gap-4">
+            {/* Desktop Social Icons */}
+            <div className="hidden lg:flex items-center gap-4 mr-2">
+              <a
+                href="https://www.instagram.com/advaitskyline/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/80 hover:text-brand-copper transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram size={18} />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61590554242765"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/80 hover:text-brand-copper transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook size={18} />
+              </a>
+            </div>
+
+            <a
+              href="https://wa.me/919909062363?text=Hello%20Advait%20Skyline%2C%20I%20would%20like%20to%20book%20a%20site%20visit%20and%20get%20more%20details%20about%20the%20project."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover-trigger flex items-center"
+              aria-label="Contact us on WhatsApp to book a site visit"
+            >
+              {/* Desktop Button */}
               <motion.button
                 whileHover={{ scale: isReduced ? 1 : 1.05 }}
                 whileTap={{ scale: isReduced ? 1 : 0.97 }}
                 className="hidden md:flex items-center gap-2 bg-brand-copper text-white font-body text-xs font-semibold uppercase tracking-wider rounded-full px-6 py-2.5 shadow-lg border border-brand-copper/30 transition-all duration-300 hover:bg-brand-copper/90"
               >
-                <PhoneCall size={14} className="text-white" />
+                <MessageCircle size={14} className="text-white fill-white/10" />
                 Book a Visit
+              </motion.button>
+
+              {/* Mobile WhatsApp Button */}
+              <motion.button
+                whileHover={{ scale: isReduced ? 1 : 1.05 }}
+                whileTap={{ scale: isReduced ? 1 : 0.97 }}
+                className="flex md:hidden items-center justify-center bg-[#25D366] text-white p-2.5 rounded-full shadow-md border border-white/20 transition-all duration-300"
+              >
+                <svg
+                  className="w-4 h-4 fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.967C16.58 2.012 14.096.993 11.474.993c-5.462 0-9.911 4.412-9.915 9.841-.001 1.737.478 3.43 1.387 4.935L1.878 20.3l4.769-1.248zM17.487 14.4c-.327-.162-1.928-.94-2.224-1.047-.297-.108-.512-.162-.729.162-.217.324-.838 1.047-1.028 1.262-.19.216-.381.243-.709.082-.327-.162-1.382-.505-2.633-1.611-.973-.865-1.63-1.933-1.82-2.257-.19-.324-.02-.499.143-.66.147-.144.327-.378.49-.567.163-.189.217-.324.327-.54.109-.216.054-.405-.027-.567-.08-.162-.729-1.74-.997-2.39-.263-.629-.53-.54-.729-.55l-.62-.01c-.217 0-.569.081-.866.405-.297.324-1.135 1.107-1.135 2.7s1.162 3.132 1.325 3.348c.163.216 2.288 3.467 5.541 4.853.774.33 1.378.527 1.849.675.779.245 1.488.211 2.049.128.625-.093 1.928-.782 2.2-1.5s.272-1.334.19-1.458c-.08-.124-.296-.217-.624-.378z" />
+                </svg>
               </motion.button>
             </a>
 
@@ -160,11 +240,39 @@ export default function Navbar() {
                   </motion.div>
                 ))}
                 <motion.div variants={itemVariants} className="pt-2">
-                  <a href="tel:+919909062363" onClick={() => setIsMobileOpen(false)} aria-label="Call to book a site visit at Advait Skyline">
+                  <a
+                    href="https://wa.me/919909062363?text=Hello%20Advait%20Skyline%2C%20I%20would%20like%20to%20book%20a%20site%20visit%20and%20get%20more%20details%20about%20the%20project."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsMobileOpen(false)}
+                    aria-label="Contact us on WhatsApp to book a site visit"
+                  >
                     <button className="w-full flex items-center justify-center gap-3 bg-brand-copper text-white font-body text-sm font-bold uppercase tracking-widest rounded-full py-3.5 shadow-md">
-                      <PhoneCall size={16} />
+                      <MessageCircle size={16} className="text-white fill-white/10" />
                       Book a Visit
                     </button>
+                  </a>
+                </motion.div>
+
+                {/* Mobile Drawer Socials */}
+                <motion.div variants={itemVariants} className="flex items-center gap-6 justify-center py-4 border-t border-white/5 mt-2">
+                  <a
+                    href="https://www.instagram.com/advaitskyline/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/80 hover:text-brand-copper transition-colors flex items-center gap-2"
+                  >
+                    <Instagram size={18} />
+                    <span className="text-sm font-semibold tracking-wider font-body">Instagram</span>
+                  </a>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61590554242765"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/80 hover:text-brand-copper transition-colors flex items-center gap-2"
+                  >
+                    <Facebook size={18} />
+                    <span className="text-sm font-semibold tracking-wider font-body">Facebook</span>
                   </a>
                 </motion.div>
               </div>

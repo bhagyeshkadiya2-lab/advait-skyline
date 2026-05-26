@@ -43,7 +43,7 @@ export default function ScrollToTop() {
             damping: 25 
           }}
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-40 p-3.5 rounded-full bg-brand-primaryBrown/90 hover:bg-brand-copper text-white border border-brand-gold/40 backdrop-blur-sm shadow-xl hover:shadow-[0_0_20px_rgba(201,151,58,0.5)] transition-colors duration-300 hover-trigger group focus:outline-none focus:ring-2 focus:ring-brand-gold/50"
+          className="fixed bottom-24 right-6 md:bottom-28 md:right-8 z-40 p-3.5 rounded-full bg-brand-primaryBrown/90 hover:bg-brand-copper text-white border border-brand-gold/40 backdrop-blur-sm shadow-xl hover:shadow-[0_0_20px_rgba(201,151,58,0.5)] transition-colors duration-300 hover-trigger group focus:outline-none focus:ring-2 focus:ring-brand-gold/50"
           aria-label="Scroll to top"
         >
           {/* subtle bounce arrow on hover */}

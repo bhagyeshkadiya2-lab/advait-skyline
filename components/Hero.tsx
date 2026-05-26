@@ -58,7 +58,7 @@ export default function Hero() {
   return (
     <section
       id="overview"
-      className="relative w-full min-h-[100dvh] lg:h-[100dvh] overflow-hidden bg-brand-charcoal flex flex-col justify-between"
+      className="relative w-full min-h-[100svh] bg-brand-charcoal"
     >
       {/* LAYER 1: Parallax Background Atmosphere (speed 0.3) */}
       <ParallaxLayer speed={0.3} className="absolute inset-0 w-full h-full z-0 pointer-events-none">
@@ -73,7 +73,7 @@ export default function Hero() {
       {/* LAYER 2: Parallax Building Render (speed 0.15) */}
       <ParallaxLayer speed={0.15} className="absolute inset-0 w-full h-full z-10 pointer-events-none">
         <Image
-          src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=75"
+          src="/hero-bg.jpg"
           alt="Advait Skyline Premium Residential Skyscraper Render"
           fill
           priority
@@ -82,6 +82,8 @@ export default function Hero() {
         />
         {/* Ambient Gradient Overlay: Darker deep brown at bottom, fading to transparent at top */}
         <div className="absolute inset-0 bg-gradient-to-t from-brand-deepBrown via-brand-deepBrown/40 to-transparent z-15" />
+        {/* Responsive Premium Left-to-Right & Top-to-Bottom Shadow Vignette: Darkens background strictly behind the text overlay while keeping the building render and sunset sky bright and beautiful */}
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-charcoal/75 via-brand-charcoal/45 to-brand-charcoal/80 lg:bg-gradient-to-r lg:from-brand-charcoal/90 lg:via-brand-charcoal/40 lg:to-transparent z-15" />
       </ParallaxLayer>
 
       {/* FLOATING PARTICLES (staggered weightless dots) - Disabled on mobile (hidden lg:block) to optimize CPU/Speed Index */}
@@ -114,15 +116,15 @@ export default function Hero() {
         </div>
       )}
 
-      {/* LAYER 3: Pinned Foreground Text Content (speed 0) */}
-      <div className="relative w-full min-h-[100dvh] lg:min-h-0 lg:h-full flex flex-col justify-between z-30 max-w-7xl mx-auto px-6 pt-24 pb-8 lg:pt-32 lg:pb-8">
-        <div className="flex-1 flex flex-col justify-center items-start max-w-3xl py-2 lg:py-0">
+      {/* LAYER 3: Foreground Text Content */}
+      <div className="relative w-full min-h-[100dvh] lg:min-h-0 lg:h-full flex flex-col justify-between z-30 max-w-7xl mx-auto px-6 pt-24 pb-8 lg:pt-24 lg:pb-6">
+        <div className="flex-1 flex flex-col justify-center items-start max-w-3xl lg:max-w-4xl xl:max-w-5xl py-2 lg:py-0">
           {/* MAHA RERA Badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-            className="mb-4 lg:mb-6 bg-brand-primaryBrown/40 border border-brand-gold/30 backdrop-blur px-4 py-1.5 rounded-full inline-flex items-center"
+            className="mb-3 lg:mb-4 bg-brand-primaryBrown/40 border border-brand-gold/30 backdrop-blur px-4 py-1.5 rounded-full inline-flex items-center"
           >
             <span className="text-brand-gold font-body text-[10px] md:text-xs font-bold uppercase tracking-[0.15em]">
               MAHA RERA · PM3000002600013
@@ -134,7 +136,7 @@ export default function Hero() {
             variants={wordContainerVariants}
             initial="hidden"
             animate="visible"
-            className="text-brand-cream text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-bold leading-tight mb-2 tracking-tight flex flex-wrap"
+            className="text-brand-cream text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-bold leading-tight mb-2 tracking-tight flex flex-wrap drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
           >
             {words.map((word, index) => (
               <span 
@@ -158,17 +160,17 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
-            className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-extrabold tracking-tight leading-[1.15] mb-6 text-left"
+            className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-display font-extrabold tracking-tight leading-[1.15] mb-4 lg:mb-5 text-left drop-shadow-[0_4px_10px_rgba(0,0,0,0.95)]"
           >
             Premium 1 & 2 BHK Homes & Shops <br className="hidden md:inline" />
-            <span className="text-brand-copper">at Naroli–Bhilad, Dadra & Nagar Haveli</span>
+            <span className="text-brand-gold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">at Naroli–Bhilad, Dadra & Nagar Haveli</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.95 }}
-            className="text-brand-cream font-body text-xs md:text-sm lg:text-base font-semibold tracking-widest uppercase mb-6 lg:mb-8"
+            className="text-brand-cream font-body text-xs md:text-sm lg:text-base font-semibold tracking-widest uppercase mb-5 lg:mb-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
           >
             Peaceful Living, Smart Investment
           </motion.p>
@@ -197,6 +199,27 @@ export default function Hero() {
                 View Floor Plans
               </motion.button>
             </a>
+
+            <a
+              href="https://wa.me/919909062363?text=Hello%2C%20I%20am%20interested%20in%20Advait%20Skyline%20project."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover-trigger"
+            >
+              <motion.button
+                whileHover={{ y: -4, scale: 1.03 }}
+                className="bg-[#25D366] hover:bg-[#20ba5a] text-white font-body text-xs md:text-sm font-bold uppercase tracking-wider px-6 py-3 lg:px-8 lg:py-3.5 rounded-full shadow-xl transition-all duration-300 flex items-center gap-2"
+              >
+                <svg
+                  className="w-4 h-4 fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.967C16.58 2.012 14.096.993 11.474.993c-5.462 0-9.911 4.412-9.915 9.841-.001 1.737.478 3.43 1.387 4.935L1.878 20.3l4.769-1.248zM17.487 14.4c-.327-.162-1.928-.94-2.224-1.047-.297-.108-.512-.162-.729.162-.217.324-.838 1.047-1.028 1.262-.19.216-.381.243-.709.082-.327-.162-1.382-.505-2.633-1.611-.973-.865-1.63-1.933-1.82-2.257-.19-.324-.02-.499.143-.66.147-.144.327-.378.49-.567.163-.189.217-.324.327-.54.109-.216.054-.405-.027-.567-.08-.162-.729-1.74-.997-2.39-.263-.629-.53-.54-.729-.55l-.62-.01c-.217 0-.569.081-.866.405-.297.324-1.135 1.107-1.135 2.7s1.162 3.132 1.325 3.348c.163.216 2.288 3.467 5.541 4.853.774.33 1.378.527 1.849.675.779.245 1.488.211 2.049.128.625-.093 1.928-.782 2.2-1.5s.272-1.334.19-1.458c-.08-.124-.296-.217-.624-.378z" />
+                </svg>
+                WhatsApp Chat
+              </motion.button>
+            </a>
           </motion.div>
 
           {/* Mobile Stat Pills Grid (Inline on mobile, hidden on desktop) */}
@@ -211,9 +234,9 @@ export default function Hero() {
                   ease: [0.16, 1, 0.3, 1] as const,
                   delay: 1.15 + pill.delay,
                 }}
-                className="bg-white/10 border border-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-center"
+                className="bg-brand-charcoal/50 border border-white/20 backdrop-blur-md rounded-full px-4 py-2.5 text-center shadow-lg"
               >
-                <span className="text-white font-body text-xs font-semibold tracking-wider">
+                <span className="text-white font-body text-xs font-semibold tracking-wider drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
                   {pill.label}
                 </span>
               </motion.div>
@@ -222,10 +245,10 @@ export default function Hero() {
         </div>
 
         {/* Bottom Elements: Scroll Mouse & Stat Pills Strip (Shown only on Desktop) */}
-        <div className="hidden lg:flex w-full items-center justify-between gap-6 pt-4 border-t border-white/10 z-40">
+        <div className="hidden lg:flex w-full items-center justify-between gap-6 pt-4 border-t border-white/15 z-40">
           {/* Scroll Mouse Indicator */}
           <div className="flex items-center gap-3">
-            <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center p-1.5">
+            <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center p-1.5 bg-brand-charcoal/30 backdrop-blur-sm">
               <motion.div
                 animate={{
                   y: [0, 12, 0],
@@ -238,7 +261,7 @@ export default function Hero() {
                 className="w-1.5 h-1.5 bg-white rounded-full"
               />
             </div>
-            <span className="text-white/50 text-[10px] uppercase font-bold tracking-widest font-body">
+            <span className="text-white/80 text-[10px] uppercase font-bold tracking-widest font-body drop-shadow-[0_1.5px_3px_rgba(0,0,0,0.8)]">
               Scroll to explore
             </span>
           </div>
@@ -255,9 +278,9 @@ export default function Hero() {
                   ease: [0.16, 1, 0.3, 1] as const,
                   delay: 1.3 + pill.delay,
                 }}
-                className="bg-white/10 border border-white/20 backdrop-blur rounded-full px-5 py-2 hover:bg-white/15 transition-colors"
+                className="bg-brand-charcoal/50 border border-white/25 backdrop-blur-md rounded-full px-5 py-2 hover:bg-brand-charcoal/70 transition-colors shadow-lg"
               >
-                <span className="text-white font-body text-xs font-semibold tracking-wider">
+                <span className="text-white font-body text-xs font-semibold tracking-wider drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
                   {pill.label}
                 </span>
               </motion.div>

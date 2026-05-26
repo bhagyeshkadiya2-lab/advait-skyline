@@ -11,8 +11,8 @@ const FLOOR_PLANS_DATA = {
   "1bhk": {
     title: "Premium 1 BHK Residence",
     carpetArea: "485 Sq. Ft.",
-    isometricImage: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80",
-    layoutImage: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=500&q=80",
+    isometricImage: "/1bhk-layout.jpg",
+    layoutImage: "/1bhk-layout.jpg",
     dimensions: [
       { name: "Bedroom", size: "10'0\" × 11'0\"" },
       { name: "Living Hall", size: "10'0\" × 15'9\"" },
@@ -26,8 +26,8 @@ const FLOOR_PLANS_DATA = {
   "2bhk": {
     title: "Luxury 2 BHK Residence",
     carpetArea: "720 Sq. Ft.",
-    isometricImage: "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=800&q=80",
-    layoutImage: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=500&q=80",
+    isometricImage: "/2bhk-layout.jpg",
+    layoutImage: "/2bhk-layout.jpg",
     dimensions: [
       { name: "Master Bedroom", size: "10'9\" × 10'0\"" },
       { name: "Common Bedroom", size: "9'0\" × 10'0\"" },
@@ -120,15 +120,15 @@ export default function FloorPlans() {
                   <div className="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden shadow-xl bg-white border border-brand-copper/15">
                     <Image
                       src={FLOOR_PLANS_DATA["1bhk"].isometricImage}
-                      alt="Advait Skyline Premium 1 BHK 3D Isometric Rendering"
+                      alt="Advait Skyline Premium 1 BHK Floor Plan Layout Blueprint"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       loading="lazy"
-                      className="object-cover"
+                      className="object-contain p-4 md:p-6"
                     />
                     <div className="absolute top-4 left-4 bg-brand-primaryBrown text-white px-4 py-1.5 rounded-full">
                       <span className="text-[10px] md:text-xs font-semibold tracking-wider font-body uppercase">
-                        3D Perspective View
+                        Official Layout Blueprint
                       </span>
                     </div>
                   </div>
@@ -190,7 +190,7 @@ export default function FloorPlans() {
                       fill
                       sizes="(max-width: 640px) 100vw, 144px"
                       loading="lazy"
-                      className="object-cover opacity-90 hover:opacity-100 transition-opacity"
+                      className="object-contain p-1.5 opacity-90 hover:opacity-100 transition-opacity"
                     />
                   </div>
                 </div>
@@ -217,15 +217,15 @@ export default function FloorPlans() {
                   <div className="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden shadow-xl bg-white border border-brand-copper/15">
                     <Image
                       src={FLOOR_PLANS_DATA["2bhk"].isometricImage}
-                      alt="Advait Skyline Luxury 2 BHK 3D Isometric Rendering"
+                      alt="Advait Skyline Luxury 2 BHK Floor Plan Layout Blueprint"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       loading="lazy"
-                      className="object-cover"
+                      className="object-contain p-4 md:p-6"
                     />
                     <div className="absolute top-4 left-4 bg-brand-primaryBrown text-white px-4 py-1.5 rounded-full">
                       <span className="text-[10px] md:text-xs font-semibold tracking-wider font-body uppercase">
-                        3D Perspective View
+                        Official Layout Blueprint
                       </span>
                     </div>
                   </div>
@@ -287,7 +287,7 @@ export default function FloorPlans() {
                       fill
                       sizes="(max-width: 640px) 100vw, 144px"
                       loading="lazy"
-                      className="object-cover opacity-90 hover:opacity-100 transition-opacity"
+                      className="object-contain p-1.5 opacity-90 hover:opacity-100 transition-opacity"
                     />
                   </div>
                 </div>
