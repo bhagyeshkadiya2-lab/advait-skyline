@@ -10,6 +10,13 @@ import ScrollToTop from "@/components/ScrollToTop";
 import WhatsAppButton from '@/components/WhatsAppButton';
 import Script from "next/script";
 
+declare global {
+  interface Window {
+    dataLayer: unknown[];
+    gtag: (...args: unknown[]) => void;
+  }
+}
+
 const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -169,6 +176,23 @@ export default function RootLayout({
   return (
     <html lang="en-IN" className={`${playfair.variable} ${inter.variable}`}>
       <head>
+        {/* Google Analytics 4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-C1J16Y1GK0"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-C1J16Y1GK0');
+            `,
+          }}
+        />
         <Script
           id="gtm-head"
           strategy="afterInteractive"
