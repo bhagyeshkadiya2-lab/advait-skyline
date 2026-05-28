@@ -64,7 +64,7 @@ export default function Commercial() {
               className="relative w-full aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/10"
             >
               <Image
-                src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80"
+                src="/commercial-bg.jpg"
                 alt="Advait Skyline Premium Commercial Shopfront Render"
                 fill
                 sizes="(max-width: 768px) 100vw, 420px"
