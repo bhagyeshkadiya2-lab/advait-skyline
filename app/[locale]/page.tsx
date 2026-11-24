@@ -9,6 +9,9 @@ import ResidenceShowcase from '@/components/sections/ResidenceShowcase';
 import CommercialSection from '@/components/sections/CommercialSection';
 import ConnectivityRadial from '@/components/sections/ConnectivityRadial';
 import FloorPlansSection from '@/components/sections/FloorPlansSection';
+import SpecificationsSection from '@/components/sections/SpecificationsSection';
+import FaqSection from '@/components/sections/FaqSection';
+import FinalCtaSection from '@/components/sections/FinalCtaSection';
 
 export default async function HomePage({
   params,
@@ -46,6 +49,15 @@ export default async function HomePage({
 
       {/* 9. Floor Plans Interactive Tabs & Lightbox */}
       <FloorPlansSection />
+
+      {/* 10. Technical Engineering Specifications Accordion */}
+      <SpecificationsSection />
+
+      {/* 11. 8 Core Homepage FAQs (AEO & Bot SEO-first) */}
+      <FaqSection />
+
+      {/* 12. Final Experience CTA & Integrated Lead Capture */}
+      <FinalCtaSection />
     </div>
   );
 }

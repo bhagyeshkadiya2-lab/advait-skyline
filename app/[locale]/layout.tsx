@@ -16,6 +16,8 @@ import TopBar from '@/components/layout/TopBar';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import SmoothScroll from '@/components/layout/SmoothScroll';
+import WhatsAppFab from '@/components/lead/WhatsAppFab';
+import MobileStickyBar from '@/components/lead/MobileStickyBar';
 import JsonLd from '@/components/seo/JsonLd';
 import { createPageMetadata } from '@/lib/seo';
 
@@ -164,6 +166,8 @@ export default async function LocaleLayout({
           <Header />
           <div id="main-content">{children}</div>
           <Footer />
+          <WhatsAppFab />
+          <MobileStickyBar />
         </NextIntlClientProvider>
       </body>
     </html>
