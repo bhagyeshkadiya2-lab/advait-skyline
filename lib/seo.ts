@@ -438,5 +438,8 @@ export function createPageMetadata({
         { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
       ],
     },
+    verification: {
+      google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || process.env.GOOGLE_SITE_VERIFICATION,
+    },
   };
 }
