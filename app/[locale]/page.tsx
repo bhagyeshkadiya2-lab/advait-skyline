@@ -1,6 +1,17 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
+import { createPageMetadata } from '@/lib/seo';
 import JsonLd from '@/components/seo/JsonLd';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return createPageMetadata({ locale, path: '/' });
+}
 import HeroStage from '@/components/sections/HeroStage';
 import TrustBar from '@/components/sections/TrustBar';
 import IntroSection from '@/components/sections/IntroSection';
