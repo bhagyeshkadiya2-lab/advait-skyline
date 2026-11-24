@@ -7,6 +7,7 @@ import IntroSection from '@/components/sections/IntroSection';
 import StatsRow from '@/components/sections/StatsRow';
 import AmenityExplorer from '@/components/sections/AmenityExplorer';
 import ResidenceShowcase from '@/components/sections/ResidenceShowcase';
+import SampleFlat3DWalkthrough from '@/components/sections/SampleFlat3DWalkthrough';
 import CommercialSection from '@/components/sections/CommercialSection';
 import ConnectivityRadial from '@/components/sections/ConnectivityRadial';
 import FloorPlansSection from '@/components/sections/FloorPlansSection';
@@ -42,6 +43,9 @@ export default async function HomePage({
 
       {/* 6. Residences 1 & 2 BHK Showcase & Dimensions */}
       <ResidenceShowcase />
+
+      {/* 6.1. Interactive 3D Spatial Sample Flat Walkthrough (Real Photos) */}
+      <SampleFlat3DWalkthrough />
 
       {/* 7. Commercial Retail Façade & 11 Use-Cases Grid */}
       <CommercialSection />
