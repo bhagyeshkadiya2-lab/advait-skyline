@@ -55,7 +55,7 @@ export default async function OneBhkVsTwoBhkPage({
   const waCompareUrl = buildWhatsAppLink({
     phone: SITE_CONFIG.contact.whatsappNumber,
     message:
-      'Hello, I am comparing 1 BHK (575 sq. ft.) and 2 BHK (652 sq. ft.) at Advait Skyline, Naroli. Please share current pricing and payment plan details.',
+      'Hello, I am comparing 1 BHK (575 sq. ft.) and 2 BHK (652 sq. ft.) at Advait Skyline, Naroli. Please share current availability and unit details.',
     sourceRef: 'comparison-page-main',
   });
 

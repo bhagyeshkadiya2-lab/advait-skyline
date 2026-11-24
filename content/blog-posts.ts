@@ -50,7 +50,7 @@ export const BLOG_POSTS: BlogPost[] = [
     content: [
       'Securing a home loan for a RERA-registered development like Advait Skyline is a structured and transparent process. Because project approvals and title clearances are already vetted, leading nationalized and private banks (including State Bank of India, Bank of Baroda, and HDFC) facilitate streamlined loan disbursements.',
       'Prospective buyers should assemble their KYC documents, last 3 months salary slips, 6 months bank account statements, and Form 16 / ITR filings. Self-employed applicants require 3 years of audited financials and business registration licenses.',
-      'Our on-site sales desk at Naroli–Bhilad Checkpost provides complimentary loan desk assistance to help buyers evaluate flexible EMI schedules, construction-linked milestone plans, and potential PMAY credit-linked subsidy eligibility.',
+      'Our on-site sales desk at Naroli–Bhilad Checkpost provides complimentary loan desk assistance to help buyers evaluate flexible home loan options, bank eligibility, and potential PMAY credit-linked subsidy eligibility.',
     ],
   },
 ];

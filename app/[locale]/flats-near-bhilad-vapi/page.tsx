@@ -61,8 +61,8 @@ export default async function FlatsNearBhiladVapiPage({
       answer: 'Advait Skyline offers 1 BHK flats (511 sq. ft. carpet area) and 2 BHK flats (573 sq. ft. carpet area) featuring 2 bathrooms, balconies, and access to 39+ lifestyle amenities.',
     },
     {
-      question: 'What is the starting price for flats near Bhilad & Vapi at Advait Skyline?',
-      answer: 'Advait Skyline offers 1 & 2 BHK homes positioned at affordable developer-direct prices. Interested buyers can receive the complete cost breakdown, floor plans, and payment milestone schedule directly on WhatsApp.',
+      question: 'What is the pricing for flats near Bhilad & Vapi at Advait Skyline?',
+      answer: 'Advait Skyline offers 1 & 2 BHK homes positioned at affordable developer-direct prices. Interested buyers can receive complete project specifications, floor plans, and booking guidance directly on WhatsApp.',
     },
   ];
 

@@ -39,7 +39,7 @@ export default async function TwoBhkPage({
   const unit = PROJECT_DATA.residential.twoBhk;
   const waUrl = buildWhatsAppLink({
     phone: PROJECT_DATA.contact.whatsappLeadNumber,
-    message: 'Hello, I am interested in the 2 BHK flats (573 sq. ft. carpet) at Advait Skyline, Naroli. Please share current pricing and payment plan details.',
+    message: 'Hello, I am interested in the 2 BHK flats (573 sq. ft. carpet) at Advait Skyline, Naroli. Please share current availability and booking details.',
     sourceRef: '2bhk-page',
   });
 
@@ -58,7 +58,7 @@ export default async function TwoBhkPage({
     },
     {
       question: 'What is the price of a 2 BHK apartment at Advait Skyline?',
-      answer: 'Advait Skyline offers 2 BHK homes positioned at affordable prices. Interested homebuyers can obtain the developer-direct price quote, floor-wise cost breakdown, and approved payment milestones by contacting the sales team on WhatsApp at +91 99090 72390.',
+      answer: 'Advait Skyline offers 2 BHK homes positioned at affordable prices. Interested homebuyers can obtain developer-direct unit details, floor-wise availability, and booking information by contacting the sales team on WhatsApp at +91 99090 72390.',
     },
     {
       question: 'Are home loans pre-approved for Advait Skyline?',

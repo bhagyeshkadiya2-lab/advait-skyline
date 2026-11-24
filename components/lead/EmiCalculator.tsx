@@ -7,19 +7,19 @@ import { SITE_CONFIG } from '@/lib/siteConfig';
 import { trackEvent, getStoredAttribution } from '@/lib/tracking';
 
 const PRESETS = [
-  { id: '1bhk', labelKey: 'preset1Bhk', amount: 2000000, configName: '1 BHK (511 sq ft)' },
-  { id: '2bhk', labelKey: 'preset2Bhk', amount: 2800000, configName: '2 BHK (573 sq ft)' },
-  { id: 'commercial', labelKey: 'presetCommercial', amount: 3800000, configName: 'Commercial Unit' },
+  { id: '15l', labelKey: 'preset1Bhk', amount: 1500000 },
+  { id: '25l', labelKey: 'preset2Bhk', amount: 2500000 },
+  { id: '35l', labelKey: 'presetCommercial', amount: 3500000 },
 ] as const;
 
 export default function EmiCalculator() {
   const t = useTranslations('emi');
 
-  // Interactive Inputs (Defaulting to 2 BHK standard: ₹28L, 8.5%, 20 yrs)
-  const [loanAmount, setLoanAmount] = useState<number>(2800000);
+  // Interactive Inputs (Defaulting to ₹25L illustrative loan, 8.5%, 20 yrs)
+  const [loanAmount, setLoanAmount] = useState<number>(2500000);
   const [interestRate, setInterestRate] = useState<number>(8.5);
   const [tenureYears, setTenureYears] = useState<number>(20);
-  const [activePreset, setActivePreset] = useState<string>('2bhk');
+  const [activePreset, setActivePreset] = useState<string>('25l');
 
   // Debounced tracking timer ref
   const debounceTimerRef = useRef<NodeJS.Timeout | null>(null);
@@ -83,15 +83,13 @@ export default function EmiCalculator() {
 
   // Build WhatsApp Eligibility Deep Link
   const waEligibilityUrl = useMemo(() => {
-    const matchedPreset = PRESETS.find((p) => p.id === activePreset);
-    const configName = matchedPreset ? matchedPreset.configName : 'Residence';
     const attr = getStoredAttribution();
     const sourceTag = attr.utm_source ? ` (via ${attr.utm_source})` : '';
 
-    const msg = `Hello Dhanasvi Infra, I calculated an EMI of ₹${formatINR(monthlyEmi)}/month for ${configName} at Advait Skyline.\n• Loan Amount: ₹${formatINR(loanAmount)}\n• Interest Rate: ${interestRate}%\n• Tenure: ${tenureYears} Years\nPlease check my home loan eligibility and share approved bank schemes.${sourceTag}`;
+    const msg = `Hello Dhanasvi Infra, I calculated an estimated EMI of ₹${formatINR(monthlyEmi)}/month using the Home Loan Calculator at Advait Skyline.\n• Loan Amount: ₹${formatINR(loanAmount)}\n• Interest Rate: ${interestRate}%\n• Tenure: ${tenureYears} Years\nPlease check my home loan eligibility and share approved banking partners.${sourceTag}`;
 
     return `https://wa.me/${SITE_CONFIG.contact.whatsappClean}?text=${encodeURIComponent(msg)}`;
-  }, [loanAmount, interestRate, tenureYears, monthlyEmi, activePreset]);
+  }, [loanAmount, interestRate, tenureYears, monthlyEmi]);
 
   // Handle preset selection
   const handleSelectPreset = (preset: (typeof PRESETS)[number]) => {
@@ -131,7 +129,7 @@ export default function EmiCalculator() {
         {/* Preset Chips Bar */}
         <div className="space-y-2">
           <span className="text-xs uppercase font-sans font-bold tracking-wider text-[#F2D27A] block">
-            Popular Configurations &amp; Loan Presets:
+            Indicative Loan Amount Presets:
           </span>
           <div className="flex flex-wrap items-center gap-2.5" role="group" aria-label="Configuration Presets">
             {PRESETS.map((p) => {

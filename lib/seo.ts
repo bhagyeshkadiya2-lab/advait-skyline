@@ -117,16 +117,16 @@ const ROUTE_METADATA: Record<string, Record<string, MetaInfo>> = {
   },
   '/price-and-payment-plan': {
     en: {
-      title: 'Affordable Price & Payment Plan | Advait Skyline Naroli–Silvassa',
-      description: 'Affordable 1 & 2 BHK flats (575 & 652 sq. ft. built-up) at Advait Skyline, Naroli. Transparent payment milestones, individual parking, and latest prices on WhatsApp.',
+      title: 'Affordable Housing & Home Loan Estimates | Advait Skyline Naroli',
+      description: 'Explore affordable 1 & 2 BHK flats (575 & 652 sq. ft. built-up) at Advait Skyline, Naroli. Individual parking, home loan EMI calculator, and verified banking assistance.',
     },
     hi: {
-      title: 'किफायती मूल्य एवं भुगतान योजना | अद्वैत स्काईलाइन नरोली–सिलवासा',
-      description: 'अद्वैत स्काईलाइन नरोली में किफायती 1 व 2 BHK फ्लैट्स (575 व 652 वर्ग फुट)। पारदर्शी निर्माण आधारित किश्त योजना और व्हाट्सएप पर तत्काल मूल्य सूची प्राप्त करें।',
+      title: 'किफायती आवास एवं होम लोन अनुमान | अद्वैत स्काईलाइन नरोली',
+      description: 'अद्वैत स्काईलाइन नरोली में किफायती 1 व 2 BHK फ्लैट्स (575 व 652 वर्ग फुट)। इंडिविजुअल पार्किंग, होम लोन ईएमआई कैलकुलेटर एवं बैंक सहायता।',
     },
     gu: {
-      title: 'કિફાયતી કિંમત અને ચુકવણી યોજના | અદ્વૈત સ્કાયલાઇન નરોલી–સેલવાસ',
-      description: 'અદ્વૈત સ્કાયલાઇન નરોલીમાં કિફાયતી 1 અને 2 BHK ફ્લેટ્સ (575 અને 652 ચો.ફૂટ). પારદર્શક પેમેન્ટ પ્લાન અને વોટ્સએપ પર વર્તમાન પ્રાઇસ લિસ્ટ મેળવો.',
+      title: 'કિફાયતી આવાસ અને હોમ લોન અંદાજ | અદ્વૈત સ્કાયલાઇન નરોલી',
+      description: 'અદ્વૈત સ્કાયલાઇન નરોલીમાં કિફાયતી 1 અને 2 BHK ફ્લેટ્સ (575 અને 652 ચો.ફૂટ). ઇન્ડિવિજ્યુઅલ પાર્કિંગ, હોમ લોન EMI કેલ્ક્યુલેટર અને બેંક સહાયતા.',
     },
   },
   '/blog': {

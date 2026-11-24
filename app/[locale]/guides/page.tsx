@@ -42,7 +42,7 @@ export default async function GuidesIndexPage({
       title: 'RERA Compliance Guide: What Buyers Must Check in Dadra & Nagar Haveli',
       category: 'Legal & Safety',
       readTime: '6 min read',
-      summary: 'Understand RERA protections, sanctioned carpet area definitions, milestone schedules, and how to verify registration number PM3000002600013 on the official regulatory portal.',
+      summary: 'Understand RERA protections, sanctioned carpet area definitions, construction stages, and how to verify registration number PM3000002600013 on the official regulatory portal.',
     },
     {
       slug: '/guides/home-loan-guide',

@@ -63,7 +63,7 @@ export default function ProjectFactSheet({ compact = false, highlightUnit }: Pro
     {
       label: 'Pricing Positioning',
       value: 'Affordable Pricing',
-      note: 'Contact sales team on WhatsApp at +91 99090 72390 for current price list and payment plans',
+      note: 'Contact sales team on WhatsApp at +91 99090 72390 for current availability and details',
     },
     {
       label: 'Possession Target',

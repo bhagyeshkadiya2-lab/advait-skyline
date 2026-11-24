@@ -39,7 +39,7 @@ export default async function OneBhkPage({
   const unit = PROJECT_DATA.residential.oneBhk;
   const waUrl = buildWhatsAppLink({
     phone: PROJECT_DATA.contact.whatsappLeadNumber,
-    message: 'Hello, I am interested in the 1 BHK flats (511 sq. ft. carpet) at Advait Skyline, Naroli. Please share current pricing and payment plan details.',
+    message: 'Hello, I am interested in the 1 BHK flats (511 sq. ft. carpet) at Advait Skyline, Naroli. Please share current availability and booking details.',
     sourceRef: '1bhk-page',
   });
 
@@ -62,7 +62,7 @@ export default async function OneBhkPage({
     },
     {
       question: 'What is the price of a 1 BHK flat at Advait Skyline?',
-      answer: 'Advait Skyline offers 1 BHK homes positioned at affordable prices. Interested homebuyers can obtain the developer-direct price quote, floor-wise cost breakdown, and approved payment milestones by contacting the sales team on WhatsApp at +91 99090 72390.',
+      answer: 'Advait Skyline offers 1 BHK homes positioned at affordable prices. Interested homebuyers can obtain developer-direct unit details, floor-wise availability, and booking information by contacting the sales team on WhatsApp at +91 99090 72390.',
     },
     {
       question: 'How do I schedule a personal site visit to view the 1 BHK layout?',

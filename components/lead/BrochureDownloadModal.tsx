@@ -231,7 +231,7 @@ export function BrochureDownloadModal({
   };
 
   const waRedirectUrl = `https://wa.me/${SITE_CONFIG.contact.whatsappClean}?text=${encodeURIComponent(
-    `Hello Dhanasvi Infra, I just downloaded the official 25-page Advait Skyline brochure for ${configuration.toUpperCase()}.\nPlease share the current price sheet and payment plans.`
+    `Hello Dhanasvi Infra, I just downloaded the official 25-page Advait Skyline brochure for ${configuration.toUpperCase()}.\nPlease share the current unit availability and details.`
   )}`;
 
   return (

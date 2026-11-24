@@ -19,7 +19,7 @@ export async function generateMetadata({
     path: '/guides/rera-property-guide',
     customTitle: 'RERA Property Guide: Due Diligence in Dadra & Nagar Haveli',
     customDescription:
-      'Understanding RERA compliance in Dadra & Nagar Haveli: how to check sanctioned carpet area, escrow accounts, milestone schedules, and RERA registration PM3000002600013.',
+      'Understanding RERA compliance in Dadra & Nagar Haveli: how to check sanctioned carpet area, escrow accounts, construction stages, and RERA registration PM3000002600013.',
   });
 }
 

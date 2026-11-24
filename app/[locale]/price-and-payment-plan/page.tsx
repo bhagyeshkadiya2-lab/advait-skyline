@@ -22,9 +22,9 @@ export async function generateMetadata({
   return createPageMetadata({
     locale,
     path: '/price-and-payment-plan',
-    customTitle: 'Affordable Price & Payment Plan | Advait Skyline Naroli–Silvassa',
+    customTitle: 'Affordable Housing & Home Loan Estimates | Advait Skyline',
     customDescription:
-      'Affordable 1 & 2 BHK flats (575 & 652 sq. ft. built-up) at Advait Skyline, Naroli. Transparent payment milestones, individual parking, and latest prices on WhatsApp.',
+      'Explore affordable 1 & 2 BHK flats (575 & 652 sq. ft. built-up) at Advait Skyline, Naroli near Silvassa. Individual parking, home loan EMI calculator, and verified banking assistance.',
   });
 }
 
@@ -38,45 +38,32 @@ export default async function PriceAndPaymentPlanPage({
 
   const waUrl = buildWhatsAppLink({
     phone: SITE_CONFIG.contact.whatsappNumber,
-    message: 'Hello, I would like to receive the official Price Sheet and Construction-Linked Payment Plan for Advait Skyline.',
+    message: 'Hello, I would like to inquire about unit availability and booking at Advait Skyline.',
     sourceRef: 'price-and-payment-plan-page',
   });
 
   const wa1BhkUrl = buildWhatsAppLink({
     phone: SITE_CONFIG.contact.whatsappNumber,
-    message: 'Hello, I am interested in the 1 BHK flat (575 sq. ft. built-up) at Advait Skyline. Please share latest pricing and payment plan.',
+    message: 'Hello, I am interested in the 1 BHK flat (575 sq. ft. built-up) at Advait Skyline. Please share current availability and booking details.',
     sourceRef: 'price-page-1bhk',
   });
 
   const wa2BhkUrl = buildWhatsAppLink({
     phone: SITE_CONFIG.contact.whatsappNumber,
-    message: 'Hello, I am interested in the 2 BHK flat (652 sq. ft. built-up) at Advait Skyline. Please share latest pricing and payment plan.',
+    message: 'Hello, I am interested in the 2 BHK flat (652 sq. ft. built-up) at Advait Skyline. Please share current availability and booking details.',
     sourceRef: 'price-page-2bhk',
   });
 
   const waCommUrl = buildWhatsAppLink({
     phone: SITE_CONFIG.contact.whatsappNumber,
-    message: 'Hello, I am interested in commercial retail shops / offices at Advait Skyline. Please share commercial pricing and floor plans.',
+    message: 'Hello, I am interested in commercial retail shops / offices at Advait Skyline. Please share commercial availability and floor plans.',
     sourceRef: 'price-page-commercial',
   });
 
-  const milestones = [
-    { stage: '1. Booking & Expression of Interest', percentage: '10%', desc: 'Initial booking token upon flat selection and allotment confirmation.' },
-    { stage: '2. Agreement for Sale (RERA Registration)', percentage: '10%', desc: 'Upon completion of plinth and formal execution of registered sale agreement.' },
-    { stage: '3. Structural Slabs (G+14 Progression)', percentage: '45%', desc: 'Disbursed in transparent installments upon completion of successive residential slabs.' },
-    { stage: '4. Walls, Plaster & Plumbing', percentage: '15%', desc: 'Upon completion of internal brick masonry, external plaster, and plumbing rough-ins.' },
-    { stage: '5. Flooring, Electrics & External Paint', percentage: '15%', desc: 'Upon laying vitrified tiles, electrical wiring, sanitary fixtures, and final paint.' },
-    { stage: '6. Notice of Possession & Handover', percentage: '5%', desc: 'Final balance due on delivery of keys and possession notice under RERA rules.' },
-  ];
-
   const pricingFaqs = [
     {
-      question: 'What is the price of flats in Advait Skyline?',
-      answer: 'Advait Skyline offers 1 BHK and 2 BHK homes positioned at affordable prices. Contact the official sales team at +91 99090 72390 on WhatsApp for the latest selling price, availability, payment terms and applicable statutory charges.',
-    },
-    {
-      question: 'What payment plans are offered for Advait Skyline?',
-      answer: 'We provide a RERA-compliant Construction-Linked Payment (CLP) plan, where payments are linked directly to verified on-site structural milestones and slab completion.',
+      question: 'How can I inquire about unit availability at Advait Skyline?',
+      answer: 'Advait Skyline offers 1 BHK and 2 BHK homes positioned at affordable prices. Contact the official sales team at +91 99090 72390 on WhatsApp for current availability, floor rise, orientation, and booking details.',
     },
     {
       question: 'Which banks provide home loan approvals for Advait Skyline?',
@@ -85,6 +72,10 @@ export default async function PriceAndPaymentPlanPage({
     {
       question: 'Are there any hidden costs beyond the published price sheet?',
       answer: 'No. Dhanasvi Infra maintains a strict policy of 100% price transparency. Statutory charges (GST, stamp duty, registration fees, and electricity meter connection) are itemized clearly.',
+    },
+    {
+      question: 'Is individual parking included with each flat?',
+      answer: 'Yes, individual parking is provided across the project subject to allocation terms and registered agreement specifications.',
     },
   ];
 
@@ -95,7 +86,7 @@ export default async function PriceAndPaymentPlanPage({
         type="faq"
         breadcrumbs={[
           { name: 'Home', item: '/' },
-          { name: 'Price & Payment Plan', item: '/price-and-payment-plan' },
+          { name: 'Pricing & Home Loan', item: '/price-and-payment-plan' },
         ]}
       />
 
@@ -109,11 +100,11 @@ export default async function PriceAndPaymentPlanPage({
           </div>
 
           <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-white leading-[1.08] max-w-4xl">
-            Affordable Price &amp; <span className="text-gold-gradient">Payment Plans</span>
+            Affordable Housing &amp; <span className="text-gold-gradient">Home Loan Estimates</span>
           </h1>
 
           <p className="font-sans text-base sm:text-xl text-[#EADFCB]/85 max-w-3xl leading-relaxed">
-            Advait Skyline offers affordable 1 &amp; 2 BHK homes with 575 and 652 sq. ft. built-up area on Naroli–Silvassa Main Road, 200 m from Naroli–Bhilad Checkpost. Transparent construction-linked milestones, individual parking, and banking assistance across 328 units (possession target before March 2028).
+            Advait Skyline offers affordable 1 &amp; 2 BHK homes with 575 and 652 sq. ft. built-up area on Naroli–Silvassa Main Road, 200 m from Naroli–Bhilad Checkpost. Individual parking, 39+ lifestyle amenities, and banking assistance across 328 units (possession target before March 2028).
           </p>
 
           <div className="flex flex-wrap items-center gap-4 pt-4">
@@ -254,39 +245,6 @@ export default async function PriceAndPaymentPlanPage({
           <EmiCalculator />
         </section>
 
-        {/* Milestone Schedule */}
-        <section className="space-y-6">
-          <div className="space-y-2">
-            <span className="text-xs uppercase font-sans tracking-widest text-[#7B4F2E] font-bold">
-              Construction-Linked Plan
-            </span>
-            <h2 className="font-display text-2xl sm:text-4xl font-bold text-[#1E130C]">
-              Standard Payment Milestone Schedule
-            </h2>
-          </div>
-
-          <div className="overflow-x-auto rounded-xl border border-[#7B4F2E]/20 bg-white shadow-sm">
-            <table className="w-full text-left border-collapse text-xs sm:text-sm font-sans">
-              <thead>
-                <tr className="bg-[#1E130C] text-[#F2D27A] border-b border-[#7B4F2E]/30">
-                  <th scope="col" className="py-3.5 px-4 sm:px-6 font-bold w-1/3">Milestone Stage</th>
-                  <th scope="col" className="py-3.5 px-4 font-bold w-1/6">Installment</th>
-                  <th scope="col" className="py-3.5 px-4 sm:px-6 font-bold w-1/2">Milestone Description</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-[#7B4F2E]/10 text-[#2A1F18]/85">
-                {milestones.map((m, idx) => (
-                  <tr key={idx} className="hover:bg-[#FBF8F2] transition-colors">
-                    <td className="py-3 px-4 sm:px-6 font-semibold text-[#1E130C]">{m.stage}</td>
-                    <td className="py-3 px-4 font-display font-bold text-[#7B4F2E]">{m.percentage}</td>
-                    <td className="py-3 px-4 sm:px-6 text-xs text-[#2A1F18]/70">{m.desc}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
-
         {/* Project Fact Sheet Embed */}
         <section>
           <ProjectFactSheet />
@@ -295,7 +253,7 @@ export default async function PriceAndPaymentPlanPage({
         {/* FAQs */}
         <section className="bg-white border border-[#7B4F2E]/20 rounded-2xl p-8 sm:p-12 shadow-sm space-y-6">
           <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#1E130C]">
-            Frequently Asked Questions — Price &amp; Payment Plan
+            Frequently Asked Questions — Affordable Housing &amp; Home Loan
           </h2>
           <div className="divide-y divide-[#7B4F2E]/15">
             {pricingFaqs.map((faq, idx) => (

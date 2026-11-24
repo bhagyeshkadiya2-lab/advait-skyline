@@ -214,7 +214,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/price-and-payment-plan" className="hover:text-[#F2D27A] transition-colors">
-                  Price & Payment Plan
+                  Pricing &amp; Home Loan
                 </Link>
               </li>
               <li>

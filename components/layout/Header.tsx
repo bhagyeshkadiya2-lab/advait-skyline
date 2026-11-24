@@ -277,7 +277,7 @@ export default function Header() {
                     </div>
                   </Link>
 
-                  {/* Price & Payment Plan Link */}
+                  {/* Pricing & Home Loan Link */}
                   <Link
                     href="/price-and-payment-plan"
                     className={`flex items-start gap-3 p-2.5 rounded-lg transition-all ${
@@ -291,10 +291,10 @@ export default function Header() {
                     </div>
                     <div className="flex flex-col">
                       <span className="text-sm font-semibold leading-tight">
-                        Price & Payment Plan
+                        Pricing &amp; Home Loan
                       </span>
                       <span className="text-[11px] text-[#EADFCB]/70 leading-normal mt-0.5">
-                        Construction-linked milestones & sheet
+                        EMI calculator &amp; bank assistance
                       </span>
                     </div>
                   </Link>
@@ -596,8 +596,8 @@ export default function Header() {
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center justify-between py-1 text-sm text-[#EADFCB] hover:text-[#F2D27A]"
                   >
-                    <span>Price & Payment Plan</span>
-                    <span className="text-[10px] text-[#D9A21B]">Milestones</span>
+                    <span>Pricing &amp; Home Loan</span>
+                    <span className="text-[10px] text-[#D9A21B]">Estimates</span>
                   </Link>
                   <Link
                     href="/#sample-flat-tour"
