@@ -41,6 +41,9 @@ export interface UnitLayout {
   plan2DPath: string;
 }
 
+// TODO(FACT): Replace with official Google Business Profile shortlink once verified by owner
+export const GBP_MAPS_URL = 'https://maps.google.com/?q=20.2798943,72.920547';
+
 export const PROJECT_DATA = {
   identity: {
     name: 'Advait Skyline',
@@ -49,11 +52,19 @@ export const PROJECT_DATA = {
     tagline: 'Elevate Your Everyday',
     developerTagline: 'Where Quality Meets Trust',
     projectType: 'Residential & Commercial Mixed Landmark',
-    structure: 'G+14 Floors, 3 Towers, Ground Floor Retail & Otta, 1st Floor Commercial, 2nd Floor Offices, Residential above',
+    // TODO(FACT): Confirm whether "three towers, each G+14" or "single G+14 tower"
+    structure: 'G+14 Floors, Ground Floor Retail & Otta, 1st Floor Commercial, 2nd Floor Offices, Residential above',
+    totalTowers: '{FILL_TOWERS}', // TODO(FACT): Total towers count (e.g. 3 towers or 1 tower with 3 wings)
+    totalUnits: '{FILL_UNITS}', // TODO(FACT): Total residential units count
     reraNumber: 'PM3000002600013',
-    reraAuthorityName: 'MAHA RERA (as cited in brochure — pending official portal verification)',
+    // TODO(FACT): confirm authority label, do not write MAHA RERA unless owner confirms
+    reraAuthorityName: 'RERA Registered (PM3000002600013)',
     reraPendingVerification: true,
-    possessionNote: 'Under construction. Delivery timeline as per registered agreement.',
+    possessionDate: '{FILL_POSSESSION}', // TODO(FACT): Official RERA completion/possession month & year
+    possessionNote: 'Under construction. Delivery timeline as per registered RERA agreement.',
+    startingPrice1BHK: '{FILL_PRICE_1BHK}', // TODO(FACT): Starting price for 1 BHK (e.g. ₹XX Lakhs)
+    startingPrice2BHK: '{FILL_PRICE_2BHK}', // TODO(FACT): Starting price for 2 BHK (e.g. ₹XX Lakhs)
+    parkingAllocation: '{FILL_PARKING}', // TODO(FACT): Stilt/basement covered and open parking spaces count
     founderFace: {
       name: 'Dr. Divyraj Rathod',
       title: 'Founder & Visionary',
@@ -73,7 +84,7 @@ export const PROJECT_DATA = {
     geoCoordinates: {
       latitude: 20.2798943,
       longitude: 72.920547,
-      googleMapsPlaceUrl: 'https://maps.app.goo.gl/AdvaitSkylineNaroli',
+      googleMapsPlaceUrl: GBP_MAPS_URL,
       embedIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.6657930800615!2d72.920547!3d20.2798943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0cd00330b9017%3A0x8c8df8922e650cec!2sAdvait%20Skyline!5e0!3m2!1sen!2sin!4v1717657200000!5m2!1sen!2sin',
     },
   },

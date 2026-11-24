@@ -15,6 +15,9 @@ import {
   Building2,
   Phone,
   MapPin,
+  Banknote,
+  Train,
+  BookOpen,
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/routing';
@@ -61,7 +64,11 @@ export default function Header() {
   const isResidencesActive =
     pathname === '/1-bhk-flats-naroli' ||
     pathname === '/2-bhk-flats-naroli' ||
-    pathname === '/floor-plans';
+    pathname === '/floor-plans' ||
+    pathname === '/flats-in-silvassa' ||
+    pathname === '/flats-near-silvassa' ||
+    pathname === '/flats-near-bhilad-vapi' ||
+    pathname === '/price-and-payment-plan';
 
   const waLeadUrl = buildWhatsAppLink({
     phone: PROJECT_DATA.contact.whatsappLeadNumber,
@@ -222,6 +229,50 @@ export default function Header() {
                     </div>
                   </Link>
 
+                  {/* Flats Near Bhilad & Vapi Link */}
+                  <Link
+                    href="/flats-near-bhilad-vapi"
+                    className={`flex items-start gap-3 p-2.5 rounded-lg transition-all ${
+                      pathname === '/flats-near-bhilad-vapi'
+                        ? 'bg-[#2E1E14] border border-[#D9A21B]/40 text-[#F2D27A]'
+                        : 'hover:bg-[#2A1B12] text-[#EADFCB] hover:text-[#F2D27A]'
+                    }`}
+                  >
+                    <div className="p-2 rounded-md bg-[#382317] border border-[#D9A21B]/30 text-[#F2D27A] shrink-0 mt-0.5">
+                      <Train size={15} />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-sm font-semibold leading-tight">
+                        Flats Near Bhilad & Vapi
+                      </span>
+                      <span className="text-[11px] text-[#EADFCB]/70 leading-normal mt-0.5">
+                        5.1 km to Bhilad Stn · Industrial Transit
+                      </span>
+                    </div>
+                  </Link>
+
+                  {/* Price & Payment Plan Link */}
+                  <Link
+                    href="/price-and-payment-plan"
+                    className={`flex items-start gap-3 p-2.5 rounded-lg transition-all ${
+                      pathname === '/price-and-payment-plan'
+                        ? 'bg-[#2E1E14] border border-[#D9A21B]/40 text-[#F2D27A]'
+                        : 'hover:bg-[#2A1B12] text-[#EADFCB] hover:text-[#F2D27A]'
+                    }`}
+                  >
+                    <div className="p-2 rounded-md bg-[#382317] border border-[#D9A21B]/30 text-[#F2D27A] shrink-0 mt-0.5">
+                      <Banknote size={15} />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-sm font-semibold leading-tight">
+                        Price & Payment Plan
+                      </span>
+                      <span className="text-[11px] text-[#EADFCB]/70 leading-normal mt-0.5">
+                        Construction-linked milestones & sheet
+                      </span>
+                    </div>
+                  </Link>
+
                   <div className="h-[1px] bg-[#7B4F2E]/40 my-1" />
 
                   {/* Floor Plans Link */}
@@ -330,6 +381,21 @@ export default function Header() {
           >
             <span>{t('gallery')}</span>
             {pathname === '/gallery' && (
+              <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-[#D9A21B] via-[#F2D27A] to-[#D9A21B] rounded-full shadow-[0_0_8px_rgba(217,162,27,0.7)]" />
+            )}
+          </Link>
+
+          {/* Blog & Real Estate Insights Link */}
+          <Link
+            href="/blog"
+            className={`h-9 flex items-center px-1 text-xs xl:text-sm font-sans tracking-wide transition-colors relative whitespace-nowrap ${
+              pathname.startsWith('/blog')
+                ? 'text-[#F2D27A] font-semibold'
+                : 'text-[#EADFCB]/85 hover:text-[#F2D27A]'
+            }`}
+          >
+            <span>Blog</span>
+            {pathname.startsWith('/blog') && (
               <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-[#D9A21B] via-[#F2D27A] to-[#D9A21B] rounded-full shadow-[0_0_8px_rgba(217,162,27,0.7)]" />
             )}
           </Link>
@@ -454,12 +520,28 @@ export default function Header() {
                     <span className="text-[10px] text-[#D9A21B] font-mono">~10 km</span>
                   </Link>
                   <Link
+                    href="/flats-near-bhilad-vapi"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center justify-between py-1 text-sm text-[#EADFCB] hover:text-[#F2D27A]"
+                  >
+                    <span>Flats Near Bhilad & Vapi</span>
+                    <span className="text-[10px] text-[#D9A21B] font-mono">5.1 km</span>
+                  </Link>
+                  <Link
                     href="/floor-plans"
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center justify-between py-1 text-sm text-[#EADFCB] hover:text-[#F2D27A]"
                   >
                     <span>{t('floorPlans')}</span>
                     <span className="text-[10px] text-[#D9A21B]">2D & 3D</span>
+                  </Link>
+                  <Link
+                    href="/price-and-payment-plan"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center justify-between py-1 text-sm text-[#EADFCB] hover:text-[#F2D27A]"
+                  >
+                    <span>Price & Payment Plan</span>
+                    <span className="text-[10px] text-[#D9A21B]">Milestones</span>
                   </Link>
                   <Link
                     href="/#sample-flat-tour"
@@ -510,6 +592,14 @@ export default function Header() {
                 className="font-display text-lg py-1.5 text-[#EADFCB] hover:text-[#F2D27A]"
               >
                 {t('gallery')}
+              </Link>
+
+              <Link
+                href="/blog"
+                onClick={() => setMobileMenuOpen(false)}
+                className="font-display text-lg py-1.5 text-[#EADFCB] hover:text-[#F2D27A]"
+              >
+                Blog & Market Insights
               </Link>
 
               <Link

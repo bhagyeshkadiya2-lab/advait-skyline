@@ -19,44 +19,44 @@ interface MetaInfo {
 const ROUTE_METADATA: Record<string, Record<string, MetaInfo>> = {
   '/': {
     en: {
-      title: 'Advait Skyline | 1 & 2 BHK Flats in Naroli–Bhilad',
-      description: 'Advait Skyline by Dhanasvi Infra: 1 & 2 BHK flats and shops at Naroli–Bhilad Checkpost, near Silvassa. 39+ amenities, floor plans, location, site visit.',
+      title: 'Flats in Naroli, Silvassa | 1 & 2 BHK – Advait Skyline',
+      description: '1 & 2 BHK flats (511 & 573 sq ft carpet) on Naroli–Silvassa road (DNH), 200 m from Bhilad checkpost. 39+ amenities by Dhanasvi Infra. Book a site visit today.',
     },
     hi: {
-      title: 'Advait Skyline | नरोली–भिलाड में 1 और 2 BHK फ्लैट',
-      description: 'धनस्वी इन्फ्रा का अद्वैत स्काईलाइन: नरोली–भिलाड़ चेकपोस्ट, सिलवासा के पास 1 व 2 BHK फ्लैट और दुकानें। 39+ सुविधाएं, साइट विजिट बुक करें।',
+      title: 'नरोली, सिलवासा में 1 व 2 BHK फ्लैट्स – अद्वैत स्काईलाइन',
+      description: 'नरोली–सिलवासा मुख्य मार्ग (दादरा एवं नगर हवेली) पर 1 व 2 बीएचके फ्लैट्स (511 व 573 वर्ग फुट), चेकपोस्ट से 200 मीटर। धनस्वी इन्फ्रा द्वारा 39+ सुविधाएं।',
     },
     gu: {
-      title: 'Advait Skyline | નરોલી–ભિલાડમાં 1 અને 2 BHK ફ્લેટ',
-      description: 'ધનસ્વી ઇન્ફ્રાનું અદ્વૈત સ્કાયલાઇન: નરોલી–ભિલાડ ચેકપોસ્ટ, સેલવાસ નજીક 1 અને 2 BHK ફ્લેટ અને દુકાનો. 39+ સુવિધાઓ, સાઇટ વિઝિટ બુક કરો.',
+      title: 'નરોલી, સેલવાસમાં 1 અને 2 BHK ફ્લેટ્સ – અદ્વૈત સ્કાયલાઇન',
+      description: 'નરોલી–સેલવાસ મેઇન રોડ (દાદરા અને નગર હવેલી) પર 1 અને 2 BHK ફ્લેટ્સ (511 અને 573 ચોરસ ફૂટ), ચેકપોસ્ટથી 200 મીટર. ધનસ્વી ઇન્ફ્રા દ્વારા 39+ સુવિધાઓ.',
     },
   },
   '/1-bhk-flats-naroli': {
     en: {
-      title: '1 BHK Flats in Naroli–Bhilad | 511 Sq. Ft. at Advait Skyline',
-      description: '511 sq. ft. carpet 1 BHK luxury apartments at Naroli–Bhilad Checkpost, Dadra & Nagar Haveli. 2 bathrooms, private balcony, modern kitchen, 39+ lifestyle amenities.',
+      title: '1 BHK Flat in Naroli, Silvassa – 511 sq ft | Advait Skyline',
+      description: '511 sq ft carpet 1 BHK flats on Naroli–Silvassa road near Bhilad checkpost, DNH. 2 bathrooms, private balcony, modern layout, 39+ lifestyle amenities.',
     },
     hi: {
-      title: 'नरोली–भिलाड़ में 1 बीएचके फ्लैट्स | 511 वर्ग फुट — अद्वैत स्काईलाइन',
-      description: '511 वर्ग फुट कारपेट 1 बीएचके लक्जरी अपार्टमेंट्स नरोली–भिलाड़ चेकपोस्ट के पास। 2 बाथरूम, प्राइवेट बालकनी, आधुनिक किचन और 39+ एमिनिटीज।',
+      title: '1 BHK Flat in Naroli, Silvassa – 511 sq ft | Advait Skyline',
+      description: '511 वर्ग फुट कारपेट 1 बीएचके फ्लैट्स नरोली–सिलवासा रोड, चेकपोस्ट के पास (DNH)। 2 बाथरूम, बालकनी और 39+ आधुनिक सुविधाएं।',
     },
     gu: {
-      title: 'નરોલી–ભિલાડ ખાતે 1 BHK ફ્લેટ્સ | 511 ચો.ફૂટ — અદ્વૈત સ્કાયલાઇન',
-      description: '511 ચોરસ ફૂટ કાર્પેટ 1 BHK લક્ઝરી એપાર્ટમેન્ટ્સ નરોલી–ભિલાડ ચેકપોસ્ટ નજીક. 2 બાથરૂમ, પ્રાઇવેટ બાલ્કની, આધુનિક કિચન અને 39+ સુવિધાઓ.',
+      title: '1 BHK Flat in Naroli, Silvassa – 511 sq ft | Advait Skyline',
+      description: '511 ચોરસ ફૂટ કાર્પેટ 1 BHK ફ્લેટ્સ નરોલી–સેલવાસ રોડ, ચેકપોસ્ટ પાસે (DNH). 2 બાથરૂમ, પ્રાઇવેટ બાલ્કની અને 39+ સુવિધાઓ.',
     },
   },
   '/2-bhk-flats-naroli': {
     en: {
-      title: '2 BHK Flats in Naroli–Bhilad | 573 Sq. Ft. Luxury Residences — Advait Skyline',
-      description: '573 sq. ft. carpet 2 BHK luxury residences on Naroli–Silvassa main road, 200m from Naroli–Bhilad Checkpost. 16ft living hall, 5\'6" sunset balcony, 2 bathrooms, 3 AC points.',
+      title: '2 BHK Flat in Naroli, Silvassa – 573 sq ft | Advait Skyline',
+      description: '573 sq ft carpet 2 BHK flats on Naroli–Silvassa road near Bhilad checkpost, DNH. 16ft living hall, 5\'6" sunset balcony, 2 bathrooms, 3 AC points.',
     },
     hi: {
-      title: 'नरोली–भिलाड़ में 2 बीएचके लक्जरी फ्लैट्स | 573 वर्ग फुट — अद्वैत स्काईलाइन',
-      description: '573 वर्ग फुट कारपेट 2 बीएचके लक्जरी फ्लैट्स नरोली–सिलवासा मेन रोड पर। 16 फुट का हॉल, 5\'6" चौड़ी बालकनी, 2 बाथरूम, 3 एसी पॉइंट्स।',
+      title: '2 BHK Flat in Naroli, Silvassa – 573 sq ft | Advait Skyline',
+      description: '573 वर्ग फुट कारपेट 2 बीएचके फ्लैट्स नरोली–सिलवासा मेन रोड (DNH)। 16 फुट का हॉल, 5\'6" चौड़ी बालकनी, 2 बाथरूम, 3 एसी पॉइंट्स।',
     },
     gu: {
-      title: 'નરોલી–ભિલાડ ખાતે 2 BHK લક્ઝરી ફ્લેટ્સ | 573 ચો.ફૂટ — અદ્વૈત સ્કાયલાઇન',
-      description: '573 ચોરસ ફૂટ કાર્પેટ 2 BHK લક્ઝરી રેસિડેન્સ નરોલી–સેલવાસ મેઇન રોડ પર. 16 ફૂટ લિવિંગ હોલ, 5\'6" બાલ્કની, 2 બાથરૂમ, 3 એસી પોઇન્ટ્સ.',
+      title: '2 BHK Flat in Naroli, Silvassa – 573 sq ft | Advait Skyline',
+      description: '573 ચોરસ ફૂટ કાર્પેટ 2 BHK ફ્લેટ્સ નરોલી–સેલવાસ મેઇન રોડ (DNH). 16 ફૂટ લિવિંગ હોલ, 5\'6" બાલ્કની, 2 બાથરૂમ, 3 એસી પોઇન્ટ્સ.',
     },
   },
   '/flats-near-silvassa': {
@@ -71,6 +71,62 @@ const ROUTE_METADATA: Record<string, Record<string, MetaInfo>> = {
     gu: {
       title: 'સેલવાસ નજીક ફ્લેટ્સ – નરોલી રોડ | અદ્વૈત સ્કાયલાઇન',
       description: 'સેલવાસ નજીક નરોલી–સેલવાસ મેઇન રોડ પર 1 અને 2 BHK ફ્લેટ્સ (~10 કિમી). ધનસ્વી ઇન્ફ્રા દ્વારા G+14 ટાવર, 39+ સુવિધાઓ અને ઝડપી કનેક્ટિવિટી.',
+    },
+  },
+  '/flats-in-silvassa': {
+    en: {
+      title: "Flats in Silvassa & Naroli | Buyer's Guide – Advait Skyline",
+      description: "Buyer's guide for flats in Silvassa and Naroli, DNH. Compare central Silvassa vs Naroli road: commute times, property rates, amenities, and RERA verified homes.",
+    },
+    hi: {
+      title: 'सिलवासा व नरोली में फ्लैट्स | खरीदार गाइड — अद्वैत स्काईलाइन',
+      description: 'सिलवासा व नरोली (दादरा एवं नगर हवेली) में फ्लैट्स खरीदने की सम्पूर्ण गाइड। सेंट्रल सिलवासा बनाम नरोली मुख्य मार्ग: कम्यूट, सुविधाएं और रेरा नियम।',
+    },
+    gu: {
+      title: 'સેલવાસ અને નરોલીમાં ફ્લેટ્સ | બાયર્સ ગાઇડ — અદ્વૈત સ્કાયલાઇન',
+      description: 'સેલવાસ અને નરોલીમાં ફ્લેટ ખરીદવા માટેની વિસ્તૃત માહિતી. સેલવાસ શહેર વિરુદ્ધ નરોલી હાઇવે: મુસાફરીનો સમય, સુવિધાઓ અને રેરા માન્ય ઘર.',
+    },
+  },
+  '/flats-near-bhilad-vapi': {
+    en: {
+      title: 'Flats Near Bhilad & Vapi | Advait Skyline – 200m from Checkpost',
+      description: '1 & 2 BHK flats near Bhilad station (5.1 km) and Vapi (16 km). G+14 development at Naroli–Bhilad Checkpost, DNH with 39+ amenities for industrial commuters.',
+    },
+    hi: {
+      title: 'भिलाड़ व वापी के पास फ्लैट्स | अद्वैत स्काईलाइन चेकपोस्ट',
+      description: 'भिलाड़ स्टेशन (5.1 किमी) और वापी (16 किमी) के पास 1 व 2 बीएचके फ्लैट्स। नरोली–भिलाड़ चेकपोस्ट पर 39+ सुविधाओं से युक्त G+14 प्रोजेक्ट।',
+    },
+    gu: {
+      title: 'ભિલાડ અને વાપી નજીક ફ્લેટ્સ | અદ્વૈત સ્કાયલાઇન ચેકપોસ્ટ',
+      description: 'ભિલાડ સ્ટેશન (5.1 કિમી) અને વાપી (16 કિમી) નજીક 1 અને 2 BHK ફ્લેટ્સ. નરોલી–ભિલાડ ચેકપોસ્ટ પર 39+ સુવિધાઓ સાથેનું આધુનિક G+14 આવાસ.',
+    },
+  },
+  '/price-and-payment-plan': {
+    en: {
+      title: 'Price & Payment Plan | Advait Skyline Naroli–Silvassa',
+      description: 'Transparent pricing structure and flexible payment milestones for 1 & 2 BHK flats at Advait Skyline, Naroli. Starting from {price} onwards. Inquire on WhatsApp.',
+    },
+    hi: {
+      title: 'मूल्य एवं भुगतान योजना | अद्वैत स्काईलाइन नरोली–सिलवासा',
+      description: 'अद्वैत स्काईलाइन नरोली में 1 व 2 बीएचके फ्लैट्स की पारदर्शी मूल्य सूची व निर्माण आधारित किश्त योजना। {price} से शुरू। व्हाट्सएप पर विवरण लें।',
+    },
+    gu: {
+      title: 'કિંમત અને ચુકવણી યોજના | અદ્વૈત સ્કાયલાઇન નરોલી–સેલવાસ',
+      description: 'અદ્વૈત સ્કાયલાઇનમાં 1 અને 2 BHK ફ્લેટ્સ માટે પારદર્શક પ્રાઇસ લિસ્ટ અને કન્સ્ટ્રક્શન-લિંક્ડ પેમેન્ટ પ્લાન. {price} થી શરૂ. વોટ્સએપ પર મેળવો.',
+    },
+  },
+  '/blog': {
+    en: {
+      title: 'Real Estate Blog & Market Insights | Advait Skyline Naroli',
+      description: 'Expert property guides, RERA compliance insights, home loan tips, and regional growth updates for homebuyers in Naroli, Bhilad, and Silvassa.',
+    },
+    hi: {
+      title: 'रियल एस्टेट ब्लॉग एवं प्रॉपर्टी गाइड | अद्वैत स्काईलाइन',
+      description: 'नरोली, भिलाड़ और सिलवासा में घर खरीदारों के लिए उपयोगी लेख, रेरा नियम, होम लोन टिप्स और रियल एस्टेट बाजार के विश्लेषण।',
+    },
+    gu: {
+      title: 'રિયલ એસ્ટેટ બ્લોગ અને માર્કેટ ઇનસાઇટ્સ | અદ્વૈત સ્કાયલાઇન',
+      description: 'નરોલી, ભિલાડ અને સેલવાસમાં ફ્લેટ ખરીદનારાઓ માટે વિગતવાર માર્ગદર્શિકા, રેરા નિયમો, હોમ લોન માહિતી અને બજાર વિશ્લેષણ.',
     },
   },
   '/commercial-shops-naroli': {

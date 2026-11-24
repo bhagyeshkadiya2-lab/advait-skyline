@@ -220,7 +220,7 @@ export default function HeroStage() {
             <Image
               key={heroLighting}
               src={heroLighting === 'day' ? '/hero-day.webp' : '/hero-night.webp'}
-              alt="Advait Skyline G+14 Skyscraper Architectural Landmark at Naroli–Bhilad"
+              alt="Advait Skyline G+14 Architectural Landmark at Naroli–Bhilad"
               fill
               priority
               fetchPriority="high"
@@ -260,12 +260,12 @@ export default function HeroStage() {
 
             {/* Architectural Specs Badge */}
             <div className="absolute top-4 left-4 z-20 px-3 py-1 rounded-full bg-[#1E130C]/85 backdrop-blur-md border border-white/10 text-[10px] uppercase font-sans tracking-widest text-[#F2D27A] font-bold pointer-events-none">
-              G+14 Skyscraper
+              G+14 Landmark
             </div>
 
             {/* Artistic Rendering Watermark */}
             <div className="absolute bottom-3 right-3 px-2.5 py-1 rounded bg-[#1E130C]/80 backdrop-blur-sm border border-white/10 text-[10px] uppercase font-sans tracking-widest text-[#EADFCB]/80 pointer-events-none">
-              Verified 3D Architectural Render
+              3D Architectural Walkthrough
             </div>
           </motion.div>
 

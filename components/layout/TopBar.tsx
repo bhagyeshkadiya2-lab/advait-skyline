@@ -32,7 +32,7 @@ export default function TopBar() {
         <div className="flex items-center gap-2 font-medium tracking-wide truncate">
           <ShieldCheck size={14} className="text-[#F2D27A] shrink-0" />
           <span className="truncate">
-            <strong className="text-[#F2D27A]">MAHA RERA: {PROJECT_DATA.identity.reraNumber}</strong> · Naroli–Bhilad Checkpost
+            <strong className="text-[#F2D27A]">RERA: {PROJECT_DATA.identity.reraNumber}</strong> · Naroli–Bhilad Checkpost
           </span>
         </div>
 

@@ -157,7 +157,54 @@ export default function JsonLd({
       },
     };
 
-    schemas.push(organizationSchema, projectSchema, webSiteSchema);
+    const realEstateAgentSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'RealEstateAgent',
+      '@id': `${BASE_URL}/#realestateagent`,
+      name: 'Advait Skyline Sales & Experience Centre',
+      image: `${BASE_URL}/renders/advait-skyline-three-towers-day.jpg`,
+      url: BASE_URL,
+      telephone: PROJECT_DATA.contact.whatsappLeadNumber,
+      email: PROJECT_DATA.contact.email,
+      priceRange: '₹₹',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: PROJECT_DATA.contact.siteAddress,
+        addressLocality: 'Naroli',
+        addressRegion: 'Dadra and Nagar Haveli',
+        postalCode: '396235',
+        addressCountry: 'IN',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: PROJECT_DATA.contact.geoCoordinates.latitude,
+        longitude: PROJECT_DATA.contact.geoCoordinates.longitude,
+      },
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+          opens: '09:30',
+          closes: '19:00',
+        },
+      ],
+    };
+
+    const videoWalkthroughSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'VideoObject',
+      name: 'Advait Skyline 3D Architectural Walkthrough Video Reels',
+      description: 'Photorealistic 3D virtual walkthrough of Advait Skyline residential and commercial landmark on Naroli–Silvassa main road.',
+      thumbnailUrl: [
+        `${BASE_URL}/renders/advait-skyline-three-towers-day.jpg`,
+        `${BASE_URL}/hero-bg.jpg`,
+      ],
+      uploadDate: '2026-01-15T08:00:00+05:30', // TODO(FACT): Confirm official video creation/upload date
+      contentUrl: `${BASE_URL}/videos/3d/grand-entrance-lobby.mp4`,
+      embedUrl: `${BASE_URL}/#3d-videos`,
+    };
+
+    schemas.push(organizationSchema, projectSchema, webSiteSchema, realEstateAgentSchema, videoWalkthroughSchema);
   }
 
   // Home FAQ schema

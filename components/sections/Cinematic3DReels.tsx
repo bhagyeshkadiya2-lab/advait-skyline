@@ -36,7 +36,7 @@ const REELS: VideoReel[] = [
   {
     id: 'tower-elevation',
     category: 'tower',
-    title: 'G+14 Skyscraper Elevation & Sunset',
+    title: 'G+14 Landmark Elevation & Sunset',
     subtitle: 'Naroli–Silvassa Main Road Landmark',
     description:
       'Sweeping 3D drone simulation showcasing the modern G+14 architecture, sunset reflections, double-height ground commercial spaces, and panoramic valley views.',
@@ -294,6 +294,8 @@ export default function Cinematic3DReels() {
                 ref={videoRef}
                 key={activeReel.videoSrc}
                 src={activeReel.videoSrc}
+                poster="/renders/advait-skyline-three-towers-day.jpg"
+                preload="metadata"
                 autoPlay
                 loop
                 muted={isMuted}

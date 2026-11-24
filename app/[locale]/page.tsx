@@ -26,6 +26,7 @@ import FloorPlansSection from '@/components/sections/FloorPlansSection';
 import SpecificationsSection from '@/components/sections/SpecificationsSection';
 import FaqSection from '@/components/sections/FaqSection';
 import FinalCtaSection from '@/components/sections/FinalCtaSection';
+import ProjectFactSheet from '@/components/sections/ProjectFactSheet';
 
 export default async function HomePage({
   params,
@@ -43,6 +44,11 @@ export default async function HomePage({
 
       {/* 2. Trust Highlights Slow Marquee */}
       <TrustBar />
+
+      {/* Semantic Project Fact Sheet at a Glance */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <ProjectFactSheet />
+      </div>
 
       {/* 3. 3D Architectural Cinematic Video Reels (High-Impact Visual Engagement) */}
       <Cinematic3DReels />

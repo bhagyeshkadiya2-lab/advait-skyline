@@ -1,12 +1,18 @@
 import { MetadataRoute } from 'next';
 import { BASE_URL } from '@/lib/seo';
+import { BLOG_POSTS } from '@/content/blog-posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const blogRoutes = BLOG_POSTS.map((post) => `/blog/${post.slug}`);
+
   const routes = [
     '',
     '/1-bhk-flats-naroli',
     '/2-bhk-flats-naroli',
+    '/flats-in-silvassa',
     '/flats-near-silvassa',
+    '/flats-near-bhilad-vapi',
+    '/price-and-payment-plan',
     '/amenities',
     '/floor-plans',
     '/commercial-shops-naroli',
@@ -15,6 +21,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/construction-updates',
     '/about-dhanasvi-infra',
     '/contact',
+    '/blog',
+    ...blogRoutes,
     '/guides',
     '/guides/buying-flat-in-naroli',
     '/guides/rera-property-guide',

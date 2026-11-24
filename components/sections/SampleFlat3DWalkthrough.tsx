@@ -361,7 +361,7 @@ export default function SampleFlat3DWalkthrough() {
                     alt={`${activeRoom.title} — ${activeAngle.label} at Advait Skyline`}
                     fill
                     sizes="(max-width: 1024px) 100vw, 66vw"
-                    priority
+                    loading="lazy"
                     className="object-cover object-center"
                   />
                 </motion.div>

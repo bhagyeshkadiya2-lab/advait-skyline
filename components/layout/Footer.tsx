@@ -50,6 +50,14 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Geographic Disambiguation Notice */}
+        <div className="py-4 border-b border-[#7B4F2E]/30 text-xs sm:text-sm font-sans text-[#EADFCB]/85 flex items-center gap-2">
+          <MapPin size={15} className="text-[#F2D27A] shrink-0" />
+          <span>
+            <strong>Location Clarification:</strong> Advait Skyline is in Naroli, near Silvassa, Dadra &amp; Nagar Haveli (not Narol, Ahmedabad).
+          </span>
+        </div>
+
         {/* 4-Column Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 py-16 border-b border-[#7B4F2E]/30">
           {/* Col 1: RERA Compliance */}
@@ -172,6 +180,21 @@ export default function Footer() {
               <li>
                 <Link href="/flats-near-silvassa" className="hover:text-[#F2D27A] transition-colors">
                   Flats Near Silvassa
+                </Link>
+              </li>
+              <li>
+                <Link href="/flats-near-bhilad-vapi" className="hover:text-[#F2D27A] transition-colors">
+                  Flats Near Bhilad & Vapi
+                </Link>
+              </li>
+              <li>
+                <Link href="/price-and-payment-plan" className="hover:text-[#F2D27A] transition-colors">
+                  Price & Payment Plan
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="hover:text-[#F2D27A] transition-colors">
+                  Real Estate Blog & Guides
                 </Link>
               </li>
               <li>

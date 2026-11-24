@@ -46,9 +46,9 @@
   },
   "hero": {
     "eyebrow": "Naroli–Silvassa Main Road · 200 m from Naroli–Bhilad Checkpost",
-    "h1Prefix": "1 & 2 BHK Flats and Commercial Shops in",
-    "h1Highlight": "Naroli–Bhilad",
-    "subheading": "A G+14 residential and commercial landmark with 39+ amenities.",
+    "h1Prefix": "1 & 2 BHK Flats in",
+    "h1Highlight": "Naroli, Silvassa (Dadra & Nagar Haveli)",
+    "subheading": "A G+14 residential and commercial landmark with 39+ amenities on Naroli–Silvassa main road. Advait Skyline is in Naroli, near Silvassa, Dadra & Nagar Haveli (not Narol, Ahmedabad).",
     "amenitiesChip": "Amenities",
     "amenitiesCount": "39+",
     "floorsChip": "Tower Height",
@@ -58,7 +58,7 @@
     "ctaWhatsApp": "Get Price on WhatsApp",
     "ctaVisit": "Book a Site Visit",
     "ctaBrochure": "Download Brochure",
-    "reraBadge": "MAHA RERA PM3000002600013"
+    "reraBadge": "RERA PM3000002600013"
   },
   "trustBar": {
     "rera": "RERA: PM3000002600013",
@@ -190,7 +190,7 @@
     "legalHeading": "Legal & Compliance",
     "privacyPolicy": "Privacy Policy",
     "termsDisclaimer": "Terms & Disclaimer",
-    "fullDisclaimer": "Disclaimer: Artistic Rendering — for information, presentation & guidance only. Specifications, amenities, layout plans, and dimensions shown on this website and in project collaterals are indicative and subject to change without prior notice as per competent authority guidelines. No guaranteed returns or flat pricing are published online. All rights reserved by Dhanasvi Infra."
+    "fullDisclaimer": "Disclaimer: Artistic Rendering — for information, presentation & guidance only. Specifications, amenities, layout plans, and dimensions shown on this website and in project collaterals are indicative and subject to change without prior notice as per competent authority guidelines. Starting from {price} onwards. Get the full price sheet on WhatsApp. Advait Skyline is in Naroli, near Silvassa, Dadra & Nagar Haveli (not Narol, Ahmedabad). All rights reserved by Dhanasvi Infra."
   },
   "whatsappMessages": {
     "default": "Hello, I am interested in Advait Skyline (Naroli). Please share details.",
