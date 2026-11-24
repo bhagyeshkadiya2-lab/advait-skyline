@@ -1,0 +1,325 @@
+Page,BlockIndex,Type,ID,Name,HasReviewsRatings,HasPriceOffers,Status
+en.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en.html,4,FAQPage,,,False,True,Valid
+en/1-bhk-flats-naroli.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/1-bhk-flats-naroli.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/1-bhk-flats-naroli.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/1-bhk-flats-naroli.html,4,Accommodation,,1 BHK Luxury Apartment — Advait Skyline,False,False,Valid
+en/1-bhk-flats-naroli.html,5,BreadcrumbList,,,False,False,Valid
+en/2-bhk-flats-naroli.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/2-bhk-flats-naroli.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/2-bhk-flats-naroli.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/2-bhk-flats-naroli.html,4,Accommodation,,2 BHK Luxury Residence — Advait Skyline,False,False,Valid
+en/2-bhk-flats-naroli.html,5,BreadcrumbList,,,False,False,Valid
+en/about-dhanasvi-infra.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/about-dhanasvi-infra.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/about-dhanasvi-infra.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/about-dhanasvi-infra.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/about-dhanasvi-infra.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/about-dhanasvi-infra.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/about-dhanasvi-infra.html,7,BreadcrumbList,,,False,False,Valid
+en/amenities.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/amenities.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/amenities.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/amenities.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/amenities.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/amenities.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/amenities.html,7,BreadcrumbList,,,False,False,Valid
+en/commercial-shops-naroli.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/commercial-shops-naroli.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/commercial-shops-naroli.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/commercial-shops-naroli.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/commercial-shops-naroli.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/commercial-shops-naroli.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/commercial-shops-naroli.html,7,BreadcrumbList,,,False,False,Valid
+en/construction-updates.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/construction-updates.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/construction-updates.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/construction-updates.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/construction-updates.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/construction-updates.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/construction-updates.html,7,BreadcrumbList,,,False,False,Valid
+en/contact.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/contact.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/contact.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/contact.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/contact.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/contact.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/contact.html,7,BreadcrumbList,,,False,False,Valid
+en/floor-plans.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/floor-plans.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/floor-plans.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/floor-plans.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/floor-plans.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/floor-plans.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/floor-plans.html,7,BreadcrumbList,,,False,False,Valid
+en/gallery.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/gallery.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/gallery.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/guides.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/guides.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/guides.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/guides.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/guides.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/guides.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/guides.html,7,BreadcrumbList,,,False,False,Valid
+en/guides/buying-flat-in-naroli.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/guides/buying-flat-in-naroli.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/guides/buying-flat-in-naroli.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/guides/buying-flat-in-naroli.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/guides/buying-flat-in-naroli.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/guides/buying-flat-in-naroli.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/guides/buying-flat-in-naroli.html,7,BreadcrumbList,,,False,False,Valid
+en/guides/home-loan-guide.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/guides/home-loan-guide.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/guides/home-loan-guide.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/guides/home-loan-guide.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/guides/home-loan-guide.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/guides/home-loan-guide.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/guides/home-loan-guide.html,7,BreadcrumbList,,,False,False,Valid
+en/guides/rera-property-guide.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/guides/rera-property-guide.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/guides/rera-property-guide.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/guides/rera-property-guide.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/guides/rera-property-guide.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/guides/rera-property-guide.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/guides/rera-property-guide.html,7,BreadcrumbList,,,False,False,Valid
+en/privacy-policy.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/privacy-policy.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/privacy-policy.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/privacy-policy.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/privacy-policy.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/privacy-policy.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/privacy-policy.html,7,BreadcrumbList,,,False,False,Valid
+en/project-location.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/project-location.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/project-location.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/project-location.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/project-location.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/project-location.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/project-location.html,7,BreadcrumbList,,,False,False,Valid
+en/terms-and-disclaimer.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/terms-and-disclaimer.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/terms-and-disclaimer.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/terms-and-disclaimer.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+en/terms-and-disclaimer.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+en/terms-and-disclaimer.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+en/terms-and-disclaimer.html,7,BreadcrumbList,,,False,False,Valid
+gu.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu.html,4,FAQPage,,,False,True,Valid
+gu/1-bhk-flats-naroli.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/1-bhk-flats-naroli.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/1-bhk-flats-naroli.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/1-bhk-flats-naroli.html,4,Accommodation,,1 BHK Luxury Apartment — Advait Skyline,False,False,Valid
+gu/1-bhk-flats-naroli.html,5,BreadcrumbList,,,False,False,Valid
+gu/2-bhk-flats-naroli.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/2-bhk-flats-naroli.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/2-bhk-flats-naroli.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/2-bhk-flats-naroli.html,4,Accommodation,,2 BHK Luxury Residence — Advait Skyline,False,False,Valid
+gu/2-bhk-flats-naroli.html,5,BreadcrumbList,,,False,False,Valid
+gu/about-dhanasvi-infra.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/about-dhanasvi-infra.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/about-dhanasvi-infra.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/about-dhanasvi-infra.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/about-dhanasvi-infra.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/about-dhanasvi-infra.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/about-dhanasvi-infra.html,7,BreadcrumbList,,,False,False,Valid
+gu/amenities.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/amenities.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/amenities.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/amenities.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/amenities.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/amenities.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/amenities.html,7,BreadcrumbList,,,False,False,Valid
+gu/commercial-shops-naroli.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/commercial-shops-naroli.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/commercial-shops-naroli.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/commercial-shops-naroli.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/commercial-shops-naroli.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/commercial-shops-naroli.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/commercial-shops-naroli.html,7,BreadcrumbList,,,False,False,Valid
+gu/construction-updates.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/construction-updates.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/construction-updates.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/construction-updates.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/construction-updates.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/construction-updates.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/construction-updates.html,7,BreadcrumbList,,,False,False,Valid
+gu/contact.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/contact.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/contact.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/contact.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/contact.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/contact.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/contact.html,7,BreadcrumbList,,,False,False,Valid
+gu/floor-plans.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/floor-plans.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/floor-plans.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/floor-plans.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/floor-plans.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/floor-plans.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/floor-plans.html,7,BreadcrumbList,,,False,False,Valid
+gu/gallery.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/gallery.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/gallery.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/guides.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/guides.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/guides.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/guides.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/guides.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/guides.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/guides.html,7,BreadcrumbList,,,False,False,Valid
+gu/guides/buying-flat-in-naroli.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/guides/buying-flat-in-naroli.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/guides/buying-flat-in-naroli.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/guides/buying-flat-in-naroli.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/guides/buying-flat-in-naroli.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/guides/buying-flat-in-naroli.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/guides/buying-flat-in-naroli.html,7,BreadcrumbList,,,False,False,Valid
+gu/guides/home-loan-guide.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/guides/home-loan-guide.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/guides/home-loan-guide.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/guides/home-loan-guide.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/guides/home-loan-guide.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/guides/home-loan-guide.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/guides/home-loan-guide.html,7,BreadcrumbList,,,False,False,Valid
+gu/guides/rera-property-guide.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/guides/rera-property-guide.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/guides/rera-property-guide.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/guides/rera-property-guide.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/guides/rera-property-guide.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/guides/rera-property-guide.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/guides/rera-property-guide.html,7,BreadcrumbList,,,False,False,Valid
+gu/privacy-policy.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/privacy-policy.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/privacy-policy.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/privacy-policy.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/privacy-policy.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/privacy-policy.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/privacy-policy.html,7,BreadcrumbList,,,False,False,Valid
+gu/project-location.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/project-location.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/project-location.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/project-location.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/project-location.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/project-location.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/project-location.html,7,BreadcrumbList,,,False,False,Valid
+gu/terms-and-disclaimer.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/terms-and-disclaimer.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/terms-and-disclaimer.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/terms-and-disclaimer.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+gu/terms-and-disclaimer.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+gu/terms-and-disclaimer.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+gu/terms-and-disclaimer.html,7,BreadcrumbList,,,False,False,Valid
+hi.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi.html,4,FAQPage,,,False,True,Valid
+hi/1-bhk-flats-naroli.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/1-bhk-flats-naroli.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/1-bhk-flats-naroli.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/1-bhk-flats-naroli.html,4,Accommodation,,1 BHK Luxury Apartment — Advait Skyline,False,False,Valid
+hi/1-bhk-flats-naroli.html,5,BreadcrumbList,,,False,False,Valid
+hi/2-bhk-flats-naroli.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/2-bhk-flats-naroli.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/2-bhk-flats-naroli.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/2-bhk-flats-naroli.html,4,Accommodation,,2 BHK Luxury Residence — Advait Skyline,False,False,Valid
+hi/2-bhk-flats-naroli.html,5,BreadcrumbList,,,False,False,Valid
+hi/about-dhanasvi-infra.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/about-dhanasvi-infra.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/about-dhanasvi-infra.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/about-dhanasvi-infra.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/about-dhanasvi-infra.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/about-dhanasvi-infra.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/about-dhanasvi-infra.html,7,BreadcrumbList,,,False,False,Valid
+hi/amenities.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/amenities.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/amenities.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/amenities.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/amenities.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/amenities.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/amenities.html,7,BreadcrumbList,,,False,False,Valid
+hi/commercial-shops-naroli.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/commercial-shops-naroli.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/commercial-shops-naroli.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/commercial-shops-naroli.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/commercial-shops-naroli.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/commercial-shops-naroli.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/commercial-shops-naroli.html,7,BreadcrumbList,,,False,False,Valid
+hi/construction-updates.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/construction-updates.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/construction-updates.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/construction-updates.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/construction-updates.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/construction-updates.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/construction-updates.html,7,BreadcrumbList,,,False,False,Valid
+hi/contact.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/contact.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/contact.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/contact.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/contact.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/contact.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/contact.html,7,BreadcrumbList,,,False,False,Valid
+hi/floor-plans.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/floor-plans.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/floor-plans.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/floor-plans.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/floor-plans.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/floor-plans.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/floor-plans.html,7,BreadcrumbList,,,False,False,Valid
+hi/gallery.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/gallery.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/gallery.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/guides.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/guides.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/guides.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/guides.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/guides.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/guides.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/guides.html,7,BreadcrumbList,,,False,False,Valid
+hi/guides/buying-flat-in-naroli.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/guides/buying-flat-in-naroli.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/guides/buying-flat-in-naroli.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/guides/buying-flat-in-naroli.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/guides/buying-flat-in-naroli.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/guides/buying-flat-in-naroli.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/guides/buying-flat-in-naroli.html,7,BreadcrumbList,,,False,False,Valid
+hi/guides/home-loan-guide.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/guides/home-loan-guide.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/guides/home-loan-guide.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/guides/home-loan-guide.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/guides/home-loan-guide.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/guides/home-loan-guide.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/guides/home-loan-guide.html,7,BreadcrumbList,,,False,False,Valid
+hi/guides/rera-property-guide.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/guides/rera-property-guide.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/guides/rera-property-guide.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/guides/rera-property-guide.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/guides/rera-property-guide.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/guides/rera-property-guide.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/guides/rera-property-guide.html,7,BreadcrumbList,,,False,False,Valid
+hi/privacy-policy.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/privacy-policy.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/privacy-policy.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/privacy-policy.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/privacy-policy.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/privacy-policy.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/privacy-policy.html,7,BreadcrumbList,,,False,False,Valid
+hi/project-location.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/project-location.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/project-location.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/project-location.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/project-location.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/project-location.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/project-location.html,7,BreadcrumbList,,,False,False,Valid
+hi/terms-and-disclaimer.html,1,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/terms-and-disclaimer.html,2,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/terms-and-disclaimer.html,3,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/terms-and-disclaimer.html,4,RealEstateAgent,https://www.advaitskyline.com/#organization,Dhanasvi Infra,False,True,Valid
+hi/terms-and-disclaimer.html,5,ApartmentComplex,https://www.advaitskyline.com/#project,Advait Skyline,False,False,Valid
+hi/terms-and-disclaimer.html,6,WebSite,https://www.advaitskyline.com/#website,Advait Skyline,False,False,Valid
+hi/terms-and-disclaimer.html,7,BreadcrumbList,,,False,False,Valid

@@ -1,0 +1,61 @@
+keyword,cluster,language,intent,primaryUrl,priority
+flat in Naroli,Flat in Naroli,English,commercial investigation,/flats-in-naroli,10
+flats in Naroli,Flat in Naroli,English,commercial investigation,/flats-in-naroli,10
+new flats Naroli,Flat in Naroli,English,commercial investigation,/flats-in-naroli,9
+apartments Naroli,Flat in Naroli,English,commercial investigation,/flats-in-naroli,8
+residential project Naroli,Flat in Naroli,English,commercial investigation,/flats-in-naroli,8
+naroli mein flat,Flat in Naroli,Hinglish,commercial investigation,/flats-in-naroli,9
+naroli me flat,Flat in Naroli,Hinglish,commercial investigation,/flats-in-naroli,9
+नरोली में फ्लैट,Flat in Naroli,Hindi,commercial investigation,/hi/flats-in-naroli,9
+નરોલીમાં ફ્લેટ,Flat in Naroli,Gujarati,commercial investigation,/gu/flats-in-naroli,9
+flat in Silvassa,Flat near Silvassa,English,commercial investigation,/flats-near-silvassa,10
+flats near Silvassa,Flat near Silvassa,English,commercial investigation,/flats-near-silvassa,10
+apartments Silvassa,Flat near Silvassa,English,commercial investigation,/flats-near-silvassa,8
+flat on Silvassa–Naroli road,Flat near Silvassa,English,commercial investigation,/flats-near-silvassa,9
+silvassa me flat,Flat near Silvassa,Hinglish,commercial investigation,/flats-near-silvassa,9
+सिलवासा में फ्लैट,Flat near Silvassa,Hindi,commercial investigation,/hi/flats-near-silvassa,9
+सिलवासा के पास फ्लैट,Flat near Silvassa,Hindi,commercial investigation,/hi/flats-near-silvassa,9
+સિલવાસામાં ફ્લેટ,Flat near Silvassa,Gujarati,commercial investigation,/gu/flats-near-silvassa,9
+સિલવાસા પાસે ફ્લેટ,Flat near Silvassa,Gujarati,commercial investigation,/gu/flats-near-silvassa,9
+flat near Bhilad,Near Bhilad / Vapi / DNH,English,commercial investigation,/flats-near-bhilad-checkpost,9
+flat near Bhilad checkpost,Near Bhilad / Vapi / DNH,English,commercial investigation,/flats-near-bhilad-checkpost,10
+flats in Dadra Nagar Haveli,Near Bhilad / Vapi / DNH,English,commercial investigation,/,8
+flat near Vapi,Near Bhilad / Vapi / DNH,English,commercial investigation,/flats-near-bhilad-checkpost,7
+bhilad ke paas flat,Near Bhilad / Vapi / DNH,Hinglish,commercial investigation,/flats-near-bhilad-checkpost,8
+भिलाड के पास फ्लैट,Near Bhilad / Vapi / DNH,Hindi,commercial investigation,/hi/flats-near-bhilad-checkpost,8
+ભિલાડ પાસે ફ્લેટ,Near Bhilad / Vapi / DNH,Gujarati,commercial investigation,/gu/flats-near-bhilad-checkpost,8
+1 BHK flat Naroli,BHK Configuration,English,transactional,/1-bhk-flats-naroli,10
+2 BHK flat Naroli,BHK Configuration,English,transactional,/2-bhk-flats-naroli,10
+1 BHK near Silvassa,BHK Configuration,English,transactional,/1-bhk-flats-naroli,9
+2 BHK near Silvassa,BHK Configuration,English,transactional,/2-bhk-flats-naroli,9
+1 BHK Bhilad,BHK Configuration,English,transactional,/1-bhk-flats-naroli,8
+naroli me 1 bhk,BHK Configuration,Hinglish,transactional,/1-bhk-flats-naroli,9
+silvassa me 2 bhk,BHK Configuration,Hinglish,transactional,/2-bhk-flats-naroli,9
+नरोली में 1 BHK,BHK Configuration,Hindi,transactional,/hi/1-bhk-flats-naroli,9
+सिलवासा 2 BHK फ्लैट,BHK Configuration,Hindi,transactional,/hi/2-bhk-flats-naroli,9
+નરોલીમાં 2 BHK ફ્લેટ,BHK Configuration,Gujarati,transactional,/gu/2-bhk-flats-naroli,9
+affordable flats near Silvassa,Price / Budget,English,commercial investigation,/1-bhk-flats-naroli,8
+budget 1 BHK Naroli,Price / Budget,English,commercial investigation,/1-bhk-flats-naroli,8
+flat price Naroli,Price / Budget,English,transactional,/contact,9
+naroli flat price,Price / Budget,Hinglish,transactional,/contact,8
+नरोली फ्लैट कीमत,Price / Budget,Hindi,transactional,/hi/contact,8
+નરોલી ફ્લેટ ભાવ,Price / Budget,Gujarati,transactional,/gu/contact,8
+flats with swimming pool Naroli,Amenities,English,commercial investigation,/amenities,8
+flat with gym clubhouse near Silvassa,Amenities,English,commercial investigation,/amenities,8
+39 amenities flat,Amenities,English,commercial investigation,/amenities,7
+amenities wala flat naroli,Amenities,Hinglish,commercial investigation,/amenities,7
+सुविधाओं वाला फ्लैट,Amenities,Hindi,commercial investigation,/hi/amenities,7
+અમેનિટી સાથે ફ્લેટ,Amenities,Gujarati,commercial investigation,/gu/amenities,7
+shop in Naroli,Commercial,English,commercial investigation,/commercial-shops-naroli,8
+commercial shop Bhilad checkpost,Commercial,English,transactional,/commercial-shops-naroli,9
+office space Naroli,Commercial,English,commercial investigation,/commercial-shops-naroli,7
+naroli me shop/dukan,Commercial,Hinglish,transactional,/commercial-shops-naroli,8
+नरोली में दुकान,Commercial,Hindi,transactional,/hi/commercial-shops-naroli,8
+નરોલીમાં દુકાન,Commercial,Gujarati,transactional,/gu/commercial-shops-naroli,8
+Advait Skyline,Brand,English,navigational,/,10
+Advait Skyline Naroli,Brand,English,navigational,/,10
+Dhanasvi Infra,Brand,English,navigational,/about-dhanasvi-infra,9
+Advait Skyline RERA PM3000002600013,Brand,English,informational,/guides/rera-property-guide,9
+RERA approved flats Naroli,Trust / Legal,English,informational,/guides/rera-property-guide,9
+अद्वैत स्काईलाइन,Brand,Hindi,navigational,/hi,9
+અદ્વૈત સ્કાયલાઇન,Brand,Gujarati,navigational,/gu,9
