@@ -37,11 +37,11 @@ const ROUTE_METADATA: Record<string, Record<string, MetaInfo>> = {
       description: '511 sq ft carpet 1 BHK flats on Naroli–Silvassa road near Bhilad checkpost, DNH. 2 bathrooms, private balcony, modern layout, 39+ lifestyle amenities.',
     },
     hi: {
-      title: '1 BHK Flat in Naroli, Silvassa – 511 sq ft | Advait Skyline',
+      title: 'नरोली, सिलवासा में 1 BHK फ्लैट (511 वर्ग फुट) | अद्वैत स्काईलाइन',
       description: '511 वर्ग फुट कारपेट 1 बीएचके फ्लैट्स नरोली–सिलवासा रोड, चेकपोस्ट के पास (DNH)। 2 बाथरूम, बालकनी और 39+ आधुनिक सुविधाएं।',
     },
     gu: {
-      title: '1 BHK Flat in Naroli, Silvassa – 511 sq ft | Advait Skyline',
+      title: 'નરોલી, સેલવાસમાં 1 BHK ફ્લેટ (511 ચો.ફૂટ) | અદ્વૈત સ્કાયલાઇન',
       description: '511 ચોરસ ફૂટ કાર્પેટ 1 BHK ફ્લેટ્સ નરોલી–સેલવાસ રોડ, ચેકપોસ્ટ પાસે (DNH). 2 બાથરૂમ, પ્રાઇવેટ બાલ્કની અને 39+ સુવિધાઓ.',
     },
   },
@@ -51,11 +51,11 @@ const ROUTE_METADATA: Record<string, Record<string, MetaInfo>> = {
       description: '573 sq ft carpet 2 BHK flats on Naroli–Silvassa road near Bhilad checkpost, DNH. 16ft living hall, 5\'6" sunset balcony, 2 bathrooms, 3 AC points.',
     },
     hi: {
-      title: '2 BHK Flat in Naroli, Silvassa – 573 sq ft | Advait Skyline',
+      title: 'नरोली, सिलवासा में 2 BHK फ्लैट (573 वर्ग फुट) | अद्वैत स्काईलाइन',
       description: '573 वर्ग फुट कारपेट 2 बीएचके फ्लैट्स नरोली–सिलवासा मेन रोड (DNH)। 16 फुट का हॉल, 5\'6" चौड़ी बालकनी, 2 बाथरूम, 3 एसी पॉइंट्स।',
     },
     gu: {
-      title: '2 BHK Flat in Naroli, Silvassa – 573 sq ft | Advait Skyline',
+      title: 'નરોલી, સેલવાસમાં 2 BHK ફ્લેટ (573 ચો.ફૂટ) | અદ્વૈત સ્કાયલાઇન',
       description: '573 ચોરસ ફૂટ કાર્પેટ 2 BHK ફ્લેટ્સ નરોલી–સેલવાસ મેઇન રોડ (DNH). 16 ફૂટ લિવિંગ હોલ, 5\'6" બાલ્કની, 2 બાથરૂમ, 3 એસી પોઇન્ટ્સ.',
     },
   },
