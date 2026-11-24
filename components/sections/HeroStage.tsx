@@ -104,22 +104,22 @@ export default function HeroStage() {
       </div>
 
       {/* Hero Core Container */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full flex-1 flex flex-col lg:flex-row items-center justify-between gap-12 pt-8 sm:pt-14 pb-16 relative z-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full flex-1 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 pt-4 sm:pt-6 lg:pt-8 pb-8 lg:pb-10 relative z-20">
         
-        {/* LEFT COLUMN: Editorial Typography & Semantic Server-Rendered CTAs (40% desktop) */}
+        {/* LEFT COLUMN: Editorial Typography & Semantic Server-Rendered CTAs (45% desktop) */}
         <div
-          className="w-full lg:w-[45%] flex flex-col items-start space-y-6 sm:space-y-8"
+          className="w-full lg:w-[48%] flex flex-col items-start space-y-3.5 sm:space-y-4 lg:space-y-4.5"
         >
           {/* Eyebrow with gold hairline */}
-          <div className="flex items-center gap-3">
-            <span className="w-8 h-[1.5px] bg-[#D9A21B]" />
-            <span className="font-sans text-xs uppercase tracking-[0.2em] font-semibold text-[#F2D27A]">
+          <div className="flex items-center gap-2.5">
+            <span className="w-7 h-[1.5px] bg-[#D9A21B]" />
+            <span className="font-sans text-[11px] sm:text-xs uppercase tracking-[0.2em] font-semibold text-[#F2D27A]">
               {t('eyebrow')}
             </span>
           </div>
 
           {/* Single H1 on Page */}
-          <h1 className="font-display text-4xl sm:text-5xl xl:text-6xl font-bold tracking-tight text-white leading-[1.08]">
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-[42px] xl:text-[48px] font-bold tracking-tight text-white leading-[1.12]">
             {t('h1Prefix')}{' '}
             <span className="text-gold-gradient block sm:inline">
               {t('h1Highlight')}
@@ -127,79 +127,79 @@ export default function HeroStage() {
           </h1>
 
           {/* Supporting Headline */}
-          <div className="text-sm sm:text-base font-sans font-bold uppercase tracking-[0.16em] text-[#F2D27A]">
+          <div className="text-xs sm:text-sm font-sans font-bold uppercase tracking-[0.16em] text-[#F2D27A]">
             {t('supportingHeadline')}
           </div>
 
           {/* Subheading */}
-          <p className="font-sans text-base sm:text-lg text-[#EADFCB]/85 leading-relaxed max-w-xl">
+          <p className="font-sans text-sm sm:text-base text-[#EADFCB]/85 leading-relaxed max-w-xl">
             {t('subheading')}
           </p>
 
           {/* Fact Chips — STATIC HTML for instant accessibility & crawler indexing */}
-          <div className="grid grid-cols-3 gap-3 sm:gap-4 w-full max-w-md pt-2">
-            <div className="bg-[#271910]/80 border border-[#7B4F2E]/40 rounded-lg p-3 text-center shadow-xs">
-              <span className="font-display text-2xl sm:text-3xl font-bold text-[#F2D27A] block leading-none mb-1">
+          <div className="grid grid-cols-3 gap-2.5 sm:gap-3 w-full max-w-md pt-1">
+            <div className="bg-[#271910]/80 border border-[#7B4F2E]/40 rounded-lg p-2 sm:p-2.5 text-center shadow-xs">
+              <span className="font-display text-xl sm:text-2xl font-bold text-[#F2D27A] block leading-none mb-1">
                 {t('amenitiesCount')}
               </span>
-              <span className="text-[11px] font-sans uppercase tracking-wider text-[#EADFCB]/70 block">
+              <span className="text-[10px] sm:text-[11px] font-sans uppercase tracking-wider text-[#EADFCB]/70 block">
                 {t('amenitiesChip')}
               </span>
             </div>
-            <div className="bg-[#271910]/80 border border-[#7B4F2E]/40 rounded-lg p-3 text-center shadow-xs">
-              <span className="font-display text-2xl sm:text-3xl font-bold text-[#F2D27A] block leading-none mb-1">
+            <div className="bg-[#271910]/80 border border-[#7B4F2E]/40 rounded-lg p-2 sm:p-2.5 text-center shadow-xs">
+              <span className="font-display text-xl sm:text-2xl font-bold text-[#F2D27A] block leading-none mb-1">
                 {t('floorsCount')}
               </span>
-              <span className="text-[11px] font-sans uppercase tracking-wider text-[#EADFCB]/70 block">
+              <span className="text-[10px] sm:text-[11px] font-sans uppercase tracking-wider text-[#EADFCB]/70 block">
                 {t('floorsChip')}
               </span>
             </div>
-            <div className="bg-[#271910]/80 border border-[#7B4F2E]/40 rounded-lg p-3 text-center shadow-xs">
-              <span className="font-display text-2xl sm:text-3xl font-bold text-[#F2D27A] block leading-none mb-1">
+            <div className="bg-[#271910]/80 border border-[#7B4F2E]/40 rounded-lg p-2 sm:p-2.5 text-center shadow-xs">
+              <span className="font-display text-xl sm:text-2xl font-bold text-[#F2D27A] block leading-none mb-1">
                 {t('distanceCount')}
               </span>
-              <span className="text-[11px] font-sans uppercase tracking-wider text-[#EADFCB]/70 block">
+              <span className="text-[10px] sm:text-[11px] font-sans uppercase tracking-wider text-[#EADFCB]/70 block">
                 {t('distanceChip')}
               </span>
             </div>
           </div>
 
           {/* Call-to-Action Buttons */}
-          <div className="flex flex-wrap items-center gap-4 pt-2 w-full sm:w-auto">
+          <div className="flex flex-wrap items-center gap-3 pt-1 w-full sm:w-auto">
             <a
               href={waLeadUrl}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => pushDataLayerEvent('whatsapp_click', { cta_location: 'hero_primary' })}
-              className="px-7 py-3.5 rounded-md bg-gold-gradient text-[#1E130C] font-sans font-bold text-sm tracking-wider uppercase shadow-lg hover:brightness-105 active:scale-[0.98] transition-all flex items-center justify-center gap-2.5 w-full sm:w-auto"
+              className="px-6 py-3 rounded-lg bg-gold-gradient text-[#1E130C] font-sans font-bold text-xs sm:text-sm tracking-wider uppercase shadow-lg hover:brightness-105 active:scale-[0.98] transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
             >
-              <MessageSquare size={18} className="fill-[#1E130C]" />
+              <MessageSquare size={17} className="fill-[#1E130C]" />
               <span>{t('ctaWhatsApp')}</span>
             </a>
 
             <Link
               href="/contact"
               onClick={() => pushDataLayerEvent('site_visit_request', { cta_location: 'hero_secondary' })}
-              className="px-7 py-3.5 rounded-md border border-[#D9A21B] text-[#F2D27A] hover:bg-[#D9A21B] hover:text-[#1E130C] font-sans font-semibold text-sm tracking-wider uppercase transition-all duration-300 text-center w-full sm:w-auto"
+              className="px-6 py-3 rounded-lg border border-[#D9A21B] text-[#F2D27A] hover:bg-[#D9A21B] hover:text-[#1E130C] font-sans font-semibold text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 text-center w-full sm:w-auto"
             >
               {t('ctaVisit')}
             </Link>
           </div>
 
           {/* 3D Virtual Sample Flat & Video Reels Shortcuts */}
-          <div className="flex flex-wrap items-center gap-2.5 pt-1">
+          <div className="flex flex-wrap items-center gap-2 pt-0.5">
             <a
               href="#3d-tour"
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#271910]/90 border border-[#D9A21B]/40 text-xs font-sans font-bold uppercase tracking-wider text-[#F2D27A] hover:bg-[#D9A21B] hover:text-[#1E130C] transition-all duration-300 shadow-md group"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#271910]/90 border border-[#D9A21B]/40 text-xs font-sans font-bold uppercase tracking-wider text-[#F2D27A] hover:bg-[#D9A21B] hover:text-[#1E130C] transition-all duration-300 shadow-sm group"
             >
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
               <span>Sample Flat 3D Tour &darr;</span>
             </a>
             <a
               href="#3d-videos"
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#271910]/90 border border-[#D9A21B]/40 text-xs font-sans font-bold uppercase tracking-wider text-white hover:bg-[#D9A21B] hover:text-[#1E130C] transition-all duration-300 shadow-md group"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#271910]/90 border border-[#D9A21B]/40 text-xs font-sans font-bold uppercase tracking-wider text-white hover:bg-[#D9A21B] hover:text-[#1E130C] transition-all duration-300 shadow-sm group"
             >
-              <Sparkles size={13} className="text-[#F2D27A]" />
+              <Sparkles size={12} className="text-[#F2D27A]" />
               <span>Watch 3D Video Reels &darr;</span>
             </a>
             <BrochureDownloadButton variant="pill">
@@ -208,8 +208,8 @@ export default function HeroStage() {
           </div>
         </div>
 
-        {/* RIGHT COLUMN: 3D Tilt Card & Building Facade (55% desktop) */}
-        <div className="w-full lg:w-[50%] relative flex items-center justify-center">
+        {/* RIGHT COLUMN: 3D Tilt Card & Building Facade (50% desktop) */}
+        <div className="w-full lg:w-[48%] relative flex items-center justify-center">
           <motion.div
             style={{
               y: buildingY,
@@ -217,7 +217,7 @@ export default function HeroStage() {
               rotateX: springY,
               rotateY: springX,
             }}
-            className="relative w-full max-w-[460px] aspect-[4/5] rounded-3xl overflow-hidden border-2 border-[#D9A21B]/40 shadow-[0_30px_90px_rgba(0,0,0,0.8)] bg-[#1A100A] group"
+            className="relative w-full max-w-[390px] xl:max-w-[420px] aspect-[4/5] rounded-3xl overflow-hidden border-2 border-[#D9A21B]/40 shadow-[0_25px_80px_rgba(0,0,0,0.85)] bg-[#1A100A] group"
           >
             {/* Main Hero Building Image (Ultra-HD with Day/Night Switch) */}
             <Image
@@ -280,17 +280,17 @@ export default function HeroStage() {
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.95 }}
             aria-label="Scroll to 39+ Amenities Explorer"
-            className="absolute -bottom-6 -left-4 sm:-bottom-8 sm:-left-8 w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-gradient-to-br from-[#F2D27A] via-[#D9A21B] to-[#A8680F] p-[2px] shadow-2xl cursor-pointer z-30 group"
+            className="absolute -bottom-5 -left-3 sm:-bottom-6 sm:-left-5 w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-br from-[#F2D27A] via-[#D9A21B] to-[#A8680F] p-[2px] shadow-2xl cursor-pointer z-30 group"
           >
             <div className="w-full h-full rounded-full bg-[#1E130C] flex flex-col items-center justify-center p-2 text-center border border-[#F2D27A]/30">
               {/* Rotating Ring Label */}
               <div className="flex items-center gap-1 text-[#F2D27A] mb-0.5">
-                <Sparkles size={13} className="text-[#F2D27A] animate-spin" style={{ animationDuration: '8s' }} />
+                <Sparkles size={12} className="text-[#F2D27A] animate-spin" style={{ animationDuration: '8s' }} />
               </div>
-              <span className="font-display text-2xl sm:text-3xl font-bold text-white block leading-none">
+              <span className="font-display text-xl sm:text-2xl font-bold text-white block leading-none">
                 39+
               </span>
-              <span className="font-sans text-[9px] sm:text-[10px] uppercase tracking-widest text-[#F2D27A] font-bold block pt-0.5">
+              <span className="font-sans text-[8px] sm:text-[9px] uppercase tracking-widest text-[#F2D27A] font-bold block pt-0.5">
                 Amenities
               </span>
               <span className="font-sans text-[8px] text-[#EADFCB]/70 tracking-tight block">

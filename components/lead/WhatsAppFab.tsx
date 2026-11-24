@@ -1,26 +1,14 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { MessageSquare, X } from 'lucide-react';
+import React, { useState } from 'react';
+import { MessageSquare } from 'lucide-react';
 import { usePathname } from '@/i18n/routing';
 import { PROJECT_DATA } from '@/lib/project-data';
 import { pushDataLayerEvent, buildWhatsAppLink } from '@/lib/tracking';
 
 export default function WhatsAppFab() {
   const pathname = usePathname();
-  const [showTooltip, setShowTooltip] = useState(false);
-  const [tooltipDismissed, setTooltipDismissed] = useState(false);
-
-  // Show tooltip after 4s delay
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      if (!tooltipDismissed) {
-        setShowTooltip(true);
-      }
-    }, 4000);
-
-    return () => clearTimeout(timer);
-  }, [tooltipDismissed]);
+  const [hovered, setHovered] = useState(false);
 
   // Page-aware messaging
   let message = 'Hello, I am interested in Advait Skyline (Naroli). Please share details.';
@@ -59,41 +47,36 @@ export default function WhatsAppFab() {
   return (
     <aside
       aria-label="Instant WhatsApp Assistance"
-      className="fixed bottom-20 sm:bottom-8 right-4 sm:right-8 z-40 flex items-center gap-3 select-none"
+      className="fixed bottom-5 right-4 sm:bottom-6 sm:right-6 z-40 flex items-center select-none group"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
-      {/* 4s Delayed Tooltip */}
-      {showTooltip && (
-        <div className="relative bg-[#1E130C] border border-[#D9A21B]/40 text-white text-xs px-3.5 py-2 rounded-xl shadow-2xl flex items-center gap-2 animate-in fade-in slide-in-from-right-4 duration-300">
-          <span className="font-sans font-medium">Chat on WhatsApp</span>
-          <button
-            type="button"
-            onClick={() => {
-              setShowTooltip(false);
-              setTooltipDismissed(true);
-            }}
-            aria-label="Dismiss Tooltip"
-            className="text-[#EADFCB]/60 hover:text-white transition-colors"
-          >
-            <X size={13} />
-          </button>
-          <div className="absolute -right-1.5 top-1/2 -translate-y-1/2 w-3 h-3 bg-[#1E130C] border-t border-r border-[#D9A21B]/40 rotate-45" />
-        </div>
-      )}
+      {/* Sleek Tooltip: Appears smoothly on hover, zero automatic screen collision */}
+      <div
+        className={`mr-3 bg-[#160E09]/95 backdrop-blur-md border border-[#D9A21B]/45 text-white text-xs px-3.5 py-1.5 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.85)] flex items-center gap-2 pointer-events-none transition-all duration-200 ${
+          hovered ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-3'
+        }`}
+      >
+        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+        <span className="font-sans font-medium text-[#F2D27A]">Chat on WhatsApp</span>
+      </div>
 
-      {/* Floating 56px WhatsApp Button with Gold Pulse Ring */}
+      {/* Floating 54px WhatsApp Button */}
       <a
         href={waUrl}
         target="_blank"
         rel="noopener noreferrer"
         onClick={handleClick}
         aria-label="Direct WhatsApp Chat with Advait Skyline Sales"
-        className="relative w-14 h-14 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center shadow-2xl transition-transform hover:scale-110 active:scale-95 group shrink-0"
+        className="relative w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center shadow-[0_10px_25px_rgba(16,185,129,0.4)] hover:shadow-[0_12px_35px_rgba(16,185,129,0.65)] transition-all duration-300 hover:scale-108 active:scale-95 shrink-0"
       >
-        {/* Pulsing Gold Halo Ring (triggers every 6s) */}
-        <span className="absolute inset-0 rounded-full border-2 border-[#D9A21B] animate-ping opacity-60 pointer-events-none" style={{ animationDuration: '6s' }} />
+        {/* Subtle glowing beacon dot (no oversized ping ring) */}
+        <span className="absolute -top-0.5 -right-0.5 w-3.5 h-3.5 bg-[#D9A21B] rounded-full border-2 border-[#1E130C] flex items-center justify-center shadow-xs">
+          <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+        </span>
 
         {/* WhatsApp Icon */}
-        <MessageSquare size={26} className="fill-white" />
+        <MessageSquare size={24} className="fill-white" />
       </a>
     </aside>
   );

@@ -159,212 +159,298 @@ export default function Header() {
               )}
             </button>
 
-            {/* Dropdown Menu Glass Card */}
+            {/* Dropdown Menu Glass Card - Luxury 2-Column Mega Panel */}
             {residencesDropdownOpen && (
-              <div className="absolute top-full left-0 pt-2 w-80 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
-                <div className="bg-[#1E130C]/98 backdrop-blur-xl border border-[#7B4F2E]/60 rounded-xl p-3 shadow-[0_20px_50px_rgba(0,0,0,0.85)] flex flex-col gap-1.5">
-                  <span className="text-[10px] uppercase font-sans tracking-[0.2em] text-[#D9A21B] px-3 pt-1 pb-1 font-semibold">
-                    Residential Options · G+14
-                  </span>
-
-                  {/* 1 BHK Link */}
-                  <Link
-                    href="/1-bhk-flats-naroli"
-                    className={`flex items-start gap-3 p-2.5 rounded-lg transition-all ${
-                      pathname === '/1-bhk-flats-naroli'
-                        ? 'bg-[#2E1E14] border border-[#D9A21B]/40 text-[#F2D27A]'
-                        : 'hover:bg-[#2A1B12] text-[#EADFCB] hover:text-[#F2D27A]'
-                    }`}
-                  >
-                    <div className="p-2 rounded-md bg-[#382317] border border-[#D9A21B]/30 text-[#F2D27A] shrink-0 mt-0.5">
-                      <Home size={15} />
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-sm font-semibold leading-tight">
-                        {t('oneBhk')}
-                      </span>
-                      <span className="text-[11px] text-[#EADFCB]/70 leading-normal mt-0.5">
-                        {t('oneBhkSub')}
-                      </span>
-                    </div>
-                  </Link>
-
-                  {/* 2 BHK Link */}
-                  <Link
-                    href="/2-bhk-flats-naroli"
-                    className={`flex items-start gap-3 p-2.5 rounded-lg transition-all ${
-                      pathname === '/2-bhk-flats-naroli'
-                        ? 'bg-[#2E1E14] border border-[#D9A21B]/40 text-[#F2D27A]'
-                        : 'hover:bg-[#2A1B12] text-[#EADFCB] hover:text-[#F2D27A]'
-                    }`}
-                  >
-                    <div className="p-2 rounded-md bg-[#382317] border border-[#D9A21B]/30 text-[#F2D27A] shrink-0 mt-0.5">
-                      <Layers size={15} />
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-sm font-semibold leading-tight">
-                        {t('twoBhk')}
-                      </span>
-                      <span className="text-[11px] text-[#EADFCB]/70 leading-normal mt-0.5">
-                        {t('twoBhkSub')}
-                      </span>
-                    </div>
-                  </Link>
-
-                  {/* 1 BHK vs 2 BHK Comparison Link */}
-                  <Link
-                    href="/1-bhk-vs-2-bhk"
-                    className={`flex items-start gap-3 p-2.5 rounded-lg transition-all ${
-                      pathname === '/1-bhk-vs-2-bhk'
-                        ? 'bg-[#2E1E14] border border-[#D9A21B]/40 text-[#F2D27A]'
-                        : 'hover:bg-[#2A1B12] text-[#EADFCB] hover:text-[#F2D27A]'
-                    }`}
-                  >
-                    <div className="p-2 rounded-md bg-[#382317] border border-[#D9A21B]/30 text-[#F2D27A] shrink-0 mt-0.5">
-                      <Scale size={15} />
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-sm font-semibold leading-tight">
-                        1 BHK vs 2 BHK Guide
-                      </span>
-                      <span className="text-[11px] text-[#EADFCB]/70 leading-normal mt-0.5">
-                        Compare layouts, areas &amp; value
-                      </span>
-                    </div>
-                  </Link>
-
-                  {/* Flats Near Silvassa Link */}
-                  <Link
-                    href="/flats-near-silvassa"
-                    className={`flex items-start gap-3 p-2.5 rounded-lg transition-all ${
-                      pathname === '/flats-near-silvassa'
-                        ? 'bg-[#2E1E14] border border-[#D9A21B]/40 text-[#F2D27A]'
-                        : 'hover:bg-[#2A1B12] text-[#EADFCB] hover:text-[#F2D27A]'
-                    }`}
-                  >
-                    <div className="p-2 rounded-md bg-[#382317] border border-[#D9A21B]/30 text-[#F2D27A] shrink-0 mt-0.5">
-                      <MapPin size={15} />
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-sm font-semibold leading-tight">
-                        Flats Near Silvassa
-                      </span>
-                      <span className="text-[11px] text-[#EADFCB]/70 leading-normal mt-0.5">
-                        ~10 km via Naroli–Silvassa Main Road
-                      </span>
-                    </div>
-                  </Link>
-
-                  {/* Flats Near Bhilad & Vapi Link */}
-                  <Link
-                    href="/flats-near-bhilad-vapi"
-                    className={`flex items-start gap-3 p-2.5 rounded-lg transition-all ${
-                      pathname === '/flats-near-bhilad-vapi'
-                        ? 'bg-[#2E1E14] border border-[#D9A21B]/40 text-[#F2D27A]'
-                        : 'hover:bg-[#2A1B12] text-[#EADFCB] hover:text-[#F2D27A]'
-                    }`}
-                  >
-                    <div className="p-2 rounded-md bg-[#382317] border border-[#D9A21B]/30 text-[#F2D27A] shrink-0 mt-0.5">
-                      <Train size={15} />
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-sm font-semibold leading-tight">
-                        Flats Near Bhilad & Vapi
-                      </span>
-                      <span className="text-[11px] text-[#EADFCB]/70 leading-normal mt-0.5">
-                        5.1 km to Bhilad Stn · Industrial Transit
-                      </span>
-                    </div>
-                  </Link>
-
-                  {/* Pricing & Home Loan Link */}
-                  <Link
-                    href="/price-and-payment-plan"
-                    className={`flex items-start gap-3 p-2.5 rounded-lg transition-all ${
-                      pathname === '/price-and-payment-plan'
-                        ? 'bg-[#2E1E14] border border-[#D9A21B]/40 text-[#F2D27A]'
-                        : 'hover:bg-[#2A1B12] text-[#EADFCB] hover:text-[#F2D27A]'
-                    }`}
-                  >
-                    <div className="p-2 rounded-md bg-[#382317] border border-[#D9A21B]/30 text-[#F2D27A] shrink-0 mt-0.5">
-                      <Banknote size={15} />
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-sm font-semibold leading-tight">
-                        Pricing &amp; Home Loan
-                      </span>
-                      <span className="text-[11px] text-[#EADFCB]/70 leading-normal mt-0.5">
-                        EMI calculator &amp; bank assistance
-                      </span>
-                    </div>
-                  </Link>
-
-                  {/* Directions & Commute Link */}
-                  <Link
-                    href="/directions"
-                    className={`flex items-start gap-3 p-2.5 rounded-lg transition-all ${
-                      pathname === '/directions'
-                        ? 'bg-[#2E1E14] border border-[#D9A21B]/40 text-[#F2D27A]'
-                        : 'hover:bg-[#2A1B12] text-[#EADFCB] hover:text-[#F2D27A]'
-                    }`}
-                  >
-                    <div className="p-2 rounded-md bg-[#382317] border border-[#D9A21B]/30 text-[#F2D27A] shrink-0 mt-0.5">
-                      <Navigation size={15} />
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-sm font-semibold leading-tight">
-                        Directions &amp; Commute
-                      </span>
-                      <span className="text-[11px] text-[#EADFCB]/70 leading-normal mt-0.5">
-                        Route guide from Bhilad, Silvassa &amp; Vapi
-                      </span>
-                    </div>
-                  </Link>
-
-                  <div className="h-[1px] bg-[#7B4F2E]/40 my-1" />
-
-                  {/* Floor Plans Link */}
-                  <Link
-                    href="/floor-plans"
-                    className={`flex items-start gap-3 p-2.5 rounded-lg transition-all ${
-                      pathname === '/floor-plans'
-                        ? 'bg-[#2E1E14] border border-[#D9A21B]/40 text-[#F2D27A]'
-                        : 'hover:bg-[#2A1B12] text-[#EADFCB] hover:text-[#F2D27A]'
-                    }`}
-                  >
-                    <div className="p-2 rounded-md bg-[#382317] border border-[#D9A21B]/30 text-[#F2D27A] shrink-0 mt-0.5">
-                      <Compass size={15} />
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-sm font-semibold leading-tight">
-                        {t('floorPlans')}
-                      </span>
-                      <span className="text-[11px] text-[#EADFCB]/70 leading-normal mt-0.5">
-                        {t('floorPlansSub')}
-                      </span>
-                    </div>
-                  </Link>
-
-                  {/* 3D Virtual Tour Anchor Link */}
-                  <Link
-                    href="/#sample-flat-tour"
-                    className="flex items-start gap-3 p-2.5 rounded-lg transition-all hover:bg-[#2A1B12] text-[#EADFCB] hover:text-[#F2D27A]"
-                  >
-                    <div className="p-2 rounded-md bg-[#382317] border border-[#D9A21B]/30 text-[#F2D27A] shrink-0 mt-0.5">
-                      <Sparkles size={15} />
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-sm font-semibold leading-tight flex items-center gap-1.5">
-                        <span>{t('sampleTour')}</span>
-                        <span className="px-1.5 py-0.2 bg-[#D9A21B]/20 text-[#F2D27A] text-[9px] uppercase tracking-wider rounded font-mono font-bold">
-                          3D
+              <div className="absolute top-full -left-12 lg:-left-20 xl:-left-24 pt-2.5 w-[620px] z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+                <div className="bg-[#140C07]/98 backdrop-blur-2xl border border-[#D9A21B]/40 rounded-2xl p-3.5 shadow-[0_25px_70px_rgba(0,0,0,0.95)] flex flex-col gap-2.5">
+                  <div className="grid grid-cols-2 gap-3">
+                    {/* Left Column: Configurations & Floor Plans */}
+                    <div className="flex flex-col gap-1">
+                      <div className="flex items-center justify-between px-2 pb-1 border-b border-[#7B4F2E]/30">
+                        <span className="text-[10px] uppercase font-sans tracking-[0.18em] text-[#D9A21B] font-bold">
+                          Configurations · G+14
                         </span>
-                      </span>
-                      <span className="text-[11px] text-[#EADFCB]/70 leading-normal mt-0.5">
-                        {t('sampleTourSub')}
-                      </span>
+                        <span className="text-[9px] font-mono text-[#F2D27A]/70 uppercase">
+                          328 Units
+                        </span>
+                      </div>
+
+                      {/* 1 BHK */}
+                      <Link
+                        href="/1-bhk-flats-naroli"
+                        className={`group flex items-start gap-2.5 p-2 rounded-xl transition-all ${
+                          pathname === '/1-bhk-flats-naroli'
+                            ? 'bg-[#2E1E14] border border-[#D9A21B]/50 text-[#F2D27A]'
+                            : 'hover:bg-[#25170E] border border-transparent hover:border-[#7B4F2E]/40 text-[#EADFCB] hover:text-[#F2D27A]'
+                        }`}
+                      >
+                        <div className="p-1.5 rounded-lg bg-[#301B10] border border-[#D9A21B]/30 text-[#F2D27A] shrink-0 mt-0.5 group-hover:bg-[#3D2214] group-hover:scale-105 transition-all">
+                          <Home size={15} />
+                        </div>
+                        <div className="flex flex-col min-w-0">
+                          <div className="flex items-center gap-1.5">
+                            <span className="text-xs font-bold leading-tight truncate">
+                              {t('oneBhk')}
+                            </span>
+                            <span className="px-1.5 py-0.2 rounded bg-[#D9A21B]/20 text-[#F2D27A] text-[9px] font-mono font-bold whitespace-nowrap">
+                              575 sq. ft.
+                            </span>
+                          </div>
+                          <span className="text-[10px] text-[#EADFCB]/70 leading-normal truncate mt-0.5">
+                            Smart layout · Master bedroom
+                          </span>
+                        </div>
+                      </Link>
+
+                      {/* 2 BHK */}
+                      <Link
+                        href="/2-bhk-flats-naroli"
+                        className={`group flex items-start gap-2.5 p-2 rounded-xl transition-all ${
+                          pathname === '/2-bhk-flats-naroli'
+                            ? 'bg-[#2E1E14] border border-[#D9A21B]/50 text-[#F2D27A]'
+                            : 'hover:bg-[#25170E] border border-transparent hover:border-[#7B4F2E]/40 text-[#EADFCB] hover:text-[#F2D27A]'
+                        }`}
+                      >
+                        <div className="p-1.5 rounded-lg bg-[#301B10] border border-[#D9A21B]/30 text-[#F2D27A] shrink-0 mt-0.5 group-hover:bg-[#3D2214] group-hover:scale-105 transition-all">
+                          <Layers size={15} />
+                        </div>
+                        <div className="flex flex-col min-w-0">
+                          <div className="flex items-center gap-1.5">
+                            <span className="text-xs font-bold leading-tight truncate">
+                              {t('twoBhk')}
+                            </span>
+                            <span className="px-1.5 py-0.2 rounded bg-[#D9A21B]/20 text-[#F2D27A] text-[9px] font-mono font-bold whitespace-nowrap">
+                              652 sq. ft.
+                            </span>
+                          </div>
+                          <span className="text-[10px] text-[#EADFCB]/70 leading-normal truncate mt-0.5">
+                            Master suite · Balcony · 2 baths
+                          </span>
+                        </div>
+                      </Link>
+
+                      {/* 1 BHK vs 2 BHK Guide */}
+                      <Link
+                        href="/1-bhk-vs-2-bhk"
+                        className={`group flex items-start gap-2.5 p-2 rounded-xl transition-all ${
+                          pathname === '/1-bhk-vs-2-bhk'
+                            ? 'bg-[#2E1E14] border border-[#D9A21B]/50 text-[#F2D27A]'
+                            : 'hover:bg-[#25170E] border border-transparent hover:border-[#7B4F2E]/40 text-[#EADFCB] hover:text-[#F2D27A]'
+                        }`}
+                      >
+                        <div className="p-1.5 rounded-lg bg-[#301B10] border border-[#D9A21B]/30 text-[#F2D27A] shrink-0 mt-0.5 group-hover:bg-[#3D2214] group-hover:scale-105 transition-all">
+                          <Scale size={15} />
+                        </div>
+                        <div className="flex flex-col min-w-0">
+                          <span className="text-xs font-bold leading-tight truncate">
+                            1 BHK vs 2 BHK Guide
+                          </span>
+                          <span className="text-[10px] text-[#EADFCB]/70 leading-normal truncate mt-0.5">
+                            Compare layout, carpet &amp; value
+                          </span>
+                        </div>
+                      </Link>
+
+                      {/* Floor Plans */}
+                      <Link
+                        href="/floor-plans"
+                        className={`group flex items-start gap-2.5 p-2 rounded-xl transition-all ${
+                          pathname === '/floor-plans'
+                            ? 'bg-[#2E1E14] border border-[#D9A21B]/50 text-[#F2D27A]'
+                            : 'hover:bg-[#25170E] border border-transparent hover:border-[#7B4F2E]/40 text-[#EADFCB] hover:text-[#F2D27A]'
+                        }`}
+                      >
+                        <div className="p-1.5 rounded-lg bg-[#301B10] border border-[#D9A21B]/30 text-[#F2D27A] shrink-0 mt-0.5 group-hover:bg-[#3D2214] group-hover:scale-105 transition-all">
+                          <Compass size={15} />
+                        </div>
+                        <div className="flex flex-col min-w-0">
+                          <div className="flex items-center gap-1.5">
+                            <span className="text-xs font-bold leading-tight truncate">
+                              {t('floorPlans')}
+                            </span>
+                            <span className="px-1.5 py-0.2 rounded bg-amber-900/40 border border-[#D9A21B]/40 text-[#F2D27A] text-[8px] font-bold uppercase tracking-wider">
+                              2D &amp; 3D
+                            </span>
+                          </div>
+                          <span className="text-[10px] text-[#EADFCB]/70 leading-normal truncate mt-0.5">
+                            Architectural dimensions &amp; layouts
+                          </span>
+                        </div>
+                      </Link>
+
+                      {/* 3D Virtual Tour */}
+                      <Link
+                        href="/#sample-flat-tour"
+                        className="group flex items-start gap-2.5 p-2 rounded-xl transition-all hover:bg-[#25170E] border border-transparent hover:border-[#7B4F2E]/40 text-[#EADFCB] hover:text-[#F2D27A]"
+                      >
+                        <div className="p-1.5 rounded-lg bg-[#301B10] border border-[#D9A21B]/30 text-[#F2D27A] shrink-0 mt-0.5 group-hover:bg-[#3D2214] group-hover:scale-105 transition-all">
+                          <Sparkles size={15} />
+                        </div>
+                        <div className="flex flex-col min-w-0">
+                          <div className="flex items-center gap-1.5">
+                            <span className="text-xs font-bold leading-tight truncate">
+                              {t('sampleTour')}
+                            </span>
+                            <span className="px-1.5 py-0.2 rounded bg-[#D9A21B]/25 text-[#F2D27A] text-[8px] font-bold uppercase tracking-wider font-mono">
+                              360°
+                            </span>
+                          </div>
+                          <span className="text-[10px] text-[#EADFCB]/70 leading-normal truncate mt-0.5">
+                            Walk inside sample flat online
+                          </span>
+                        </div>
+                      </Link>
                     </div>
-                  </Link>
+
+                    {/* Right Column: Location & Finance */}
+                    <div className="flex flex-col gap-1">
+                      <div className="flex items-center justify-between px-2 pb-1 border-b border-[#7B4F2E]/30">
+                        <span className="text-[10px] uppercase font-sans tracking-[0.18em] text-[#D9A21B] font-bold">
+                          Location &amp; Connectivity
+                        </span>
+                        <span className="text-[9px] font-mono text-[#F2D27A]/70 uppercase">
+                          Strategic Hub
+                        </span>
+                      </div>
+
+                      {/* Flats Near Silvassa */}
+                      <Link
+                        href="/flats-near-silvassa"
+                        className={`group flex items-start gap-2.5 p-2 rounded-xl transition-all ${
+                          pathname === '/flats-near-silvassa'
+                            ? 'bg-[#2E1E14] border border-[#D9A21B]/50 text-[#F2D27A]'
+                            : 'hover:bg-[#25170E] border border-transparent hover:border-[#7B4F2E]/40 text-[#EADFCB] hover:text-[#F2D27A]'
+                        }`}
+                      >
+                        <div className="p-1.5 rounded-lg bg-[#301B10] border border-[#D9A21B]/30 text-[#F2D27A] shrink-0 mt-0.5 group-hover:bg-[#3D2214] group-hover:scale-105 transition-all">
+                          <MapPin size={15} />
+                        </div>
+                        <div className="flex flex-col min-w-0">
+                          <div className="flex items-center gap-1.5">
+                            <span className="text-xs font-bold leading-tight truncate">
+                              Flats Near Silvassa
+                            </span>
+                            <span className="px-1.5 py-0.2 rounded bg-[#D9A21B]/15 text-[#F2D27A] text-[9px] font-mono">
+                              ~10 km
+                            </span>
+                          </div>
+                          <span className="text-[10px] text-[#EADFCB]/70 leading-normal truncate mt-0.5">
+                            Naroli–Silvassa 4-lane main road
+                          </span>
+                        </div>
+                      </Link>
+
+                      {/* Flats Near Bhilad & Vapi */}
+                      <Link
+                        href="/flats-near-bhilad-vapi"
+                        className={`group flex items-start gap-2.5 p-2 rounded-xl transition-all ${
+                          pathname === '/flats-near-bhilad-vapi'
+                            ? 'bg-[#2E1E14] border border-[#D9A21B]/50 text-[#F2D27A]'
+                            : 'hover:bg-[#25170E] border border-transparent hover:border-[#7B4F2E]/40 text-[#EADFCB] hover:text-[#F2D27A]'
+                        }`}
+                      >
+                        <div className="p-1.5 rounded-lg bg-[#301B10] border border-[#D9A21B]/30 text-[#F2D27A] shrink-0 mt-0.5 group-hover:bg-[#3D2214] group-hover:scale-105 transition-all">
+                          <Train size={15} />
+                        </div>
+                        <div className="flex flex-col min-w-0">
+                          <div className="flex items-center gap-1.5">
+                            <span className="text-xs font-bold leading-tight truncate">
+                              Flats Near Bhilad &amp; Vapi
+                            </span>
+                            <span className="px-1.5 py-0.2 rounded bg-[#D9A21B]/15 text-[#F2D27A] text-[9px] font-mono">
+                              5.1 km
+                            </span>
+                          </div>
+                          <span className="text-[10px] text-[#EADFCB]/70 leading-normal truncate mt-0.5">
+                            Bhilad Railway Station &amp; NH-48 transit
+                          </span>
+                        </div>
+                      </Link>
+
+                      {/* Pricing & Home Loan */}
+                      <Link
+                        href="/price-and-payment-plan"
+                        className={`group flex items-start gap-2.5 p-2 rounded-xl transition-all ${
+                          pathname === '/price-and-payment-plan'
+                            ? 'bg-[#2E1E14] border border-[#D9A21B]/50 text-[#F2D27A]'
+                            : 'hover:bg-[#25170E] border border-transparent hover:border-[#7B4F2E]/40 text-[#EADFCB] hover:text-[#F2D27A]'
+                        }`}
+                      >
+                        <div className="p-1.5 rounded-lg bg-[#301B10] border border-[#D9A21B]/30 text-[#F2D27A] shrink-0 mt-0.5 group-hover:bg-[#3D2214] group-hover:scale-105 transition-all">
+                          <Banknote size={15} />
+                        </div>
+                        <div className="flex flex-col min-w-0">
+                          <div className="flex items-center gap-1.5">
+                            <span className="text-xs font-bold leading-tight truncate">
+                              Pricing &amp; Home Loan
+                            </span>
+                            <span className="px-1.5 py-0.2 rounded bg-emerald-900/40 text-emerald-300 text-[9px] font-semibold border border-emerald-500/30">
+                              Affordable
+                            </span>
+                          </div>
+                          <span className="text-[10px] text-[#EADFCB]/70 leading-normal truncate mt-0.5">
+                            EMI calculator &amp; bank assistance
+                          </span>
+                        </div>
+                      </Link>
+
+                      {/* Directions & Commute */}
+                      <Link
+                        href="/directions"
+                        className={`group flex items-start gap-2.5 p-2 rounded-xl transition-all ${
+                          pathname === '/directions'
+                            ? 'bg-[#2E1E14] border border-[#D9A21B]/50 text-[#F2D27A]'
+                            : 'hover:bg-[#25170E] border border-transparent hover:border-[#7B4F2E]/40 text-[#EADFCB] hover:text-[#F2D27A]'
+                        }`}
+                      >
+                        <div className="p-1.5 rounded-lg bg-[#301B10] border border-[#D9A21B]/30 text-[#F2D27A] shrink-0 mt-0.5 group-hover:bg-[#3D2214] group-hover:scale-105 transition-all">
+                          <Navigation size={15} />
+                        </div>
+                        <div className="flex flex-col min-w-0">
+                          <div className="flex items-center gap-1.5">
+                            <span className="text-xs font-bold leading-tight truncate">
+                              Directions &amp; Commute
+                            </span>
+                            <span className="px-1.5 py-0.2 rounded bg-[#D9A21B]/15 text-[#F2D27A] text-[9px] font-mono">
+                              Route
+                            </span>
+                          </div>
+                          <span className="text-[10px] text-[#EADFCB]/70 leading-normal truncate mt-0.5">
+                            From Silvassa, Bhilad &amp; Vapi hubs
+                          </span>
+                        </div>
+                      </Link>
+
+                      {/* Schedule Site Visit Quick Promo Card */}
+                      <Link
+                        href="/contact"
+                        className="mt-1 p-2 rounded-xl bg-gradient-to-r from-[#2A170C] to-[#1E1108] border border-[#D9A21B]/35 hover:border-[#F2D27A]/70 flex items-center justify-between gap-2 group transition-all"
+                      >
+                        <div className="flex flex-col">
+                          <span className="text-xs font-bold text-[#F2D27A] flex items-center gap-1">
+                            Sample Flat Ready On-Site
+                          </span>
+                          <span className="text-[10px] text-[#EADFCB]/70">
+                            Book a guided walkthrough today
+                          </span>
+                        </div>
+                        <span className="p-1 rounded-lg bg-[#D9A21B] text-[#1E130C] group-hover:scale-110 group-hover:bg-[#F2D27A] transition-all shrink-0">
+                          <ArrowUpRight size={13} />
+                        </span>
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* Bottom Footer Bar */}
+                  <div className="pt-2 px-1 border-t border-[#7B4F2E]/30 flex items-center justify-between text-[10px] text-[#EADFCB]/60 font-sans">
+                    <span className="flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                      RERA: PM3000002600013
+                    </span>
+                    <span className="text-[#D9A21B] font-medium">
+                      Vadfaliya, Naroli · Near Bhilad Checkpost
+                    </span>
+                  </div>
                 </div>
               </div>
             )}
