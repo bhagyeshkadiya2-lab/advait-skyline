@@ -182,15 +182,21 @@ export default function HeroStage() {
             </Link>
           </div>
 
-          {/* 3D Virtual Sample Flat Shortcut */}
-          <div className="pt-1">
+          {/* 3D Virtual Sample Flat & Video Reels Shortcuts */}
+          <div className="flex flex-wrap items-center gap-2.5 pt-1">
             <a
               href="#3d-tour"
-              className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#271910]/90 border border-[#D9A21B]/40 text-xs font-sans font-bold uppercase tracking-wider text-[#F2D27A] hover:bg-[#D9A21B] hover:text-[#1E130C] transition-all duration-300 shadow-md group"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#271910]/90 border border-[#D9A21B]/40 text-xs font-sans font-bold uppercase tracking-wider text-[#F2D27A] hover:bg-[#D9A21B] hover:text-[#1E130C] transition-all duration-300 shadow-md group"
             >
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-              <span>Explore Sample Flat (Interactive 3D Tour)</span>
-              <span className="group-hover:translate-y-0.5 transition-transform">&darr;</span>
+              <span>Sample Flat 3D Tour &darr;</span>
+            </a>
+            <a
+              href="#3d-videos"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#271910]/90 border border-[#D9A21B]/40 text-xs font-sans font-bold uppercase tracking-wider text-white hover:bg-[#D9A21B] hover:text-[#1E130C] transition-all duration-300 shadow-md group"
+            >
+              <Sparkles size={13} className="text-[#F2D27A]" />
+              <span>Watch 3D Video Reels &darr;</span>
             </a>
           </div>
         </motion.div>

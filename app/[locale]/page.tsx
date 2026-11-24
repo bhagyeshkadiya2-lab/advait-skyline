@@ -8,6 +8,7 @@ import StatsRow from '@/components/sections/StatsRow';
 import AmenityExplorer from '@/components/sections/AmenityExplorer';
 import ResidenceShowcase from '@/components/sections/ResidenceShowcase';
 import SampleFlat3DWalkthrough from '@/components/sections/SampleFlat3DWalkthrough';
+import Cinematic3DReels from '@/components/sections/Cinematic3DReels';
 import CommercialSection from '@/components/sections/CommercialSection';
 import ConnectivityRadial from '@/components/sections/ConnectivityRadial';
 import FloorPlansSection from '@/components/sections/FloorPlansSection';
@@ -46,6 +47,9 @@ export default async function HomePage({
 
       {/* 6.1. Interactive 3D Spatial Sample Flat Walkthrough (Real Photos) */}
       <SampleFlat3DWalkthrough />
+
+      {/* 6.2. 3D Architectural Cinematic Video Reels */}
+      <Cinematic3DReels />
 
       {/* 7. Commercial Retail Façade & 11 Use-Cases Grid */}
       <CommercialSection />

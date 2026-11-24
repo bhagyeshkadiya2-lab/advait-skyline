@@ -100,6 +100,59 @@ export default async function AboutDhanasviPage({
           </div>
         </div>
 
+        {/* Dhanasvi Infra Sales Office & Experience Center */}
+        <div className="space-y-6">
+          <div className="space-y-2">
+            <span className="text-xs uppercase font-sans tracking-widest text-[#7B4F2E] font-bold block">
+              On-Site Experience Center
+            </span>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1E130C]">
+              Visit Our Sales Office at Naroli–Bhilad Checkpost
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="relative aspect-[16/11] rounded-2xl overflow-hidden border border-[#7B4F2E]/20 shadow-md group">
+              <Image
+                src="/real-site/sales-office-entrance.webp"
+                alt="Dhanasvi Infra Sales Office Glass Entrance"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4">
+                <span className="text-xs font-sans text-white font-semibold">Corporate Experience Entrance</span>
+              </div>
+            </div>
+
+            <div className="relative aspect-[16/11] rounded-2xl overflow-hidden border border-[#7B4F2E]/20 shadow-md group">
+              <Image
+                src="/real-site/sales-office-lounge.webp"
+                alt="Client Consultation Lounge & Discussion Room"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4">
+                <span className="text-xs font-sans text-white font-semibold">Client Consultation Lounge</span>
+              </div>
+            </div>
+
+            <div className="relative aspect-[16/11] rounded-2xl overflow-hidden border border-[#7B4F2E]/20 shadow-md group">
+              <Image
+                src="/real-site/sales-office-branding.webp"
+                alt="Dhanasvi Infra Gold Logo & Architectural Model View"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4">
+                <span className="text-xs font-sans text-white font-semibold">Advait Skyline Project Gallery</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Professional Consultant Credits */}
         <div className="p-8 sm:p-12 rounded-3xl bg-[#1E130C] text-[#EADFCB] space-y-8">
           <div className="space-y-2">

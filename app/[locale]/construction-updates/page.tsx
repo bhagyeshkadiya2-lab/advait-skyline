@@ -1,7 +1,8 @@
 import React from 'react';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { setRequestLocale } from 'next-intl/server';
-import { Calendar, ShieldCheck, CheckCircle2, Clock, MapPin, MessageSquare } from 'lucide-react';
+import { Calendar, ShieldCheck, CheckCircle2, Clock, MapPin, MessageSquare, Camera } from 'lucide-react';
 import { createPageMetadata } from '@/lib/seo';
 import JsonLd from '@/components/seo/JsonLd';
 import LeadForm from '@/components/lead/LeadForm';
@@ -105,6 +106,97 @@ export default async function ConstructionUpdatesPage({
         </div>
       </section>
 
+      {/* Actual On-Site Construction Photography */}
+      <section className="py-16 bg-[#F3EDE2] border-y border-[#7B4F2E]/15">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 space-y-10">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+              <div className="flex items-center gap-2 text-xs font-sans uppercase tracking-[0.2em] text-[#7B4F2E] font-bold mb-2">
+                <Camera size={15} />
+                <span>Verified Site Photography</span>
+              </div>
+              <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1E130C]">
+                On-Site Structural Progress & Sample Flat
+              </h2>
+            </div>
+            <span className="text-xs font-sans text-[#7B4F2E] bg-white px-3.5 py-1.5 rounded-full border border-[#7B4F2E]/20 font-semibold self-start sm:self-auto">
+              Real Photos from Site
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white rounded-2xl overflow-hidden border border-[#7B4F2E]/15 shadow-sm space-y-3 group">
+              <div className="relative aspect-[16/11] overflow-hidden bg-[#1E130C]">
+                <Image
+                  src="/real-site/construction-rcc-columns.webp"
+                  alt="RCC Column Casting & Commercial Ground Level"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-4 space-y-1">
+                <span className="text-[10px] font-sans uppercase font-bold text-[#D9A21B] tracking-wider block">
+                  Ground & 1st Floor Framework
+                </span>
+                <h3 className="font-display text-lg font-bold text-[#1E130C]">
+                  Heavy RCC Columns & Foundation
+                </h3>
+                <p className="text-xs font-sans text-[#2A1F18]/70 leading-relaxed">
+                  Structural casting of plinth level and commercial retail pillars along the Naroli–Silvassa main road.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl overflow-hidden border border-[#7B4F2E]/15 shadow-sm space-y-3 group">
+              <div className="relative aspect-[16/11] overflow-hidden bg-[#1E130C]">
+                <Image
+                  src="/real-site/construction-slab-casting.webp"
+                  alt="Multi-Storey Column Reinforcement & Staging"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-4 space-y-1">
+                <span className="text-[10px] font-sans uppercase font-bold text-[#D9A21B] tracking-wider block">
+                  Podium Casting
+                </span>
+                <h3 className="font-display text-lg font-bold text-[#1E130C]">
+                  Podium Shuttering & Steel Reinforcement
+                </h3>
+                <p className="text-xs font-sans text-[#2A1F18]/70 leading-relaxed">
+                  Precision steel binding and commercial deck shuttering overseen by chartered structural engineers.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl overflow-hidden border border-[#7B4F2E]/15 shadow-sm space-y-3 group">
+              <div className="relative aspect-[16/11] overflow-hidden bg-[#1E130C]">
+                <Image
+                  src="/real-site/sales-office-entrance.webp"
+                  alt="Dhanasvi Infra Site Sales Office & Experience Center"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-4 space-y-1">
+                <span className="text-[10px] font-sans uppercase font-bold text-[#D9A21B] tracking-wider block">
+                  On-Site Experience Lounge
+                </span>
+                <h3 className="font-display text-lg font-bold text-[#1E130C]">
+                  Site Sales Office & Sample Flat
+                </h3>
+                <p className="text-xs font-sans text-[#2A1F18]/70 leading-relaxed">
+                  Visit the fully furnished sample flat and experience center at Naroli–Bhilad Checkpost, open 7 days a week.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Milestone Timeline */}
       <section className="py-20 sm:py-28 max-w-4xl mx-auto px-4 sm:px-6 space-y-12">
         <div className="space-y-8 relative before:absolute before:inset-0 before:left-5 before:w-0.5 before:bg-[#7B4F2E]/20">
@@ -170,6 +262,97 @@ export default async function ConstructionUpdatesPage({
             <MessageSquare size={16} />
             <span>Get Site Video on WhatsApp</span>
           </a>
+        </div>
+      </section>
+
+      {/* Actual On-Site Construction Photography */}
+      <section className="py-16 bg-[#F3EDE2] border-y border-[#7B4F2E]/15">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 space-y-10">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+              <div className="flex items-center gap-2 text-xs font-sans uppercase tracking-[0.2em] text-[#7B4F2E] font-bold mb-2">
+                <Camera size={15} />
+                <span>Verified Site Photography</span>
+              </div>
+              <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1E130C]">
+                On-Site Structural Progress & Sample Flat
+              </h2>
+            </div>
+            <span className="text-xs font-sans text-[#7B4F2E] bg-white px-3.5 py-1.5 rounded-full border border-[#7B4F2E]/20 font-semibold self-start sm:self-auto">
+              Real Photos from Site
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white rounded-2xl overflow-hidden border border-[#7B4F2E]/15 shadow-sm space-y-3 group">
+              <div className="relative aspect-[16/11] overflow-hidden bg-[#1E130C]">
+                <Image
+                  src="/real-site/construction-rcc-columns.webp"
+                  alt="RCC Column Casting & Commercial Ground Level"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-4 space-y-1">
+                <span className="text-[10px] font-sans uppercase font-bold text-[#D9A21B] tracking-wider block">
+                  Ground & 1st Floor Framework
+                </span>
+                <h3 className="font-display text-lg font-bold text-[#1E130C]">
+                  Heavy RCC Columns & Foundation
+                </h3>
+                <p className="text-xs font-sans text-[#2A1F18]/70 leading-relaxed">
+                  Structural casting of plinth level and commercial retail pillars along the Naroli–Silvassa main road.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl overflow-hidden border border-[#7B4F2E]/15 shadow-sm space-y-3 group">
+              <div className="relative aspect-[16/11] overflow-hidden bg-[#1E130C]">
+                <Image
+                  src="/real-site/construction-slab-casting.webp"
+                  alt="Multi-Storey Column Reinforcement & Staging"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-4 space-y-1">
+                <span className="text-[10px] font-sans uppercase font-bold text-[#D9A21B] tracking-wider block">
+                  Podium Casting
+                </span>
+                <h3 className="font-display text-lg font-bold text-[#1E130C]">
+                  Podium Shuttering & Steel Reinforcement
+                </h3>
+                <p className="text-xs font-sans text-[#2A1F18]/70 leading-relaxed">
+                  Precision steel binding and commercial deck shuttering overseen by chartered structural engineers.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl overflow-hidden border border-[#7B4F2E]/15 shadow-sm space-y-3 group">
+              <div className="relative aspect-[16/11] overflow-hidden bg-[#1E130C]">
+                <Image
+                  src="/real-site/sales-office-entrance.webp"
+                  alt="Dhanasvi Infra Site Sales Office & Experience Center"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-4 space-y-1">
+                <span className="text-[10px] font-sans uppercase font-bold text-[#D9A21B] tracking-wider block">
+                  On-Site Experience Lounge
+                </span>
+                <h3 className="font-display text-lg font-bold text-[#1E130C]">
+                  Site Sales Office & Sample Flat
+                </h3>
+                <p className="text-xs font-sans text-[#2A1F18]/70 leading-relaxed">
+                  Visit the fully furnished sample flat and experience center at Naroli–Bhilad Checkpost, open 7 days a week.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
