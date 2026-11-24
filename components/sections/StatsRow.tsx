@@ -1,49 +1,4 @@
-'use client';
-
-import React, { useEffect, useRef } from 'react';
-import { animate, useInView } from 'motion/react';
-
-type CounterProps = {
-  value: number;
-  prefix?: string;
-  suffix?: string;
-  className?: string;
-};
-
-/**
- * Reusable SEO-Safe Counter Component:
- * - Server HTML and no-JS text = final value ONLY (no "0+39" or "G+0").
- * - Animates once smoothly when entering viewport via requestAnimationFrame.
- * - Respects prefers-reduced-motion.
- */
-export function Counter({ value, prefix = '', suffix = '', className }: CounterProps) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: '-10% 0px' });
-
-  useEffect(() => {
-    if (!inView || !ref.current) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const node = ref.current;
-    const controls = animate(0, value, {
-      duration: 1.2,
-      ease: 'easeOut',
-      onUpdate: (v) => {
-        node.textContent = `${prefix}${Math.round(v)}${suffix}`;
-      },
-      onComplete: () => {
-        node.textContent = `${prefix}${value}${suffix}`;
-      },
-    });
-    return () => controls.stop();
-  }, [inView, value, prefix, suffix]);
-
-  // Server HTML and no-JS text = final value only.
-  return (
-    <span ref={ref} className={className}>
-      {`${prefix}${value}${suffix}`}
-    </span>
-  );
-}
+import React from 'react';
 
 export default function StatsRow() {
   return (
@@ -59,7 +14,7 @@ export default function StatsRow() {
           {/* Stat 1: 39+ Lifestyle Amenities */}
           <div className="flex flex-col items-center justify-center text-center px-4 py-8 relative group">
             <div className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-[#F2D27A] mb-2 leading-none">
-              <Counter value={39} suffix="+" />
+              <span>39+</span>
             </div>
             <span className="font-sans text-xs sm:text-sm font-bold uppercase tracking-[0.16em] text-white block mb-1">
               Lifestyle Amenities
@@ -69,7 +24,7 @@ export default function StatsRow() {
             </span>
           </div>
 
-          {/* Stat 2: G+14 Landmark Floors (Static text, not counter) */}
+          {/* Stat 2: G+14 Landmark Floors */}
           <div className="flex flex-col items-center justify-center text-center px-4 py-8 relative group">
             <div className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-[#F2D27A] mb-2 leading-none">
               <span>G+14</span>
@@ -85,7 +40,7 @@ export default function StatsRow() {
           {/* Stat 3: 200m From Checkpost */}
           <div className="flex flex-col items-center justify-center text-center px-4 py-8 relative group">
             <div className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-[#F2D27A] mb-2 leading-none">
-              <Counter value={200} suffix=" m" />
+              <span>200 m</span>
             </div>
             <span className="font-sans text-xs sm:text-sm font-bold uppercase tracking-[0.16em] text-white block mb-1">
               From Checkpost
@@ -98,7 +53,7 @@ export default function StatsRow() {
           {/* Stat 4: 20 Ground Retail Shops */}
           <div className="flex flex-col items-center justify-center text-center px-4 py-8 relative group">
             <div className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-[#F2D27A] mb-2 leading-none">
-              <Counter value={20} />
+              <span>20</span>
             </div>
             <span className="font-sans text-xs sm:text-sm font-bold uppercase tracking-[0.16em] text-white block mb-1">
               Ground Retail Shops
