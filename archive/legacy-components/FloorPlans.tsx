@@ -10,7 +10,7 @@ type TabType = "1bhk" | "2bhk";
 const FLOOR_PLANS_DATA = {
   "1bhk": {
     title: "Premium 1 BHK Residence",
-    carpetArea: "485 Sq. Ft.",
+    carpetArea: "511 Sq. Ft.",
     isometricImage: "/1bhk-layout.jpg",
     layoutImage: "/1bhk-layout.jpg",
     dimensions: [
@@ -25,7 +25,7 @@ const FLOOR_PLANS_DATA = {
   },
   "2bhk": {
     title: "Luxury 2 BHK Residence",
-    carpetArea: "720 Sq. Ft.",
+    carpetArea: "573 Sq. Ft.",
     isometricImage: "/2bhk-layout.jpg",
     layoutImage: "/2bhk-layout.jpg",
     dimensions: [

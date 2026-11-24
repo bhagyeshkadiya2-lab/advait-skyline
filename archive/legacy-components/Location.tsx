@@ -111,7 +111,7 @@ export default function Location() {
               <div className="w-full h-full rounded-[2rem] overflow-hidden shadow-2xl border border-brand-copper/30 bg-brand-charcoal relative">
                 <iframe
                   title="Advait Skyline Location Map (Naroli–Bhilad Checkpost)"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3743.729111425126!2d72.90993077598687!3d20.22956271477435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0cb68b5555555%3A0x6b149b18366914!2sNaroli%20Checkpost!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.6657930800615!2d72.920547!3d20.2798943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0cd00330b9017%3A0x8c8df8922e650cec!2sAdvait%20Skyline!5e0!3m2!1sen!2sin!4v1717657200000!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -120,6 +120,17 @@ export default function Location() {
                   referrerPolicy="no-referrer-when-downgrade"
                   className="absolute inset-0 w-full h-full filter grayscale contrast-[1.1] brightness-[0.95]"
                 />
+                <div className="absolute bottom-4 right-4 z-20">
+                  <a
+                    href="https://www.google.com/maps/dir//Advait+Skyline,+Shop+No.+01,+Oppo.Pushapak+Hotel,+Checkpost,+DNH,+Naroli,+Dadra+and+Nagar+Haveli+and+Daman+and+Diu+396235/@20.2756434,72.9090628,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3be0cd00330b9017:0x8c8df8922e650cec!2m2!1d72.920547!2d20.2798943"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-brand-primaryBrown text-white font-body text-xs font-bold uppercase tracking-wider px-4 py-2.5 rounded-full shadow-lg border border-brand-copper/30 hover:bg-brand-copper transition-all inline-flex items-center gap-1.5 hover-trigger"
+                  >
+                    <MapPin size={12} className="text-brand-gold" />
+                    Get Directions
+                  </a>
+                </div>
               </div>
             </FloatingEntrance>
           </div>

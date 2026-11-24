@@ -1,87 +1,109 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-espresso-950: #1E130C;
+  --color-espresso-900: #271910;
+  --color-brown-700: #7B4F2E;
+  --color-brown-600: #8C5B36;
+  --color-brown-500: #9A6A45;
+  --color-gold-300: #F2D27A;
+  --color-gold-500: #D9A21B;
+  --color-gold-700: #A8680F;
+  --color-cream-50: #FBF8F2;
+  --color-sand-100: #F3EBDD;
+  --color-sand-200: #EADFCB;
+  --color-ink: #2A1F18;
+  --color-ink-muted: #614F44;
+
+  --font-display: var(--font-display), "Cormorant Garamond", Georgia, serif;
+  --font-body: var(--font-body), "Manrope", system-ui, sans-serif;
+}
 
 @layer base {
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: var(--color-cream-50);
+    color: var(--color-ink);
   }
 
   body {
-    background-color: #F5EFE6; /* brand.cream */
-    color: #1C110A; /* brand.charcoal */
-    font-family: var(--font-body), Inter, sans-serif;
+    background-color: var(--color-cream-50);
+    color: var(--color-ink);
+    font-family: var(--font-body);
     overflow-x: hidden;
   }
 
-  /* Hide default cursor on desktop when custom cursor is used */
-  @media (min-width: 1024px) {
-    .has-custom-cursor,
-    .has-custom-cursor * {
-      cursor: none !important;
-    }
+  /* Specific typography rules for Indic scripts (Devanagari & Gujarati) */
+  :lang(hi), :lang(gu) {
+    line-height: 1.7;
+    letter-spacing: 0;
   }
 }
 
-/* Elegant scrollbar using brand colors */
+/* Custom scrollbar in brand espresso & gold */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #6B3A1F; /* brand.deepBrown */
+  background: #1E130C;
 }
 ::-webkit-scrollbar-thumb {
-  background: #C4843A; /* brand.copper */
+  background: #7B4F2E;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #C9973A; /* brand.gold */
+  background: #D9A21B;
 }
 
-/* Responsive Typographic Utility Clamps */
-@layer utilities {
-  .text-display-hero {
-    font-family: var(--font-display), Playfair Display, serif;
-    font-size: clamp(2.25rem, 7.5vw, 6rem); /* Scaled from 36px up to 96px */
-    font-weight: 700;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-  }
-  
-  .text-section-h2 {
-    font-family: var(--font-display), Playfair Display, serif;
-    font-size: clamp(2.25rem, 5vw, 3.5rem); /* Scaled from 36px up to 56px */
-    font-weight: 600;
-    line-height: 1.15;
-  }
+/* Gold Gradient Utilities */
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #F2D27A 0%, #D9A21B 45%, #A8680F 100%);
+}
 
-  .text-section-h3 {
-    font-family: var(--font-body), Inter, sans-serif;
-    font-size: clamp(1.15rem, 2.5vw, 1.5rem); /* Scaled from 18px up to 24px */
-    font-weight: 500;
-    line-height: 1.4;
-  }
-  
-  .text-body-custom {
-    font-family: var(--font-body), Inter, sans-serif;
-    font-size: clamp(1rem, 2vw, 1.125rem); /* Scaled from 16px up to 18px */
-    font-weight: 400;
-    line-height: 1.7;
-  }
+.text-gold-gradient {
+  background: linear-gradient(135deg, #F2D27A 0%, #D9A21B 45%, #A8680F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-  .text-label-caps {
-    font-family: var(--font-body), Inter, sans-serif;
-    font-size: clamp(0.68rem, 1.5vw, 0.8125rem); /* Scaled from 11px up to 13px */
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
+.border-gold-gradient {
+  border-image: linear-gradient(135deg, #F2D27A 0%, #D9A21B 45%, #A8680F 100%) 1;
+}
 
-  .text-stat-number {
-    font-family: var(--font-display), Playfair Display, serif;
-    font-size: clamp(3rem, 6.5vw, 5rem); /* Scaled from 48px up to 80px */
-    font-weight: 700;
-  }
+/* Fluid Typographic Clamps */
+.text-display-hero {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 6.5vw, 5.25rem);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+}
+
+.text-section-h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.text-stat-number {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 5.5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Subtle architectural paper texture for dark espresso surfaces */
+.bg-texture-espresso {
+  background-color: #1E130C;
+  background-image: radial-gradient(rgba(242, 210, 122, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.bg-texture-cream {
+  background-color: #FBF8F2;
+  background-image: radial-gradient(rgba(123, 79, 46, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
 }

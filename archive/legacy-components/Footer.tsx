@@ -109,9 +109,14 @@ export default function Footer() {
                 Naroli–Bhilad Checkpost, Vadfaliya,<br />
                 Dadra & Nagar Haveli - 396235
               </p>
-              <span className="inline-flex items-center gap-1.5 text-xs text-brand-copper hover:underline cursor-pointer">
+              <a
+                href="https://www.google.com/maps/dir//Advait+Skyline,+Shop+No.+01,+Oppo.Pushapak+Hotel,+Checkpost,+DNH,+Naroli,+Dadra+and+Nagar+Haveli+and+Daman+and+Diu+396235/@20.2756434,72.9090628,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3be0cd00330b9017:0x8c8df8922e650cec!2m2!1d72.920547!2d20.2798943"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs text-brand-copper hover:underline hover-trigger"
+              >
                 Get Driving Directions &rarr;
-              </span>
+              </a>
             </div>
           </div>
 

@@ -7,9 +7,17 @@ import { useReducedMotion } from "@/lib/hooks/useReducedMotion";
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
+  const [shouldHide, setShouldHide] = useState(false);
   const isReduced = useReducedMotion();
 
   useEffect(() => {
+    // Safely check User Agent to see if we are in Instagram/Facebook webview
+    const ua = navigator.userAgent || navigator.vendor || '';
+    const isSocialWebview = /Instagram/i.test(ua) || /FBAN/i.test(ua) || /FBIOS/i.test(ua);
+    if (isSocialWebview) {
+      setShouldHide(true);
+    }
+
     const toggleVisibility = () => {
       // Show button when page is scrolled down past 400px
       if (window.scrollY > 400) {
@@ -22,6 +30,10 @@ export default function ScrollToTop() {
     window.addEventListener("scroll", toggleVisibility, { passive: true });
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
+
+  if (shouldHide) {
+    return null;
+  }
 
   const scrollToTop = () => {
     window.scrollTo({

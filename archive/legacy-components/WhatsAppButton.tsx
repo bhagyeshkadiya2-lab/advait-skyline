@@ -1,6 +1,23 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
 export default function WhatsAppButton() {
+  const [shouldHide, setShouldHide] = useState(false);
+
+  useEffect(() => {
+    // Safely check User Agent inside useEffect
+    const ua = navigator.userAgent || navigator.vendor || '';
+    const isSocialWebview = /Instagram/i.test(ua) || /FBAN/i.test(ua) || /FBIOS/i.test(ua);
+    if (isSocialWebview) {
+      setShouldHide(true);
+    }
+  }, []);
+
+  if (shouldHide) {
+    return null;
+  }
+
   const waLink = "https://wa.me/919909062363?text=Hello%2C%20I%20am%20interested%20in%20Advait%20Skyline%20project.";
   return (
     <>

@@ -121,16 +121,36 @@ export default function Navbar() {
                 y: isReduced ? 0 : logoY,
                 transformOrigin: "left center",
               }}
-              className="relative w-[44px] h-[40px] rounded-lg overflow-hidden border border-brand-gold shadow-md bg-brand-charcoal transition-all duration-300"
             >
-              <Image
-                src="/logo.png"
-                alt="Advait Skyline Logo"
-                fill
-                priority
-                sizes="44px"
-                className="object-cover"
-              />
+              <motion.div
+                whileHover={isReduced ? {} : {
+                  scale: 1.08,
+                  rotate: [0, -4, 4, -4, 0],
+                  boxShadow: "0 0 16px rgba(201, 151, 58, 0.5)",
+                }}
+                whileTap={isReduced ? {} : { scale: 0.95 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                className="relative w-[44px] h-[40px] rounded-lg overflow-hidden border border-brand-gold shadow-md bg-brand-charcoal"
+              >
+                <Image
+                  src="/logo.png"
+                  alt="Advait Skyline Logo"
+                  fill
+                  priority
+                  sizes="44px"
+                  className="object-cover"
+                />
+                {/* Premium Gold Shine sweep effect */}
+                <motion.div
+                  initial={{ x: "-150%", opacity: 0 }}
+                  whileHover={{
+                    x: "150%",
+                    opacity: [0, 0.7, 0.7, 0],
+                  }}
+                  transition={{ duration: 0.8, ease: "easeInOut" }}
+                  className="absolute inset-0 z-10 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12"
+                />
+              </motion.div>
             </motion.div>
           </a>
 
