@@ -23,6 +23,7 @@ import {
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/routing';
 import LanguageSwitcher from './LanguageSwitcher';
+import SocialLinks from '@/components/ui/SocialLinks';
 import { PROJECT_DATA } from '@/lib/project-data';
 import { pushDataLayerEvent, buildWhatsAppLink } from '@/lib/tracking';
 
@@ -667,6 +668,11 @@ export default function Header() {
             <div className="flex items-center justify-between pb-2">
               <span className="text-xs text-[#EADFCB]/70 font-sans">Language:</span>
               <LanguageSwitcher />
+            </div>
+
+            <div className="flex items-center justify-between py-2 border-y border-[#7B4F2E]/30">
+              <span className="text-xs text-[#EADFCB]/70 font-sans">Follow Us:</span>
+              <SocialLinks variant="topbar" />
             </div>
 
             <div className="grid grid-cols-2 gap-3">

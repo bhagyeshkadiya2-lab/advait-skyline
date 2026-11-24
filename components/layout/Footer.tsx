@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { PROJECT_DATA } from '@/lib/project-data';
 import { pushDataLayerEvent } from '@/lib/tracking';
+import SocialLinks from '@/components/ui/SocialLinks';
 
 export default function Footer() {
   const t = useTranslations('footer');
@@ -166,6 +167,12 @@ export default function Footer() {
                   {PROJECT_DATA.contact.email}
                 </a>
               </p>
+              <div className="pt-2">
+                <span className="block text-[#EADFCB]/50 uppercase text-[10px] tracking-wider font-semibold mb-2">
+                  Official Social Channels
+                </span>
+                <SocialLinks variant="footer" />
+              </div>
             </div>
           </div>
 

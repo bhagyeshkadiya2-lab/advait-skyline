@@ -7,6 +7,7 @@ import { createPageMetadata } from '@/lib/seo';
 import JsonLd from '@/components/seo/JsonLd';
 import LeadForm from '@/components/lead/LeadForm';
 import GoogleMapsEmbed from '@/components/sections/GoogleMapsEmbed';
+import SocialLinks from '@/components/ui/SocialLinks';
 import { buildWhatsAppLink } from '@/lib/tracking';
 
 export async function generateMetadata({
@@ -141,6 +142,21 @@ export default async function ContactPage({
               <a href={`mailto:${PROJECT_DATA.contact.email}`} className="text-sm font-semibold text-[#7B4F2E] hover:underline">
                 {PROJECT_DATA.contact.email}
               </a>
+            </div>
+
+            <div className="p-6 rounded-2xl border border-[#7B4F2E]/20 bg-white shadow-sm space-y-4">
+              <div className="space-y-1">
+                <span className="text-[11px] font-sans uppercase tracking-widest text-[#7B4F2E] font-bold block">
+                  Official Channels
+                </span>
+                <h3 className="font-display text-xl font-bold text-[#1E130C]">
+                  Follow on Social Media
+                </h3>
+                <p className="text-xs text-[#2A1F18]/70 font-sans leading-relaxed">
+                  Stay updated with site construction progress, festival offers, and live walkthrough reels.
+                </p>
+              </div>
+              <SocialLinks variant="card" />
             </div>
           </div>
 

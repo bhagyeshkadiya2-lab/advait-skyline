@@ -55,9 +55,9 @@ export default function JsonLd({
       telephone: [PROJECT_DATA.contact.whatsappLeadNumber, ...PROJECT_DATA.contact.brochurePhones],
       sameAs: [
         GBP_MAPS_URL,
-        'https://www.youtube.com/@advaitskyline',
-        'https://www.facebook.com/advaitskyline',
-        'https://www.instagram.com/advaitskyline',
+        PROJECT_DATA.contact.social.instagram,
+        PROJECT_DATA.contact.social.facebook,
+        PROJECT_DATA.contact.social.youtube,
       ],
       address: {
         '@type': 'PostalAddress',
@@ -96,7 +96,9 @@ export default function JsonLd({
       hasMap: GBP_MAPS_URL,
       sameAs: [
         GBP_MAPS_URL,
-        'https://www.youtube.com/@advaitskyline',
+        PROJECT_DATA.contact.social.instagram,
+        PROJECT_DATA.contact.social.facebook,
+        PROJECT_DATA.contact.social.youtube,
       ],
       speakable: {
         '@type': 'SpeakableSpecification',
@@ -184,7 +186,9 @@ export default function JsonLd({
       hasMap: GBP_MAPS_URL,
       sameAs: [
         GBP_MAPS_URL,
-        'https://www.youtube.com/@advaitskyline',
+        PROJECT_DATA.contact.social.instagram,
+        PROJECT_DATA.contact.social.facebook,
+        PROJECT_DATA.contact.social.youtube,
       ],
       speakable: {
         '@type': 'SpeakableSpecification',

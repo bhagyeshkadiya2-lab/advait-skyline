@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { Phone, ShieldCheck } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import LanguageSwitcher from './LanguageSwitcher';
+import SocialLinks from '@/components/ui/SocialLinks';
 import { PROJECT_DATA } from '@/lib/project-data';
 import { pushDataLayerEvent } from '@/lib/tracking';
 
@@ -38,6 +39,7 @@ export default function TopBar() {
 
         {/* Right: Language switcher & phone call */}
         <div className="flex items-center gap-4 shrink-0">
+          <SocialLinks variant="topbar" className="hidden md:flex" />
           <LanguageSwitcher />
 
           <a

@@ -85,6 +85,11 @@ export const PROJECT_DATA = {
       googleMapsPlaceUrl: GBP_MAPS_URL,
       embedIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.6657930800615!2d72.920547!3d20.2798943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0cd00330b9017%3A0x8c8df8922e650cec!2sAdvait%20Skyline!5e0!3m2!1sen!2sin!4v1717657200000!5m2!1sen!2sin',
     },
+    social: {
+      instagram: 'https://www.instagram.com/advaitskyline/',
+      facebook: 'https://www.facebook.com/profile.php?id=61590554242765',
+      youtube: 'https://www.youtube.com/@ADVAITSKYLINE',
+    },
   },
 
   team: {
