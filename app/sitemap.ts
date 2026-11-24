@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/floor-plans',
     '/commercial-shops-naroli',
     '/project-location',
+    '/directions',
     '/gallery',
     '/construction-updates',
     '/about-dhanasvi-infra',

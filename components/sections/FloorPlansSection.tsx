@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Maximize2, MessageSquare, Download, Check } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import PlanLightbox from '@/components/ui/PlanLightbox';
+import { BrochureDownloadButton } from '@/components/lead/BrochureDownloadModal';
 import { PROJECT_DATA } from '@/lib/project-data';
 import { pushDataLayerEvent, buildWhatsAppLink } from '@/lib/tracking';
 
@@ -136,7 +137,7 @@ export default function FloorPlansSection() {
                 <p>✓ All measurements approximate; measured plaster-to-plaster.</p>
               </div>
 
-              <div className="flex flex-wrap items-center gap-4 pt-2">
+              <div className="flex flex-wrap items-center gap-3 pt-2">
                 <a
                   href={waLeadUrl}
                   target="_blank"
@@ -148,10 +149,18 @@ export default function FloorPlansSection() {
                   <span>Get Details on WhatsApp</span>
                 </a>
 
+                <BrochureDownloadButton
+                  variant="outline"
+                  className="px-5 py-3"
+                  defaultConfig={activeTab === '2bhk' ? '2bhk' : activeTab === 'ground' ? 'shop' : activeTab === 'second' ? 'office' : '1bhk'}
+                >
+                  Download Brochure (PDF)
+                </BrochureDownloadButton>
+
                 <button
                   type="button"
                   onClick={() => setLightboxOpen(true)}
-                  className="px-6 py-3 rounded-md border border-[#D9A21B] text-[#F2D27A] hover:bg-[#D9A21B] hover:text-[#1E130C] font-sans font-semibold text-xs uppercase tracking-wider transition-colors"
+                  className="px-5 py-3 rounded-md border border-[#7B4F2E] text-[#EADFCB]/80 hover:text-white hover:border-[#D9A21B] font-sans font-semibold text-xs uppercase tracking-wider transition-colors"
                 >
                   View Full Plan
                 </button>

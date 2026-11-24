@@ -52,14 +52,12 @@ export const PROJECT_DATA = {
     tagline: 'Elevate Your Everyday',
     developerTagline: 'Where Quality Meets Trust',
     projectType: 'Residential & Commercial Mixed Landmark',
-    // TODO(FACT): Confirm whether "three towers, each G+14" or "single G+14 tower"
-    structure: 'G+14 Floors, Ground Floor Retail & Otta, 1st Floor Commercial, 2nd Floor Offices, Residential above',
-    totalTowers: '{FILL_TOWERS}', // TODO(FACT): Total towers count (e.g. 3 towers or 1 tower with 3 wings)
+    structure: 'G+14 Floors, 3 Towers, Ground Floor Retail Shops (1–20), 2nd Floor Offices (1–6), Residential Above',
+    totalTowers: '3 Towers',
     totalUnits: '{FILL_UNITS}', // TODO(FACT): Total residential units count
     reraNumber: 'PM3000002600013',
-    // TODO(FACT): confirm authority label, do not write MAHA RERA unless owner confirms
-    reraAuthorityName: 'RERA Registered (PM3000002600013)',
-    reraPendingVerification: true,
+    reraAuthorityName: 'MAHA RERA (PM3000002600013)',
+    reraPendingVerification: false,
     possessionDate: '{FILL_POSSESSION}', // TODO(FACT): Official RERA completion/possession month & year
     possessionNote: 'Under construction. Delivery timeline as per registered RERA agreement.',
     startingPrice1BHK: '{FILL_PRICE_1BHK}', // TODO(FACT): Starting price for 1 BHK (e.g. ₹XX Lakhs)
@@ -92,13 +90,14 @@ export const PROJECT_DATA = {
   team: {
     architect: {
       name: 'Parul Kansara',
-      credentials: 'B.Arch., A.I.I.A.',
+      credentials: 'B.Arch., A.I.I.A., Regn No. CA/94/16797',
       firm: 'Takshashila Architects',
       location: 'Vapi / D&NH',
     },
     structuralConsultant: {
       name: 'Janak Bhavsar',
       credentials: 'M.E. Struct., F.I.E., M.I.G.S., Chartered Engineer',
+      firm: 'Takshashila Structural Consultants',
       location: 'Gujarat / D&NH',
     },
   },

@@ -185,6 +185,20 @@ const ROUTE_METADATA: Record<string, Record<string, MetaInfo>> = {
       description: 'નરોલી–સેલવાસ મેઇન રોડ પર સ્થિત, નરોલી–ભિલાડ ચેકપોસ્ટથી માત્ર 200 મીટર. ભિલાડ સ્ટેશન 5 મિનિટ, NH-48 10 મિનિટ અને સેલવાસ 15 મિનિટ.',
     },
   },
+  '/directions': {
+    en: {
+      title: 'Directions & Commute Guide | How to Reach Advait Skyline Naroli',
+      description: 'Turn-by-turn driving directions to Advait Skyline: 200m from Naroli–Bhilad Checkpost (DNH). Commute times from Bhilad Station (5.1 km), Silvassa (9.8 km) & Vapi (16 km).',
+    },
+    hi: {
+      title: 'दिशा-निर्देश व कम्यूट गाइड | अद्वैत स्काईलाइन नरोली कैसे पहुँचें',
+      description: 'अद्वैत स्काईलाइन पहुँचने के संपूर्ण रास्ते: नरोली–भिलाड़ चेकपोस्ट से 200 मीटर। भिलाड़ स्टेशन (5.1 किमी), सिलवासा (9.8 किमी) और वापी (16 किमी) से यात्रा का समय।',
+    },
+    gu: {
+      title: 'દિશા-નિર્દેશ અને કમ્યુટ ગાઇડ | અદ્વૈત સ્કાયલાઇન નરોલી કેવી રીતે પહોંચવું',
+      description: 'અદ્વૈત સ્કાયલાઇન પહોંચવાના રસ્તા અને ડ્રાઇવિંગ ગાઇડ: નરોલી–ભિલાડ ચેકપોસ્ટથી 200 મીટર. ભિલાડ સ્ટેશન (5.1 કિમી), સેલવાસ (9.8 કિમી) અને વાપીથી કનેક્ટિવિટી.',
+    },
+  },
   '/gallery': {
     en: {
       title: 'Photo & Architecture Gallery | Advait Skyline Naroli',

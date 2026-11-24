@@ -18,6 +18,7 @@ import {
   Banknote,
   Train,
   BookOpen,
+  Navigation,
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/routing';
@@ -269,6 +270,28 @@ export default function Header() {
                       </span>
                       <span className="text-[11px] text-[#EADFCB]/70 leading-normal mt-0.5">
                         Construction-linked milestones & sheet
+                      </span>
+                    </div>
+                  </Link>
+
+                  {/* Directions & Commute Link */}
+                  <Link
+                    href="/directions"
+                    className={`flex items-start gap-3 p-2.5 rounded-lg transition-all ${
+                      pathname === '/directions'
+                        ? 'bg-[#2E1E14] border border-[#D9A21B]/40 text-[#F2D27A]'
+                        : 'hover:bg-[#2A1B12] text-[#EADFCB] hover:text-[#F2D27A]'
+                    }`}
+                  >
+                    <div className="p-2 rounded-md bg-[#382317] border border-[#D9A21B]/30 text-[#F2D27A] shrink-0 mt-0.5">
+                      <Navigation size={15} />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-sm font-semibold leading-tight">
+                        Directions &amp; Commute
+                      </span>
+                      <span className="text-[11px] text-[#EADFCB]/70 leading-normal mt-0.5">
+                        Route guide from Bhilad, Silvassa &amp; Vapi
                       </span>
                     </div>
                   </Link>
@@ -584,6 +607,17 @@ export default function Header() {
                 className="font-display text-lg py-1.5 text-[#EADFCB] hover:text-[#F2D27A]"
               >
                 {t('location')}
+              </Link>
+
+              <Link
+                href="/directions"
+                onClick={() => setMobileMenuOpen(false)}
+                className="font-display text-lg py-1.5 text-[#EADFCB] hover:text-[#F2D27A] flex items-center justify-between"
+              >
+                <span>Directions &amp; Commute</span>
+                <span className="text-[10px] uppercase font-sans text-[#F2D27A] bg-[#7B4F2E]/40 px-2 py-0.5 rounded">
+                  GPS
+                </span>
               </Link>
 
               <Link

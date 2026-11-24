@@ -8,6 +8,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { PROJECT_DATA } from '@/lib/project-data';
 import { pushDataLayerEvent, buildWhatsAppLink } from '@/lib/tracking';
+import { BrochureDownloadButton } from '@/components/lead/BrochureDownloadModal';
 
 // Ambient dust particles (strictly CSS, <= 20 elements, 0 canvas)
 const DUST_PARTICLES = [
@@ -199,6 +200,9 @@ export default function HeroStage() {
               <Sparkles size={13} className="text-[#F2D27A]" />
               <span>Watch 3D Video Reels &darr;</span>
             </a>
+            <BrochureDownloadButton variant="pill">
+              Official Brochure (PDF)
+            </BrochureDownloadButton>
           </div>
         </motion.div>
 

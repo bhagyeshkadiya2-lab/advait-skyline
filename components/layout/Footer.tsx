@@ -106,15 +106,23 @@ export default function Footer() {
               <p className="text-[#D9A21B] font-medium pt-1">
                 {PROJECT_DATA.contact.streetFrontage} (200 m from Checkpost)
               </p>
-              <a
-                href={PROJECT_DATA.contact.geoCoordinates.googleMapsPlaceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-[#F2D27A] hover:underline pt-2 text-xs font-semibold"
-              >
-                <span>View on Google Maps</span>
-                <ArrowUpRight size={13} />
-              </a>
+              <div className="flex flex-col gap-1 pt-2">
+                <Link
+                  href="/directions"
+                  className="inline-flex items-center gap-1 text-[#F2D27A] hover:underline text-xs font-semibold"
+                >
+                  <span>Directions &amp; Commute Guide →</span>
+                </Link>
+                <a
+                  href={PROJECT_DATA.contact.geoCoordinates.googleMapsPlaceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-[#EADFCB]/70 hover:text-white pt-0.5 text-xs font-semibold"
+                >
+                  <span>Verified Google Maps Listing</span>
+                  <ArrowUpRight size={13} />
+                </a>
+              </div>
             </address>
           </div>
 
@@ -185,6 +193,11 @@ export default function Footer() {
               <li>
                 <Link href="/flats-near-bhilad-vapi" className="hover:text-[#F2D27A] transition-colors">
                   Flats Near Bhilad & Vapi
+                </Link>
+              </li>
+              <li>
+                <Link href="/directions" className="hover:text-[#F2D27A] transition-colors">
+                  Directions &amp; Commute Guide
                 </Link>
               </li>
               <li>

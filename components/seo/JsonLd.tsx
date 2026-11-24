@@ -27,6 +27,7 @@ export interface JsonLdProps {
   unitData?: UnitData;
   breadcrumbs?: BreadcrumbItem[];
   customFaqs?: { question: string; answer: string }[];
+  faqItems?: { question: string; answer: string }[];
 }
 
 export default function JsonLd({
@@ -35,6 +36,7 @@ export default function JsonLd({
   unitData,
   breadcrumbs,
   customFaqs,
+  faqItems,
 }: JsonLdProps) {
   const schemas: Record<string, unknown>[] = [];
 
@@ -51,6 +53,12 @@ export default function JsonLd({
       image: `${BASE_URL}/hero-bg.jpg`,
       email: PROJECT_DATA.contact.email,
       telephone: [PROJECT_DATA.contact.whatsappLeadNumber, ...PROJECT_DATA.contact.brochurePhones],
+      sameAs: [
+        GBP_MAPS_URL,
+        'https://www.youtube.com/@advaitskyline',
+        'https://www.facebook.com/advaitskyline',
+        'https://www.instagram.com/advaitskyline',
+      ],
       address: {
         '@type': 'PostalAddress',
         streetAddress: PROJECT_DATA.contact.siteAddress,
@@ -64,7 +72,6 @@ export default function JsonLd({
         latitude: PROJECT_DATA.contact.geoCoordinates.latitude,
         longitude: PROJECT_DATA.contact.geoCoordinates.longitude,
       },
-      hasMap: GBP_MAPS_URL,
       openingHoursSpecification: [
         {
           '@type': 'OpeningHoursSpecification',
@@ -86,6 +93,15 @@ export default function JsonLd({
       description:
         'Advait Skyline is a G+14 residential and commercial landmark by Dhanasvi Infra on the Naroli–Silvassa main road, 200 meters from the Naroli–Bhilad Checkpost, offering 39+ amenities, 1 & 2 BHK luxury flats and commercial shops.',
       url: BASE_URL,
+      hasMap: GBP_MAPS_URL,
+      sameAs: [
+        GBP_MAPS_URL,
+        'https://www.youtube.com/@advaitskyline',
+      ],
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['h1', '.speakable-summary', '#project-fact-sheet'],
+      },
       image: [
         `${BASE_URL}/hero-bg.jpg`,
         `${BASE_URL}/clubhouse-bg.jpg`,
@@ -110,7 +126,6 @@ export default function JsonLd({
         latitude: PROJECT_DATA.contact.geoCoordinates.latitude,
         longitude: PROJECT_DATA.contact.geoCoordinates.longitude,
       },
-      hasMap: GBP_MAPS_URL,
       numberOfAccommodationUnits: 150,
       amenityFeature: PROJECT_DATA.amenities
         .filter((a) => a.confirmedInBrochure)
@@ -166,6 +181,15 @@ export default function JsonLd({
       name: 'Advait Skyline Sales & Experience Centre',
       image: `${BASE_URL}/renders/advait-skyline-three-towers-day.jpg`,
       url: BASE_URL,
+      hasMap: GBP_MAPS_URL,
+      sameAs: [
+        GBP_MAPS_URL,
+        'https://www.youtube.com/@advaitskyline',
+      ],
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['h1', '.speakable-summary', '#project-fact-sheet'],
+      },
       telephone: PROJECT_DATA.contact.whatsappLeadNumber,
       email: PROJECT_DATA.contact.email,
       priceRange: '₹₹',
@@ -182,7 +206,6 @@ export default function JsonLd({
         latitude: PROJECT_DATA.contact.geoCoordinates.latitude,
         longitude: PROJECT_DATA.contact.geoCoordinates.longitude,
       },
-      hasMap: GBP_MAPS_URL,
       openingHoursSpecification: [
         {
           '@type': 'OpeningHoursSpecification',
@@ -210,9 +233,9 @@ export default function JsonLd({
     schemas.push(organizationSchema, projectSchema, webSiteSchema, realEstateAgentSchema, videoWalkthroughSchema);
   }
 
-  // Home FAQ schema
-  if (type === 'home' || type === 'faq') {
-    const faqList = customFaqs || [
+  // Home FAQ schema & Custom FAQs
+  if (type === 'home' || type === 'faq' || customFaqs || faqItems) {
+    const faqList = customFaqs || faqItems || [
       {
         question: 'Where is Advait Skyline located?',
         answer: 'Advait Skyline is located on the Naroli–Silvassa main road, approximately 200 meters from the Naroli–Bhilad Checkpost in Vadfaliya, Dadra & Nagar Haveli – 396235.',

@@ -5,6 +5,7 @@ import ConnectivityRadial from '@/components/sections/ConnectivityRadial';
 import { createPageMetadata } from '@/lib/seo';
 import JsonLd from '@/components/seo/JsonLd';
 import LeadForm from '@/components/lead/LeadForm';
+import GoogleMapsEmbed from '@/components/sections/GoogleMapsEmbed';
 
 export async function generateMetadata({
   params,
@@ -44,8 +45,11 @@ export default async function ProjectLocationPage({
 
       <ConnectivityRadial />
 
-      <section className="py-20 max-w-4xl mx-auto px-4 sm:px-6">
-        <LeadForm />
+      <section className="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 space-y-16">
+        <GoogleMapsEmbed />
+        <div className="max-w-4xl mx-auto">
+          <LeadForm />
+        </div>
       </section>
     </div>
   );

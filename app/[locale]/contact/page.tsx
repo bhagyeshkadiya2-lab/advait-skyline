@@ -6,6 +6,7 @@ import { PROJECT_DATA } from '@/lib/project-data';
 import { createPageMetadata } from '@/lib/seo';
 import JsonLd from '@/components/seo/JsonLd';
 import LeadForm from '@/components/lead/LeadForm';
+import GoogleMapsEmbed from '@/components/sections/GoogleMapsEmbed';
 import { buildWhatsAppLink } from '@/lib/tracking';
 
 export async function generateMetadata({
@@ -148,6 +149,11 @@ export default async function ContactPage({
             <LeadForm />
           </div>
 
+        </div>
+
+        {/* Interactive Google Maps Embed with Verified Place Link */}
+        <div className="mt-14 sm:mt-20">
+          <GoogleMapsEmbed />
         </div>
       </section>
     </div>

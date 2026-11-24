@@ -8,6 +8,7 @@ import { createPageMetadata } from '@/lib/seo';
 import JsonLd from '@/components/seo/JsonLd';
 import LeadForm from '@/components/lead/LeadForm';
 import ProjectFactSheet from '@/components/sections/ProjectFactSheet';
+import EmiCalculator from '@/components/lead/EmiCalculator';
 import { buildWhatsAppLink } from '@/lib/tracking';
 
 export async function generateMetadata({
@@ -179,6 +180,11 @@ export default async function PriceAndPaymentPlanPage({
               </div>
             </div>
           </div>
+        </section>
+
+        {/* Interactive EMI Calculator Widget */}
+        <section className="space-y-6">
+          <EmiCalculator />
         </section>
 
         {/* Milestone Schedule */}
