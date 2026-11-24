@@ -63,9 +63,8 @@ export default function FloorPlansSection() {
                 key={tab.id}
                 type="button"
                 onClick={() => setActiveTab(tab.id)}
-                className={`relative px-5 py-3 rounded-lg font-sans text-xs sm:text-sm font-semibold tracking-wider uppercase transition-colors shrink-0 whitespace-nowrap ${
-                  isActive ? 'text-[#F2D27A]' : 'text-[#EADFCB]/70 hover:text-white'
-                }`}
+                className={`relative px-5 py-3 rounded-lg font-sans text-xs sm:text-sm font-semibold tracking-wider uppercase transition-colors shrink-0 whitespace-nowrap ${isActive ? 'text-[#F2D27A]' : 'text-[#EADFCB]/70 hover:text-white'
+                  }`}
               >
                 <span>{tab.label}</span>
                 {isActive && (

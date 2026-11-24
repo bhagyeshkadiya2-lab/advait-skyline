@@ -8,7 +8,6 @@ export interface PageMetadataProps {
   path?: string; // e.g. '/1-bhk-flats-naroli'
   customTitle?: string;
   customDescription?: string;
-  keywords?: string[];
   ogImage?: string;
 }
 
@@ -20,16 +19,16 @@ interface MetaInfo {
 const ROUTE_METADATA: Record<string, Record<string, MetaInfo>> = {
   '/': {
     en: {
-      title: 'Advait Skyline | 1 & 2 BHK Flats & Shops in Naroli–Bhilad by Dhanasvi Infra',
-      description: 'Explore Advait Skyline: G+14 residential and commercial landmark on Naroli–Silvassa main road, 200m from Naroli–Bhilad Checkpost. 39+ amenities, 1 & 2 BHK luxury flats and prime commercial shops.',
+      title: 'Advait Skyline | 1 & 2 BHK Flats in Naroli–Bhilad',
+      description: 'Advait Skyline by Dhanasvi Infra: 1 & 2 BHK flats and shops at Naroli–Bhilad Checkpost, near Silvassa. 39+ amenities, floor plans, location, site visit.',
     },
     hi: {
-      title: 'अद्वैत स्काईलाइन | नरोली–भिलाड़ में 1 व 2 बीएचके फ्लैट्स और दुकानें — धनस्वी इन्फ्रा',
-      description: 'अद्वैत स्काईलाइन: नरोली–सिलवासा मेन रोड, नरोली–भिलाड़ चेकपोस्ट से 200 मी. दूर G+14 आवासीय एवं कमर्शियल प्रोजेक्ट। 39+ एमिनिटीज, 1 और 2 बीएचके लक्जरी फ्लैट्स।',
+      title: 'Advait Skyline | नरोली–भिलाड में 1 और 2 BHK फ्लैट',
+      description: 'धनस्वी इन्फ्रा का अद्वैत स्काईलाइन: नरोली–भिलाड़ चेकपोस्ट, सिलवासा के पास 1 व 2 BHK फ्लैट और दुकानें। 39+ सुविधाएं, साइट विजिट बुक करें।',
     },
     gu: {
-      title: 'અદ્વૈત સ્કાયલાઇન | નરોલી–ભિલાડ ખાતે 1 અને 2 BHK ફ્લેટ્સ અને દુકાનો — ધનસ્વી ઇન્ફ્રા',
-      description: 'અદ્વૈત સ્કાયલાઇન: નરોલી–સેલવાસ મેઇન રોડ, નરોલી–ભિલાડ ચેકપોસ્ટથી 200 મીટર દૂર G+14 રહેણાંક અને કોમર્શિયલ લેન્ડમાર્ક. 39+ સુવિધાઓ, 1 અને 2 BHK લક્ઝરી ફ્લેટ્સ.',
+      title: 'Advait Skyline | નરોલી–ભિલાડમાં 1 અને 2 BHK ફ્લેટ',
+      description: 'ધનસ્વી ઇન્ફ્રાનું અદ્વૈત સ્કાયલાઇન: નરોલી–ભિલાડ ચેકપોસ્ટ, સેલવાસ નજીક 1 અને 2 BHK ફ્લેટ અને દુકાનો. 39+ સુવિધાઓ, સાઇટ વિઝિટ બુક કરો.',
     },
   },
   '/1-bhk-flats-naroli': {
@@ -60,6 +59,20 @@ const ROUTE_METADATA: Record<string, Record<string, MetaInfo>> = {
       description: '573 ચોરસ ફૂટ કાર્પેટ 2 BHK લક્ઝરી રેસિડેન્સ નરોલી–સેલવાસ મેઇન રોડ પર. 16 ફૂટ લિવિંગ હોલ, 5\'6" બાલ્કની, 2 બાથરૂમ, 3 એસી પોઇન્ટ્સ.',
     },
   },
+  '/flats-near-silvassa': {
+    en: {
+      title: 'Flats Near Silvassa – Naroli Road | Advait Skyline',
+      description: 'Explore 1 & 2 BHK flats near Silvassa on Naroli–Silvassa main road (~10 km from Silvassa). G+14 residential tower by Dhanasvi Infra, 39+ amenities, verified commute.',
+    },
+    hi: {
+      title: 'सिलवासा के पास फ्लैट्स – नरोली रोड | अद्वैत स्काईलाइन',
+      description: 'सिलवासा के पास 1 व 2 बीएचके फ्लैट्स नरोली–सिलवासा मेन रोड पर (~10 किमी)। धनस्वी इन्फ्रा द्वारा G+14 टावर, 39+ सुविधाएं और सत्यापित कम्यूट।',
+    },
+    gu: {
+      title: 'સેલવાસ નજીક ફ્લેટ્સ – નરોલી રોડ | અદ્વૈત સ્કાયલાઇન',
+      description: 'સેલવાસ નજીક નરોલી–સેલવાસ મેઇન રોડ પર 1 અને 2 BHK ફ્લેટ્સ (~10 કિમી). ધનસ્વી ઇન્ફ્રા દ્વારા G+14 ટાવર, 39+ સુવિધાઓ અને ઝડપી કનેક્ટિવિટી.',
+    },
+  },
   '/commercial-shops-naroli': {
     en: {
       title: 'Commercial Shops & Offices in Naroli–Silvassa Main Road | Advait Skyline',
@@ -77,7 +90,7 @@ const ROUTE_METADATA: Record<string, Record<string, MetaInfo>> = {
   '/amenities': {
     en: {
       title: '39+ Luxury Amenities | Advait Skyline Naroli–Bhilad',
-      description: 'Experience 39+ world-class amenities at Advait Skyline: rooftop infinity pool, sky gym, landscaped gardens, banquet hall, children play area, indoor games and 24x7 security.',
+      description: 'Experience 39+ amenities at Advait Skyline: swimming pool, gym, landscaped gardens, banquet hall, children play area, indoor games and 24x7 security.',
     },
     hi: {
       title: '39+ लक्जरी सुविधाएं व एमिनिटीज | अद्वैत स्काईलाइन नरोली',
@@ -263,7 +276,6 @@ export function createPageMetadata({
   path = '',
   customTitle,
   customDescription,
-  keywords = [],
   ogImage = '/hero-bg.jpg',
 }: PageMetadataProps): Metadata {
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;
@@ -286,28 +298,10 @@ export function createPageMetadata({
 
   const canonicalUrl = `${BASE_URL}${locale === 'en' ? '' : `/${locale}`}${normalizedPath === '/' ? '' : normalizedPath}`;
 
-  const defaultKeywords = [
-    'Advait Skyline',
-    'Dhanasvi Infra',
-    'Flats in Naroli',
-    'Flats near Bhilad',
-    '1 BHK flat Naroli',
-    '2 BHK flat Naroli',
-    'Commercial shops Naroli Silvassa',
-    'Naroli Bhilad Checkpost',
-    'Dadra and Nagar Haveli real estate',
-    'Advait Skyline RERA PM3000002600013',
-    'નરોલી માં ફ્લેટ',
-    'નરોલી ભિલાડ પ્રોપર્ટી',
-    'नरोली में 1 BHK फ्लैट',
-    'नरोली भिलाड़ रियल एस्टेट',
-  ];
-
   return {
     metadataBase: new URL(BASE_URL),
     title,
     description,
-    keywords: [...defaultKeywords, ...keywords],
     alternates: {
       canonical: canonicalUrl,
       languages: {

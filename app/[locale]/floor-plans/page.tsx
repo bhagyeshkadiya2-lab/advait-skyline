@@ -39,6 +39,9 @@ export default async function FloorPlansPage({
         ]}
       />
 
+      {/* SEO H1 — visually integrated into the section header */}
+      <h1 className="sr-only">Floor Plans &amp; Layouts – 1 BHK, 2 BHK &amp; Shops at Advait Skyline</h1>
+
       <FloorPlansSection />
 
       <section className="py-20 max-w-4xl mx-auto px-4 sm:px-6">

@@ -170,6 +170,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/flats-near-silvassa" className="hover:text-[#F2D27A] transition-colors">
+                  Flats Near Silvassa
+                </Link>
+              </li>
+              <li>
                 <Link href="/commercial-shops-naroli" className="hover:text-[#F2D27A] transition-colors">
                   Commercial Shops & Offices
                 </Link>

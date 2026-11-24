@@ -42,7 +42,7 @@ export default function JsonLd({
   if (type === 'global') {
     const organizationSchema = {
       '@context': 'https://schema.org',
-      '@type': 'RealEstateAgent',
+      '@type': 'Organization',
       '@id': `${BASE_URL}/#organization`,
       name: PROJECT_DATA.identity.legalEntity,
       alternateName: 'Dhanasvi Infra — Builders & Developers',
@@ -72,7 +72,7 @@ export default function JsonLd({
           closes: '19:00',
         },
       ],
-      priceRange: '₹₹',
+
     };
 
     const projectSchema = {
@@ -117,6 +117,30 @@ export default function JsonLd({
           name: a.name,
           value: true,
         })),
+      containsPlace: [
+        {
+          '@type': 'Apartment',
+          name: '1 BHK',
+          numberOfBedrooms: 1,
+          numberOfBathroomsTotal: 2,
+          floorSize: {
+            '@type': 'QuantitativeValue',
+            value: 511,
+            unitCode: 'FTK',
+          },
+        },
+        {
+          '@type': 'Apartment',
+          name: '2 BHK',
+          numberOfBedrooms: 2,
+          numberOfBathroomsTotal: 2,
+          floorSize: {
+            '@type': 'QuantitativeValue',
+            value: 573,
+            unitCode: 'FTK',
+          },
+        },
+      ],
     };
 
     const webSiteSchema = {
@@ -141,15 +165,15 @@ export default function JsonLd({
     const faqList = customFaqs || [
       {
         question: 'Where is Advait Skyline located?',
-        answer: 'Advait Skyline is located on the Naroli–Silvassa main road, 200 meters from the Naroli–Bhilad Checkpost in Vadfaliya, Dadra & Nagar Haveli – 396235.',
+        answer: 'Advait Skyline is located on the Naroli–Silvassa main road, approximately 200 meters from the Naroli–Bhilad Checkpost in Vadfaliya, Dadra & Nagar Haveli – 396235.',
       },
       {
         question: 'Who is the developer of Advait Skyline?',
-        answer: 'Advait Skyline is developed by Dhanasvi Infra, a reputed real estate firm in Dadra & Nagar Haveli.',
+        answer: 'Advait Skyline is developed by Dhanasvi Infra, a reputable real estate partnership firm dedicated to premium construction quality and timely delivery in the Dadra & Nagar Haveli region.',
       },
       {
         question: 'What configurations are offered at Advait Skyline?',
-        answer: 'Advait Skyline offers 1 BHK (approx. 511 sq. ft. carpet) and 2 BHK (approx. 573 sq. ft. carpet) luxury residences, as well as ground and first floor commercial retail shops and second-floor office suites.',
+        answer: 'Advait Skyline offers 1 BHK (approx. 511 sq. ft. carpet) and 2 BHK (approx. 573 sq. ft. carpet) residential residences, as well as ground and first floor commercial retail shops and second-floor office suites.',
       },
       {
         question: 'What is the RERA registration number of Advait Skyline?',
@@ -157,7 +181,27 @@ export default function JsonLd({
       },
       {
         question: 'How many amenities does Advait Skyline feature?',
-        answer: 'Advait Skyline features 39+ lifestyle and wellness amenities including a rooftop infinity pool, sky gymnasium, landscaped gardens, banquet hall, children play park, and round-the-clock gated security.',
+        answer: 'Advait Skyline features 39+ lifestyle and wellness amenities including a swimming pool, separate gyms for men and women, landscaped gardens, banquet hall, children play area, and round-the-clock gated security.',
+      },
+      {
+        question: 'What is the carpet area of the 1 BHK flats?',
+        answer: 'The 1 BHK apartments feature a thoughtful carpet area of approximately 511 sq. ft. (47.47 sq. m.) with a spacious living room, private balcony, 2 bathrooms, and a modern kitchen.',
+      },
+      {
+        question: 'What is the carpet area of the 2 BHK flats?',
+        answer: 'The 2 BHK residences feature an expansive carpet area of approximately 573 sq. ft. (53.23 sq. m.) with two generous bedrooms, a 16-foot living hall, a 5\'6" wide sunset balcony, and 2 bathrooms.',
+      },
+      {
+        question: 'How can I book a site visit to Advait Skyline?',
+        answer: 'You can schedule a site visit instantly by clicking the \'Book a Site Visit\' button, sending a message on WhatsApp at +91 99090 72390, or calling our sales office directly at +91 99090 72363.',
+      },
+      {
+        question: 'Is Naroli (Dadra & Nagar Haveli) the same as Narol in Ahmedabad?',
+        answer: 'No. Naroli is an industrial and residential hub in the Union Territory of Dadra & Nagar Haveli, situated near Bhilad and roughly 10 km from Silvassa. Narol is a separate locality in Ahmedabad, Gujarat. Advait Skyline is located specifically in Naroli, Dadra & Nagar Haveli (PIN 396235).',
+      },
+      {
+        question: 'How far is Advait Skyline from Silvassa?',
+        answer: 'Advait Skyline is located approximately 10 km from central Silvassa (about 13 to 15 minutes by car along the Naroli–Silvassa main road). The project is positioned 200 meters from the Naroli–Bhilad Checkpost, offering direct connectivity between Silvassa and Bhilad Railway Station.',
       },
     ];
 
@@ -181,9 +225,11 @@ export default function JsonLd({
   if (type === 'unit' && unitData) {
     const accommodationSchema = {
       '@context': 'https://schema.org',
-      '@type': 'Accommodation',
+      '@type': 'Apartment',
       name: unitData.name,
       description: unitData.description,
+      numberOfBedrooms: unitData.numberOfRooms === '1 BHK' ? 1 : 2,
+      numberOfBathroomsTotal: 2,
       numberOfRooms: unitData.numberOfRooms,
       floorSize: {
         '@type': 'QuantitativeValue',
@@ -192,6 +238,7 @@ export default function JsonLd({
       },
       isPartOf: {
         '@type': 'ApartmentComplex',
+        '@id': `${BASE_URL}/#project`,
         name: PROJECT_DATA.identity.name,
         url: BASE_URL,
       },

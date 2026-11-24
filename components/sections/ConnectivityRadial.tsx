@@ -88,7 +88,7 @@ export default function ConnectivityRadial() {
                 {t('transitTableTitle')}
               </span>
               <p className="text-xs text-[#2A1F18]/65 font-sans">
-                Travel times are approximate estimates under typical vehicular conditions.
+                approx. travel time; actual time depends on traffic. Verified from brochure &amp; maps. Last updated: November 2026.
               </p>
             </div>
 

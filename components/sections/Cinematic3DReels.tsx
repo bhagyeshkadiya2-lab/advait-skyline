@@ -61,7 +61,7 @@ const REELS: VideoReel[] = [
     title: 'Double-Height Grand Entrance Lobby',
     subtitle: 'Italian Marble & Crystal Chandelier',
     description:
-      'Step into luxury: an expansive double-height reception lobby finished in book-matched Italian marble, bespoke designer lighting, and air-conditioned guest waiting lounge.',
+      'Step into an expansive double-height reception lobby finished in book-matched Italian marble, bespoke designer lighting, and air-conditioned guest waiting lounge.',
     videoSrc: '/videos/3d/grand-entrance-lobby.mp4',
     tag: 'Entrance Lobby 3D',
     highlights: ['Air-Conditioned Visitors Lounge', 'Concierge & Security Desk', 'Access-Controlled Turnstiles'],
@@ -91,7 +91,7 @@ const REELS: VideoReel[] = [
   {
     id: 'clubhouse-banquet',
     category: 'clubhouse',
-    title: 'Luxury Clubhouse & Banquet Lounge',
+    title: 'Clubhouse & Banquet Lounge',
     subtitle: 'Celebration & Indoor Community Spaces',
     description:
       'Double-height private community banquet hall with grand chandeliers, plush sofa seating, indoor game stations, and pantry provisions for family functions.',
@@ -248,7 +248,7 @@ export default function Cinematic3DReels() {
               Experience Advait Skyline in 3D Motion
             </h2>
             <p className="font-sans text-[#EADFCB]/80 text-sm sm:text-base leading-relaxed">
-              Watch photorealistic 3D architectural animated walkthroughs of our G+14 residential tower, rooftop infinity pool, commercial shopping arcade, grand entrance lobbies, and modern apartments.
+              Watch 3D architectural animated walkthroughs of our G+14 residential tower, rooftop infinity pool, commercial shopping arcade, grand entrance lobbies, and modern apartments.
             </p>
           </div>
 

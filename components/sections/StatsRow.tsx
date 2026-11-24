@@ -1,118 +1,51 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
-import { motion, useInView } from 'motion/react';
+import React, { useEffect, useRef } from 'react';
+import { animate, useInView } from 'motion/react';
 
-interface StatItemProps {
-  finalNumber: number;
-  suffix?: string;
+type CounterProps = {
+  value: number;
   prefix?: string;
-  label: string;
-  caption: string;
-}
+  suffix?: string;
+  className?: string;
+};
 
 /**
- * SEO-Safe Counter Stat Component:
- * - In the initial Server-Rendered HTML, the REAL final number is always visible in the accessible DOM (inside a visually hidden element or directly).
- * - Crawlers and bots reading raw HTML see "39+ Lifestyle Amenities", "G+14 Landmark Floors", "200 m from Bhilad Checkpost", "20 Retail Shops".
- * - Visually on client, when scrolled into view, it animates smoothly from 0 to finalNumber.
+ * Reusable SEO-Safe Counter Component:
+ * - Server HTML and no-JS text = final value ONLY (no "0+39" or "G+0").
+ * - Animates once smoothly when entering viewport via requestAnimationFrame.
+ * - Respects prefers-reduced-motion.
  */
-function SingleStatCounter({ finalNumber, suffix = '', prefix = '', label, caption }: StatItemProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-50px' });
-  const [currentValue, setCurrentValue] = useState(0);
+export function Counter({ value, prefix = '', suffix = '', className }: CounterProps) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: true, margin: '-10% 0px' });
 
   useEffect(() => {
-    if (!isInView) return;
+    if (!inView || !ref.current) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const node = ref.current;
+    const controls = animate(0, value, {
+      duration: 1.2,
+      ease: 'easeOut',
+      onUpdate: (v) => {
+        node.textContent = `${prefix}${Math.round(v)}${suffix}`;
+      },
+      onComplete: () => {
+        node.textContent = `${prefix}${value}${suffix}`;
+      },
+    });
+    return () => controls.stop();
+  }, [inView, value, prefix, suffix]);
 
-    let startTime: number | null = null;
-    const durationMs = 1600;
-
-    const animateCount = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
-      const elapsed = timestamp - startTime;
-      const progress = Math.min(elapsed / durationMs, 1);
-
-      // Smooth easeOutQuart formula
-      const easeProgress = 1 - Math.pow(1 - progress, 4);
-      const computed = Math.floor(easeProgress * finalNumber);
-
-      setCurrentValue(computed);
-
-      if (progress < 1) {
-        requestAnimationFrame(animateCount);
-      } else {
-        setCurrentValue(finalNumber);
-      }
-    };
-
-    requestAnimationFrame(animateCount);
-  }, [isInView, finalNumber]);
-
+  // Server HTML and no-JS text = final value only.
   return (
-    <div
-      ref={ref}
-      className="flex flex-col items-center justify-center text-center px-4 py-8 relative group"
-    >
-      {/* 
-        ACCESSIBLE ACCURACY FOR SEARCH BOTS:
-        The accessible label holds the final real value directly so crawlers never index 0.
-      */}
-      <div
-        aria-label={`${prefix}${finalNumber}${suffix} ${label}`}
-        className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-[#F2D27A] mb-2 leading-none"
-      >
-        <span aria-hidden="true">
-          {prefix}{currentValue}{suffix}
-        </span>
-        <span className="sr-only">
-          {prefix}{finalNumber}{suffix}
-        </span>
-      </div>
-
-      <span className="font-sans text-xs sm:text-sm font-bold uppercase tracking-[0.16em] text-white block mb-1">
-        {label}
-      </span>
-
-      <span className="font-sans text-[11px] text-[#EADFCB]/70 tracking-wide block max-w-[200px]">
-        {caption}
-      </span>
-    </div>
+    <span ref={ref} className={className}>
+      {`${prefix}${value}${suffix}`}
+    </span>
   );
 }
 
 export default function StatsRow() {
-  const STATS = [
-    {
-      finalNumber: 39,
-      suffix: '+',
-      prefix: '',
-      label: 'Lifestyle Amenities',
-      caption: 'Resort pool, dual gyms, turf cricket & mini cinema',
-    },
-    {
-      finalNumber: 14,
-      suffix: '',
-      prefix: 'G+',
-      label: 'Landmark Floors',
-      caption: 'Three soaring architectural residential towers',
-    },
-    {
-      finalNumber: 200,
-      suffix: 'm',
-      prefix: '',
-      label: 'From Checkpost',
-      caption: 'Naroli–Bhilad Checkpost border crossing',
-    },
-    {
-      finalNumber: 20,
-      suffix: '',
-      prefix: '',
-      label: 'Ground Retail Shops',
-      caption: '5-foot wide customer otta on main road',
-    },
-  ];
-
   return (
     <section
       aria-label="Advait Skyline Quantitative Metrics"
@@ -122,16 +55,59 @@ export default function StatsRow() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0 divide-y sm:divide-y-0 sm:divide-x divide-[#7B4F2E]/30">
-          {STATS.map((stat, idx) => (
-            <SingleStatCounter
-              key={idx}
-              finalNumber={stat.finalNumber}
-              suffix={stat.suffix}
-              prefix={stat.prefix}
-              label={stat.label}
-              caption={stat.caption}
-            />
-          ))}
+          
+          {/* Stat 1: 39+ Lifestyle Amenities */}
+          <div className="flex flex-col items-center justify-center text-center px-4 py-8 relative group">
+            <div className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-[#F2D27A] mb-2 leading-none">
+              <Counter value={39} suffix="+" />
+            </div>
+            <span className="font-sans text-xs sm:text-sm font-bold uppercase tracking-[0.16em] text-white block mb-1">
+              Lifestyle Amenities
+            </span>
+            <span className="font-sans text-[11px] text-[#EADFCB]/70 tracking-wide block max-w-[200px]">
+              Swimming pool, dual gyms, turf cricket &amp; mini cinema
+            </span>
+          </div>
+
+          {/* Stat 2: G+14 Landmark Floors (Static text, not counter) */}
+          <div className="flex flex-col items-center justify-center text-center px-4 py-8 relative group">
+            <div className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-[#F2D27A] mb-2 leading-none">
+              <span>G+14</span>
+            </div>
+            <span className="font-sans text-xs sm:text-sm font-bold uppercase tracking-[0.16em] text-white block mb-1">
+              Landmark Floors
+            </span>
+            <span className="font-sans text-[11px] text-[#EADFCB]/70 tracking-wide block max-w-[200px]">
+              Residential and commercial development
+            </span>
+          </div>
+
+          {/* Stat 3: 200m From Checkpost */}
+          <div className="flex flex-col items-center justify-center text-center px-4 py-8 relative group">
+            <div className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-[#F2D27A] mb-2 leading-none">
+              <Counter value={200} suffix=" m" />
+            </div>
+            <span className="font-sans text-xs sm:text-sm font-bold uppercase tracking-[0.16em] text-white block mb-1">
+              From Checkpost
+            </span>
+            <span className="font-sans text-[11px] text-[#EADFCB]/70 tracking-wide block max-w-[200px]">
+              Naroli–Bhilad Checkpost border crossing
+            </span>
+          </div>
+
+          {/* Stat 4: 20 Ground Retail Shops */}
+          <div className="flex flex-col items-center justify-center text-center px-4 py-8 relative group">
+            <div className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-[#F2D27A] mb-2 leading-none">
+              <Counter value={20} />
+            </div>
+            <span className="font-sans text-xs sm:text-sm font-bold uppercase tracking-[0.16em] text-white block mb-1">
+              Ground Retail Shops
+            </span>
+            <span className="font-sans text-[11px] text-[#EADFCB]/70 tracking-wide block max-w-[200px]">
+              5-foot wide customer otta on main road
+            </span>
+          </div>
+
         </div>
       </div>
     </section>

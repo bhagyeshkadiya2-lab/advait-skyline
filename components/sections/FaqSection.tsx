@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ChevronDown, HelpCircle } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 export default function FaqSection() {
@@ -17,6 +17,8 @@ export default function FaqSection() {
     { q: t('q6'), a: t('a6') },
     { q: t('q7'), a: t('a7') },
     { q: t('q8'), a: t('a8') },
+    { q: t('q9'), a: t('a9') },
+    { q: t('q10'), a: t('a10') },
   ];
 
   const toggleFaq = (index: number) => {
@@ -48,7 +50,7 @@ export default function FaqSection() {
 
         {/* 
           AEO-Optimized FAQ Accordion:
-          Always present in initial HTML for immediate parsing by Search Engines & AI LLMs.
+          All answers are present in the server HTML (SSR) for search crawlers, curl, and AI search engines.
         */}
         <div className="space-y-4">
           {FAQS.map((faq, idx) => {
@@ -76,11 +78,14 @@ export default function FaqSection() {
                   />
                 </button>
 
-                {isOpen && (
-                  <div className="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-[#EADFCB]/85 font-sans leading-relaxed border-t border-[#7B4F2E]/20 bg-[#1E130C]/30">
-                    {faq.a}
-                  </div>
-                )}
+                {/* Always rendered in DOM — toggled via CSS hidden/block so answers exist in server HTML */}
+                <div
+                  className={`px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-[#EADFCB]/85 font-sans leading-relaxed border-t border-[#7B4F2E]/20 bg-[#1E130C]/30 ${
+                    isOpen ? 'block' : 'hidden'
+                  }`}
+                >
+                  {faq.a}
+                </div>
               </div>
             );
           })}

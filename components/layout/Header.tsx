@@ -14,6 +14,7 @@ import {
   Compass,
   Building2,
   Phone,
+  MapPin,
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/routing';
@@ -195,6 +196,28 @@ export default function Header() {
                       </span>
                       <span className="text-[11px] text-[#EADFCB]/70 leading-normal mt-0.5">
                         {t('twoBhkSub')}
+                      </span>
+                    </div>
+                  </Link>
+
+                  {/* Flats Near Silvassa Link */}
+                  <Link
+                    href="/flats-near-silvassa"
+                    className={`flex items-start gap-3 p-2.5 rounded-lg transition-all ${
+                      pathname === '/flats-near-silvassa'
+                        ? 'bg-[#2E1E14] border border-[#D9A21B]/40 text-[#F2D27A]'
+                        : 'hover:bg-[#2A1B12] text-[#EADFCB] hover:text-[#F2D27A]'
+                    }`}
+                  >
+                    <div className="p-2 rounded-md bg-[#382317] border border-[#D9A21B]/30 text-[#F2D27A] shrink-0 mt-0.5">
+                      <MapPin size={15} />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-sm font-semibold leading-tight">
+                        Flats Near Silvassa
+                      </span>
+                      <span className="text-[11px] text-[#EADFCB]/70 leading-normal mt-0.5">
+                        ~10 km via Naroli–Silvassa Main Road
                       </span>
                     </div>
                   </Link>
@@ -421,6 +444,14 @@ export default function Header() {
                   >
                     <span>{t('twoBhk')}</span>
                     <span className="text-[10px] text-[#D9A21B] font-mono">573 sq.ft</span>
+                  </Link>
+                  <Link
+                    href="/flats-near-silvassa"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center justify-between py-1 text-sm text-[#EADFCB] hover:text-[#F2D27A]"
+                  >
+                    <span>Flats Near Silvassa</span>
+                    <span className="text-[10px] text-[#D9A21B] font-mono">~10 km</span>
                   </Link>
                   <Link
                     href="/floor-plans"

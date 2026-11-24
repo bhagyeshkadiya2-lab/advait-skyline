@@ -395,8 +395,8 @@ export const PROJECT_DATA = {
       name: 'Sewage Treatment Plant (STP)',
       category: 'safety-utilities',
       confirmedInBrochure: true,
-      tagline: 'Eco-Compliant Water Recycling',
-      description: 'Advanced biological STP meeting full State Environmental Committee pollution control norms; supplies recycled flush/gardening water.',
+      tagline: 'Sewage Treatment Plant as per EC Rules',
+      description: 'Biological STP as per State Environmental Committee pollution control norms; supplies recycled flush and gardening water.',
       iconName: 'Recycle',
     },
 
@@ -583,18 +583,18 @@ export const PROJECT_DATA = {
       approxNote: 'Immediate walking reach; prime junction connecting Gujarat & Dadra and Nagar Haveli.',
     },
     {
-      name: 'Banks (SBI / BOB / HDFC)',
-      category: 'commercial',
-      time: '3 min',
-      distance: '2.5 km',
-      approxNote: 'Naroli commercial banking hub with 24/7 ATM facilities.',
-    },
-    {
       name: 'Naroli High School',
       category: 'education',
       time: '4 min',
       distance: '2.4 km',
       approxNote: 'Reputed secondary education center in close residential proximity.',
+    },
+    {
+      name: 'Banks (SBI / BOB / HDFC)',
+      category: 'commercial',
+      time: '3 min',
+      distance: '2.5 km',
+      approxNote: 'Naroli commercial banking hub with 24/7 ATM facilities.',
     },
     {
       name: 'Primary Health Centre (PHC)',
@@ -620,9 +620,9 @@ export const PROJECT_DATA = {
     {
       name: 'Laxmi Vidyapeet Campus',
       category: 'education',
-      time: '21 min',
+      time: '14 min (approx.)',
       distance: '9.0 km',
-      approxNote: 'Premier multi-disciplinary engineering and academic educational institute.',
+      approxNote: 'Premier multi-disciplinary engineering and academic educational campus.',
     },
     {
       name: 'Silvassa Sports Stadium',
@@ -650,7 +650,7 @@ export const PROJECT_DATA = {
   specifications: [
     {
       title: 'Structure',
-      description: 'Quality-controlled earthquake-resistant RCC framed structural build designed by chartered structural engineers per IS 1893 seismic standards.',
+      description: 'Quality-controlled earthquake-resistant RCC framed structural build designed by chartered structural engineers.',
       icon: 'Building2',
     },
     {

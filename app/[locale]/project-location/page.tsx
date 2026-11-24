@@ -39,6 +39,9 @@ export default async function ProjectLocationPage({
         ]}
       />
 
+      {/* SEO H1 — visually integrated into the section header */}
+      <h1 className="sr-only">Project Location &amp; Connectivity – Advait Skyline, Naroli–Bhilad</h1>
+
       <ConnectivityRadial />
 
       <section className="py-20 max-w-4xl mx-auto px-4 sm:px-6">

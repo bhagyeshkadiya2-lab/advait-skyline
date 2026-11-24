@@ -17,7 +17,7 @@ export async function generateMetadata({
     path: '/amenities',
     customTitle: '39+ Amenities at Advait Skyline | Resort Pool, Gym, Box Cricket Naroli',
     customDescription:
-      'Explore 39+ world-class lifestyle amenities at Advait Skyline, Naroli–Bhilad Checkpost: resort pool, separate gyms, turf box cricket, mini theater, club house, gardens.',
+      'Explore 39+ lifestyle amenities at Advait Skyline, Naroli–Bhilad Checkpost: swimming pool, separate gyms, turf box cricket, mini theater, club house, gardens.',
   });
 }
 
@@ -38,6 +38,9 @@ export default async function AmenitiesPage({
           { name: '39+ Amenities', item: '/amenities' },
         ]}
       />
+
+      {/* SEO H1 — visually integrated into the section header */}
+      <h1 className="sr-only">39+ Lifestyle Amenities at Advait Skyline, Naroli</h1>
 
       {/* Standalone Master Amenity Explorer */}
       <AmenityExplorer />

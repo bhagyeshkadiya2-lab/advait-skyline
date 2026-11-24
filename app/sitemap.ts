@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/1-bhk-flats-naroli',
     '/2-bhk-flats-naroli',
+    '/flats-near-silvassa',
     '/amenities',
     '/floor-plans',
     '/commercial-shops-naroli',
@@ -23,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const locales = ['en', 'hi', 'gu'];
-  const lastModified = new Date('2026-05-28T00:00:00.000Z');
+  const lastModified = new Date();
 
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
