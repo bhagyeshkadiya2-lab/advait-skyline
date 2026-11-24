@@ -1,4 +1,10 @@
+import type { Metadata } from 'next';
+import { BASE_URL } from '@/lib/seo';
 import './globals.css';
+
+export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
+};
 
 export default function RootLayout({
   children,

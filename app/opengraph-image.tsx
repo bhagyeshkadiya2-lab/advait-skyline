@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const runtime = "edge";
+export const runtime = "nodejs";
 
 export const alt = "Advait Skyline — Premium 1 & 2 BHK Residences & Shops by Dhanasvi Infra";
 export const size = {

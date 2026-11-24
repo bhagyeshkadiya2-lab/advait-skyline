@@ -1,5 +1,6 @@
 import React from 'react';
 import { setRequestLocale } from 'next-intl/server';
+import JsonLd from '@/components/seo/JsonLd';
 import HeroStage from '@/components/sections/HeroStage';
 import TrustBar from '@/components/sections/TrustBar';
 import IntroSection from '@/components/sections/IntroSection';
@@ -23,6 +24,7 @@ export default async function HomePage({
 
   return (
     <div className="w-full">
+      <JsonLd locale={locale} type="home" />
       {/* 1. Cinematic Hero with 39+ Rotating Badge, Pointer Tilt, Parallax */}
       <HeroStage />
 

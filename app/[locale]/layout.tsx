@@ -138,7 +138,7 @@ export default async function LocaleLayout({
         />
 
         {/* Core Structured Data */}
-        <JsonLd locale={locale} type="home" />
+        <JsonLd locale={locale} type="global" />
       </head>
 
       <body className="bg-[#FBF8F2] text-[#2A1F18] font-sans antialiased selection:bg-[#D9A21B] selection:text-[#1E130C]">
