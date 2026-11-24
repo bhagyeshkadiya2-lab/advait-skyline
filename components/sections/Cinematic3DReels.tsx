@@ -260,7 +260,7 @@ export default function Cinematic3DReels() {
         </div>
 
         {/* Category Filter Pills */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+        <div data-lenis-prevent className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
           {CATEGORIES.map((cat) => {
             const Icon = cat.icon;
             const isActive = cat.id === activeCategory;
@@ -410,7 +410,7 @@ export default function Cinematic3DReels() {
                 Select 3D Reel ({filteredReels.length} available):
               </span>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 max-h-[220px] overflow-y-auto pr-1">
+              <div data-lenis-prevent className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 max-h-[220px] overflow-y-auto pr-1">
                 {filteredReels.map((reel, rIdx) => {
                   const isSelected = rIdx === activeReelIndex;
                   return (

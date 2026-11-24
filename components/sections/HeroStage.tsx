@@ -28,6 +28,7 @@ const DUST_PARTICLES = [
 export default function HeroStage() {
   const t = useTranslations('hero');
   const heroRef = useRef<HTMLDivElement>(null);
+  const [heroLighting, setHeroLighting] = React.useState<'day' | 'night'>('day');
 
   // 1. Scroll-linked 3D Parallax & Depth
   const { scrollYProgress } = useScroll({
@@ -202,7 +203,7 @@ export default function HeroStage() {
         </motion.div>
 
         {/* RIGHT COLUMN: 3D Tilt Card & Building Facade (55% desktop) */}
-        <div className="w-full lg:w-[52%] relative flex items-center justify-center">
+        <div className="w-full lg:w-[50%] relative flex items-center justify-center">
           <motion.div
             style={{
               y: buildingY,
@@ -213,26 +214,58 @@ export default function HeroStage() {
             initial={{ opacity: 0, clipPath: 'inset(100% 0 0 0)' }}
             animate={{ opacity: 1, clipPath: 'inset(0% 0 0 0)' }}
             transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-            className="relative w-full aspect-[4/3] sm:aspect-[16/11] rounded-2xl overflow-hidden border border-[#D9A21B]/30 shadow-2xl bg-[#271910] group"
+            className="relative w-full max-w-[460px] aspect-[4/5] rounded-3xl overflow-hidden border-2 border-[#D9A21B]/40 shadow-[0_30px_90px_rgba(0,0,0,0.8)] bg-[#1A100A] group"
           >
-            {/* Main Hero Building Image */}
+            {/* Main Hero Building Image (Ultra-HD with Day/Night Switch) */}
             <Image
-              src="/hero-bg.jpg"
-              alt="Advait Skyline G+14 Tower Architectural Landmark at Naroli–Bhilad"
+              key={heroLighting}
+              src={heroLighting === 'day' ? '/hero-day.webp' : '/hero-night.webp'}
+              alt="Advait Skyline G+14 Skyscraper Architectural Landmark at Naroli–Bhilad"
               fill
               priority
               fetchPriority="high"
-              sizes="(max-width: 768px) 100vw, 55vw"
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover object-center group-hover:scale-105 transition-transform duration-1000 ease-out"
             />
 
             {/* Ambient Gold Light-Sweep Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#1E130C]/70 via-transparent to-[#F2D27A]/15 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#1E130C]/60 via-transparent to-[#F2D27A]/15 pointer-events-none" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1E130C] via-transparent to-transparent opacity-60 pointer-events-none" />
+
+            {/* Lighting Mode Switcher Pills */}
+            <div className="absolute top-4 right-4 z-20 flex items-center gap-1.5 p-1 rounded-full bg-[#1E130C]/85 backdrop-blur-md border border-[#D9A21B]/40">
+              <button
+                type="button"
+                onClick={() => setHeroLighting('day')}
+                className={`px-3 py-1 rounded-full text-[10px] font-sans font-bold uppercase tracking-wider transition-all cursor-pointer ${
+                  heroLighting === 'day'
+                    ? 'bg-gold-gradient text-[#1E130C] shadow-md'
+                    : 'text-[#EADFCB]/70 hover:text-white'
+                }`}
+              >
+                Day 3D
+              </button>
+              <button
+                type="button"
+                onClick={() => setHeroLighting('night')}
+                className={`px-3 py-1 rounded-full text-[10px] font-sans font-bold uppercase tracking-wider transition-all cursor-pointer ${
+                  heroLighting === 'night'
+                    ? 'bg-gold-gradient text-[#1E130C] shadow-md'
+                    : 'text-[#EADFCB]/70 hover:text-white'
+                }`}
+              >
+                Dusk Glow
+              </button>
+            </div>
+
+            {/* Architectural Specs Badge */}
+            <div className="absolute top-4 left-4 z-20 px-3 py-1 rounded-full bg-[#1E130C]/85 backdrop-blur-md border border-white/10 text-[10px] uppercase font-sans tracking-widest text-[#F2D27A] font-bold pointer-events-none">
+              G+14 Skyscraper
+            </div>
 
             {/* Artistic Rendering Watermark */}
             <div className="absolute bottom-3 right-3 px-2.5 py-1 rounded bg-[#1E130C]/80 backdrop-blur-sm border border-white/10 text-[10px] uppercase font-sans tracking-widest text-[#EADFCB]/80 pointer-events-none">
-              Artistic Rendering
+              Verified 3D Architectural Render
             </div>
           </motion.div>
 

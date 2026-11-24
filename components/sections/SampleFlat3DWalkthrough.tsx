@@ -306,7 +306,7 @@ export default function SampleFlat3DWalkthrough() {
         </div>
 
         {/* Room Navigation Pills */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+        <div data-lenis-prevent className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
           {ROOMS_DATA.map((room, idx) => {
             const isActive = idx === activeRoomIndex;
             return (

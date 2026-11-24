@@ -27,46 +27,46 @@ export default async function HomePage({
   return (
     <div className="w-full">
       <JsonLd locale={locale} type="home" />
-      {/* 1. Cinematic Hero with 39+ Rotating Badge, Pointer Tilt, Parallax */}
+      {/* 1. Cinematic Hero with 39+ Rotating Badge, Day/Night Toggle, Pointer Tilt */}
       <HeroStage />
 
       {/* 2. Trust Highlights Slow Marquee */}
       <TrustBar />
 
-      {/* 3. Architectural Overview & Mixed-Use Destination */}
-      <IntroSection />
-
-      {/* 4. SEO-Safe Quantifiable Highlights */}
-      <StatsRow />
-
-      {/* 5. 39+ Lifestyle Amenities Master Explorer */}
-      <AmenityExplorer />
-
-      {/* 6. Residences 1 & 2 BHK Showcase & Dimensions */}
-      <ResidenceShowcase />
-
-      {/* 6.1. Interactive 3D Spatial Sample Flat Walkthrough (Real Photos) */}
-      <SampleFlat3DWalkthrough />
-
-      {/* 6.2. 3D Architectural Cinematic Video Reels */}
+      {/* 3. 3D Architectural Cinematic Video Reels (High-Impact Visual Engagement) */}
       <Cinematic3DReels />
 
-      {/* 7. Commercial Retail Façade & 11 Use-Cases Grid */}
-      <CommercialSection />
+      {/* 4. Architectural Overview & Mixed-Use Destination */}
+      <IntroSection />
 
-      {/* 8. Connectivity Radial Diagram & Transit Table */}
-      <ConnectivityRadial />
+      {/* 5. SEO-Safe Quantifiable Highlights */}
+      <StatsRow />
 
-      {/* 9. Floor Plans Interactive Tabs & Lightbox */}
+      {/* 6. 39+ Lifestyle Amenities Master Explorer (Ultra-HD 3D Cards) */}
+      <AmenityExplorer />
+
+      {/* 7. Residences 1 & 2 BHK Showcase & Dimensions */}
+      <ResidenceShowcase />
+
+      {/* 8. Interactive 3D Spatial Sample Flat Walkthrough (Real Furnished Unit) */}
+      <SampleFlat3DWalkthrough />
+
+      {/* 9. Floor Plans Interactive Tabs & Lightbox (Paired with Residences) */}
       <FloorPlansSection />
 
-      {/* 10. Technical Engineering Specifications Accordion */}
+      {/* 10. Commercial Retail Façade & 11 Use-Cases Grid */}
+      <CommercialSection />
+
+      {/* 11. Connectivity Radial Diagram & Transit Table */}
+      <ConnectivityRadial />
+
+      {/* 12. Technical Engineering Specifications Accordion */}
       <SpecificationsSection />
 
-      {/* 11. 8 Core Homepage FAQs (AEO & Bot SEO-first) */}
+      {/* 13. 8 Core Homepage FAQs (AEO & Bot SEO-first) */}
       <FaqSection />
 
-      {/* 12. Final Experience CTA & Integrated Lead Capture */}
+      {/* 14. Final Experience CTA & Integrated Lead Capture */}
       <FinalCtaSection />
     </div>
   );

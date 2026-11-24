@@ -104,6 +104,13 @@ export default function AmenityExplorer() {
   const t = useTranslations('amenitiesSection');
   const [activeCategory, setActiveCategory] = useState<string>('sports-fitness');
   const [selectedAmenityId, setSelectedAmenityId] = useState<string>('swimming-pool');
+  const carouselRef = React.useRef<HTMLDivElement>(null);
+
+  const scrollCarousel = (direction: 'left' | 'right') => {
+    if (!carouselRef.current) return;
+    const amount = direction === 'left' ? -340 : 340;
+    carouselRef.current.scrollBy({ left: amount, behavior: 'smooth' });
+  };
 
   const filteredAmenities = PROJECT_DATA.amenities.filter(
     (a) => a.category === activeCategory
@@ -154,7 +161,7 @@ export default function AmenityExplorer() {
         </div>
 
         {/* Category Tabs with Animated Sliding Gold Underline */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-4 scrollbar-none border-b border-[#7B4F2E]/20">
+        <div data-lenis-prevent className="flex items-center gap-2 overflow-x-auto pb-4 scrollbar-none border-b border-[#7B4F2E]/20">
           {CATEGORIES.map((cat) => {
             const isActive = activeCategory === cat.id;
             return (
@@ -183,7 +190,7 @@ export default function AmenityExplorer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
           
           {/* Left Column: Vertical Interactive List */}
-          <div className="lg:col-span-6 flex flex-col space-y-2.5 max-h-[580px] overflow-y-auto pr-2">
+          <div data-lenis-prevent className="lg:col-span-6 flex flex-col space-y-2.5 max-h-[580px] overflow-y-auto pr-2">
             {filteredAmenities.map((amenity, idx) => {
               const isSelected = selectedAmenityId === amenity.id;
               const IconComp = ICON_MAP[amenity.iconName] || Sparkles;
@@ -283,15 +290,39 @@ export default function AmenityExplorer() {
         {/* Pinned Horizontal Gallery: Card Carousel (01 to 39) */}
         <div className="pt-8 border-t border-[#7B4F2E]/30 space-y-6">
           <div className="flex items-center justify-between">
-            <span className="text-xs uppercase font-sans tracking-[0.2em] font-bold text-[#F2D27A]">
-              Full 39+ Numbered Directory
-            </span>
-            <span className="text-xs text-[#EADFCB]/60 font-sans">
-              Scroll horizontally →
-            </span>
+            <div>
+              <span className="text-xs uppercase font-sans tracking-[0.2em] font-bold text-[#F2D27A] block">
+                Full 39+ Numbered Directory
+              </span>
+              <span className="text-xs text-[#EADFCB]/60 font-sans">
+                Click any amenity to view 3D showcase · Scroll or use arrows
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={() => scrollCarousel('left')}
+                aria-label="Scroll left"
+                className="w-9 h-9 rounded-full bg-[#271910] border border-[#7B4F2E]/50 text-white flex items-center justify-center hover:bg-[#D9A21B] hover:text-[#1E130C] active:scale-95 transition-all cursor-pointer shadow-md"
+              >
+                <ChevronLeft size={18} />
+              </button>
+              <button
+                type="button"
+                onClick={() => scrollCarousel('right')}
+                aria-label="Scroll right"
+                className="w-9 h-9 rounded-full bg-[#271910] border border-[#7B4F2E]/50 text-white flex items-center justify-center hover:bg-[#D9A21B] hover:text-[#1E130C] active:scale-95 transition-all cursor-pointer shadow-md"
+              >
+                <ChevronRight size={18} />
+              </button>
+            </div>
           </div>
 
-          <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-[#7B4F2E] scrollbar-track-[#1E130C]">
+          <div
+            ref={carouselRef}
+            data-lenis-prevent
+            className="flex gap-4 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-[#7B4F2E] scrollbar-track-[#1E130C] scroll-smooth"
+          >
             {PROJECT_DATA.amenities.map((item, idx) => {
               const numStr = (idx + 1).toString().padStart(2, '0');
               const IconComp = ICON_MAP[item.iconName] || Sparkles;
