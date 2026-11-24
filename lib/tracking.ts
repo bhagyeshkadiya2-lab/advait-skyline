@@ -14,7 +14,7 @@ declare global {
 export interface TrackingParams {
   cta_location?: string;
   page_type?: string;
-  configuration?: '1bhk' | '2bhk' | 'commercial' | 'all';
+  configuration?: '1bhk' | '2bhk' | '1-bhk' | '2-bhk' | 'commercial' | 'all' | string;
   locale?: string;
   amenity_id?: string;
   plan_name?: string;

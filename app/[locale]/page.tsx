@@ -4,6 +4,11 @@ import HeroStage from '@/components/sections/HeroStage';
 import TrustBar from '@/components/sections/TrustBar';
 import IntroSection from '@/components/sections/IntroSection';
 import StatsRow from '@/components/sections/StatsRow';
+import AmenityExplorer from '@/components/sections/AmenityExplorer';
+import ResidenceShowcase from '@/components/sections/ResidenceShowcase';
+import CommercialSection from '@/components/sections/CommercialSection';
+import ConnectivityRadial from '@/components/sections/ConnectivityRadial';
+import FloorPlansSection from '@/components/sections/FloorPlansSection';
 
 export default async function HomePage({
   params,
@@ -26,6 +31,21 @@ export default async function HomePage({
 
       {/* 4. SEO-Safe Quantifiable Highlights */}
       <StatsRow />
+
+      {/* 5. 39+ Lifestyle Amenities Master Explorer */}
+      <AmenityExplorer />
+
+      {/* 6. Residences 1 & 2 BHK Showcase & Dimensions */}
+      <ResidenceShowcase />
+
+      {/* 7. Commercial Retail Façade & 11 Use-Cases Grid */}
+      <CommercialSection />
+
+      {/* 8. Connectivity Radial Diagram & Transit Table */}
+      <ConnectivityRadial />
+
+      {/* 9. Floor Plans Interactive Tabs & Lightbox */}
+      <FloorPlansSection />
     </div>
   );
 }
