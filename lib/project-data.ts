@@ -41,8 +41,8 @@ export interface UnitLayout {
   plan2DPath: string;
 }
 
-// TODO(FACT): Replace with official Google Business Profile shortlink once verified by owner
-export const GBP_MAPS_URL = 'https://maps.google.com/?q=20.2798943,72.920547';
+// Verified official Google Business Profile share link
+export const GBP_MAPS_URL = 'https://share.google/1BK6JUvV05C14djr3';
 
 export const PROJECT_DATA = {
   identity: {

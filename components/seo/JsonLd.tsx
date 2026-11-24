@@ -1,5 +1,5 @@
 import React from 'react';
-import { PROJECT_DATA } from '@/lib/project-data';
+import { PROJECT_DATA, GBP_MAPS_URL } from '@/lib/project-data';
 import { BASE_URL } from '@/lib/seo';
 
 /**
@@ -64,6 +64,7 @@ export default function JsonLd({
         latitude: PROJECT_DATA.contact.geoCoordinates.latitude,
         longitude: PROJECT_DATA.contact.geoCoordinates.longitude,
       },
+      hasMap: GBP_MAPS_URL,
       openingHoursSpecification: [
         {
           '@type': 'OpeningHoursSpecification',
@@ -109,6 +110,7 @@ export default function JsonLd({
         latitude: PROJECT_DATA.contact.geoCoordinates.latitude,
         longitude: PROJECT_DATA.contact.geoCoordinates.longitude,
       },
+      hasMap: GBP_MAPS_URL,
       numberOfAccommodationUnits: 150,
       amenityFeature: PROJECT_DATA.amenities
         .filter((a) => a.confirmedInBrochure)
@@ -180,6 +182,7 @@ export default function JsonLd({
         latitude: PROJECT_DATA.contact.geoCoordinates.latitude,
         longitude: PROJECT_DATA.contact.geoCoordinates.longitude,
       },
+      hasMap: GBP_MAPS_URL,
       openingHoursSpecification: [
         {
           '@type': 'OpeningHoursSpecification',
