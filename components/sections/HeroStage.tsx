@@ -107,10 +107,7 @@ export default function HeroStage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full flex-1 flex flex-col lg:flex-row items-center justify-between gap-12 pt-8 sm:pt-14 pb-16 relative z-20">
         
         {/* LEFT COLUMN: Editorial Typography & Semantic Server-Rendered CTAs (40% desktop) */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+        <div
           className="w-full lg:w-[45%] flex flex-col items-start space-y-6 sm:space-y-8"
         >
           {/* Eyebrow with gold hairline */}
@@ -209,7 +206,7 @@ export default function HeroStage() {
               Official Brochure (PDF)
             </BrochureDownloadButton>
           </div>
-        </motion.div>
+        </div>
 
         {/* RIGHT COLUMN: 3D Tilt Card & Building Facade (55% desktop) */}
         <div className="w-full lg:w-[50%] relative flex items-center justify-center">
@@ -220,9 +217,6 @@ export default function HeroStage() {
               rotateX: springY,
               rotateY: springX,
             }}
-            initial={{ opacity: 0, clipPath: 'inset(100% 0 0 0)' }}
-            animate={{ opacity: 1, clipPath: 'inset(0% 0 0 0)' }}
-            transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
             className="relative w-full max-w-[460px] aspect-[4/5] rounded-3xl overflow-hidden border-2 border-[#D9A21B]/40 shadow-[0_30px_90px_rgba(0,0,0,0.8)] bg-[#1A100A] group"
           >
             {/* Main Hero Building Image (Ultra-HD with Day/Night Switch) */}

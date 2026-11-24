@@ -2,13 +2,15 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import { motion, AnimatePresence } from 'motion/react';
 import { Maximize2, MessageSquare, Download, Check } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import PlanLightbox from '@/components/ui/PlanLightbox';
 import { BrochureDownloadButton } from '@/components/lead/BrochureDownloadModal';
 import { PROJECT_DATA } from '@/lib/project-data';
 import { pushDataLayerEvent, buildWhatsAppLink } from '@/lib/tracking';
+
+const PlanLightbox = dynamic(() => import('@/components/ui/PlanLightbox'), { ssr: false });
 
 const FLOOR_PLAN_TABS = [
   { id: 'master', label: 'Aerial Master Plan', image: '/master-layout-aerial.jpg', carpet: 'G+14 & Amenity Grounds', desc: 'Bird’s-eye master layout showing the G+14 tower, swimming pool, society temple, celebration lawn, box cricket & parking.' },

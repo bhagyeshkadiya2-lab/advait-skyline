@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import { setRequestLocale } from 'next-intl/server';
 import { createPageMetadata } from '@/lib/seo';
 import JsonLd from '@/components/seo/JsonLd';
@@ -18,15 +19,25 @@ import IntroSection from '@/components/sections/IntroSection';
 import StatsRow from '@/components/sections/StatsRow';
 import AmenityExplorer from '@/components/sections/AmenityExplorer';
 import ResidenceShowcase from '@/components/sections/ResidenceShowcase';
-import SampleFlat3DWalkthrough from '@/components/sections/SampleFlat3DWalkthrough';
-import Cinematic3DReels from '@/components/sections/Cinematic3DReels';
 import CommercialSection from '@/components/sections/CommercialSection';
 import ConnectivityRadial from '@/components/sections/ConnectivityRadial';
-import FloorPlansSection from '@/components/sections/FloorPlansSection';
 import SpecificationsSection from '@/components/sections/SpecificationsSection';
 import FaqSection from '@/components/sections/FaqSection';
 import FinalCtaSection from '@/components/sections/FinalCtaSection';
 import ProjectFactSheet from '@/components/sections/ProjectFactSheet';
+
+// Lazy-load below-the-fold interactive media and 3D widgets to keep initial JS bundle lean and minimize TBT
+const Cinematic3DReels = dynamic(() => import('@/components/sections/Cinematic3DReels'), {
+  loading: () => <div className="py-24 bg-[#120B07] min-h-[480px]" />,
+});
+
+const SampleFlat3DWalkthrough = dynamic(() => import('@/components/sections/SampleFlat3DWalkthrough'), {
+  loading: () => <div className="py-24 bg-[#1E130C] min-h-[520px]" />,
+});
+
+const FloorPlansSection = dynamic(() => import('@/components/sections/FloorPlansSection'), {
+  loading: () => <div className="py-24 bg-[#1E130C] min-h-[480px]" />,
+});
 
 export default async function HomePage({
   params,

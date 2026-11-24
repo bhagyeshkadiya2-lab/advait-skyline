@@ -180,7 +180,7 @@ const CATEGORIES = [
 export default function Cinematic3DReels() {
   const [activeCategory, setActiveCategory] = useState<string>('all');
   const [activeReelIndex, setActiveReelIndex] = useState<number>(0);
-  const [isPlaying, setIsPlaying] = useState<boolean>(true);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [isMuted, setIsMuted] = useState<boolean>(true);
 
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -295,8 +295,7 @@ export default function Cinematic3DReels() {
                 key={activeReel.videoSrc}
                 src={activeReel.videoSrc}
                 poster="/renders/advait-skyline-three-towers-day.jpg"
-                preload="metadata"
-                autoPlay
+                preload="none"
                 loop
                 muted={isMuted}
                 playsInline
