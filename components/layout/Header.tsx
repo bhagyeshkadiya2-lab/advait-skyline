@@ -102,7 +102,7 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav
           aria-label="Main Navigation"
-          className="hidden lg:flex items-center gap-4 xl:gap-6 2xl:gap-7"
+          className="hidden lg:flex items-center gap-2.5 xl:gap-5 2xl:gap-6"
         >
           {/* Home Link */}
           <Link
@@ -320,7 +320,15 @@ export default function Header() {
                 : 'text-[#EADFCB]/85 hover:text-[#F2D27A]'
             }`}
           >
-            <span>{t('about')}</span>
+            <span>
+              {t('about') === 'About Dhanasvi' ? (
+                <>
+                  About<span className="hidden xl:inline"> Dhanasvi</span>
+                </>
+              ) : (
+                t('about')
+              )}
+            </span>
             {pathname === '/about-dhanasvi-infra' && (
               <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-[#D9A21B] via-[#F2D27A] to-[#D9A21B] rounded-full shadow-[0_0_8px_rgba(217,162,27,0.7)]" />
             )}
@@ -343,13 +351,13 @@ export default function Header() {
         </nav>
 
         {/* Right Action: Luxury Gold Site Visit Button */}
-        <div className="hidden lg:flex items-center shrink-0 ml-2 xl:ml-4">
+        <div className="hidden lg:flex items-center shrink-0 ml-2 xl:ml-3">
           <Link
             href="/contact"
             onClick={() =>
               pushDataLayerEvent('site_visit_request', { cta_location: 'header_nav' })
             }
-            className="group relative px-4.5 py-2.5 rounded-lg border border-[#D9A21B] bg-gradient-to-r from-[#D9A21B]/15 via-[#F2D27A]/20 to-[#D9A21B]/15 hover:bg-[#D9A21B] hover:text-[#1E130C] text-[#F2D27A] font-sans text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-[0_0_15px_rgba(217,162,27,0.15)] hover:shadow-[0_0_22px_rgba(217,162,27,0.45)] flex items-center gap-1.5 whitespace-nowrap"
+            className="group relative px-3.5 xl:px-4.5 py-2 xl:py-2.5 rounded-lg border border-[#D9A21B] bg-gradient-to-r from-[#D9A21B]/15 via-[#F2D27A]/20 to-[#D9A21B]/15 hover:bg-[#D9A21B] hover:text-[#1E130C] text-[#F2D27A] font-sans text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-[0_0_15px_rgba(217,162,27,0.15)] hover:shadow-[0_0_22px_rgba(217,162,27,0.45)] flex items-center gap-1.5 whitespace-nowrap"
           >
             <span>{t('bookVisitBtn')}</span>
             <ArrowUpRight

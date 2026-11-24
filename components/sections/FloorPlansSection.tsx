@@ -10,16 +10,17 @@ import { PROJECT_DATA } from '@/lib/project-data';
 import { pushDataLayerEvent, buildWhatsAppLink } from '@/lib/tracking';
 
 const FLOOR_PLAN_TABS = [
+  { id: 'master', label: 'Aerial Master Plan', image: '/master-layout-aerial.jpg', carpet: 'G+14 & Amenity Grounds', desc: 'Bird’s-eye master layout showing the G+14 tower, swimming pool, society temple, celebration lawn, box cricket & parking.' },
   { id: '1bhk', label: '1 BHK Residence', image: '/1bhk-layout.jpg', carpet: '511 Sq. Ft. Carpet', desc: 'Spacious hall with foyer, bedroom, kitchen, 2 bathrooms, wash area & wide balcony.' },
   { id: '2bhk', label: '2 BHK Residence', image: '/2bhk-layout.jpg', carpet: '573 Sq. Ft. Carpet', desc: 'Grand 16\' living hall, 2 bedrooms, kitchen, 2 bathrooms, wash area & 5\'6" sunset balcony.' },
   { id: 'ground', label: 'Ground Floor (Shops 1–20)', image: '/commercial-bg.jpg', carpet: 'Main Road Frontage', desc: 'Shops 1 to 20 with 5\' wide customer otta, entrance foyer, fire staircase & meter room.' },
   { id: 'first', label: '1st Floor Commercial', image: '/commercial-bg.jpg', carpet: 'Retail Floor Plate', desc: 'Expansive commercial retail showroom level with dedicated customer circulation.' },
   { id: 'second', label: '2nd Floor Offices (1–6)', image: '/about-bg.jpg', carpet: 'Executive Suites', desc: 'Offices 1 to 6 with attached private balconies, lift access & peaceful business environment.' },
-  { id: 'typical', label: 'Typical 4th–14th Floors', image: '/hero-bg.jpg', carpet: 'Residential Cluster', desc: 'Standard residential cluster floor plan showing lift lobby, cross-ventilation & refuge zones.' },
+  { id: 'typical', label: 'Typical 4th–14th Floors', image: '/hero-day.jpg', carpet: 'Residential Cluster', desc: 'Standard residential cluster floor plan showing lift lobby, cross-ventilation & refuge zones.' },
 ] as const;
 
 export default function FloorPlansSection() {
-  const [activeTab, setActiveTab] = useState<string>('1bhk');
+  const [activeTab, setActiveTab] = useState<string>('master');
   const [lightboxOpen, setLightboxOpen] = useState(false);
 
   const activePlan = FLOOR_PLAN_TABS.find((p) => p.id === activeTab) || FLOOR_PLAN_TABS[0];
