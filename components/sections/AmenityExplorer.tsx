@@ -232,30 +232,36 @@ export default function AmenityExplorer() {
           <div className="lg:col-span-6 flex flex-col justify-between">
             <AnimatePresence mode="wait">
               <motion.div
-                key={activeCategory}
+                key={activeAmenity ? activeAmenity.id : activeCategory}
                 initial={{ opacity: 0, scale: 0.96 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.98 }}
-                transition={{ duration: 0.4 }}
-                className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-[#D9A21B]/30 shadow-2xl bg-[#271910] group"
+                transition={{ duration: 0.35 }}
+                className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-[#D9A21B]/40 shadow-2xl bg-[#271910] group"
               >
                 <Image
-                  src={currentCategoryData.photo}
-                  alt={currentCategoryData.caption}
+                  src={`/amenities/${activeAmenity ? activeAmenity.id : filteredAmenities[0]?.id || 'swimming-pool'}.webp`}
+                  alt={activeAmenity ? activeAmenity.name : currentCategoryData.caption}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1E130C] via-[#1E130C]/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1E130C] via-[#1E130C]/40 to-transparent" />
 
-                <div className="absolute bottom-6 left-6 right-6 space-y-2">
+                <div className="absolute top-4 left-4 z-10 flex items-center gap-2">
+                  <span className="px-3 py-1 rounded-full bg-[#1E130C]/85 backdrop-blur-md border border-[#D9A21B]/40 text-[#F2D27A] font-sans text-xs font-bold uppercase tracking-wider">
+                    {activeAmenity?.confirmedInBrochure ? 'Brochure Confirmed' : 'Project Amenity'}
+                  </span>
+                </div>
+
+                <div className="absolute bottom-6 left-6 right-6 space-y-2 z-10">
                   <span className="text-xs font-sans uppercase tracking-widest text-[#F2D27A] font-bold block">
-                    Featured Lifestyle Zone
+                    {activeAmenity ? activeAmenity.tagline : 'Featured Lifestyle Zone'}
                   </span>
                   <h3 className="font-display text-2xl sm:text-3xl font-bold text-white leading-tight">
                     {activeAmenity ? activeAmenity.name : currentCategoryData.caption}
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#EADFCB]/90 font-sans leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#EADFCB]/90 font-sans leading-relaxed line-clamp-3">
                     {activeAmenity ? activeAmenity.description : currentCategoryData.caption}
                   </p>
                 </div>
@@ -289,21 +295,41 @@ export default function AmenityExplorer() {
             {PROJECT_DATA.amenities.map((item, idx) => {
               const numStr = (idx + 1).toString().padStart(2, '0');
               const IconComp = ICON_MAP[item.iconName] || Sparkles;
+              const isSelected = selectedAmenityId === item.id;
 
               return (
                 <div
                   key={item.id}
-                  className="min-w-[240px] sm:min-w-[280px] p-5 rounded-xl border border-[#7B4F2E]/30 bg-[#271910]/70 flex flex-col justify-between shrink-0 space-y-4 hover:border-[#D9A21B]/60 transition-colors"
+                  onClick={() => {
+                    setActiveCategory(item.category);
+                    setSelectedAmenityId(item.id);
+                  }}
+                  className={`min-w-[240px] sm:min-w-[280px] rounded-xl border overflow-hidden flex flex-col justify-between shrink-0 transition-all cursor-pointer group ${
+                    isSelected
+                      ? 'bg-[#271910] border-[#D9A21B] shadow-lg ring-1 ring-[#D9A21B]'
+                      : 'bg-[#1E130C]/80 border-[#7B4F2E]/30 hover:border-[#D9A21B]/60 hover:bg-[#271910]'
+                  }`}
                 >
-                  <div className="flex items-center justify-between">
-                    <span className="font-display text-xl font-bold text-[#F2D27A]">
+                  {/* Amenity Image Thumbnail */}
+                  <div className="relative w-full aspect-[16/10] overflow-hidden bg-[#120B07]">
+                    <Image
+                      src={`/amenities/${item.id}.webp`}
+                      alt={item.name}
+                      fill
+                      sizes="280px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1E130C] via-transparent to-transparent" />
+                    <span className="absolute bottom-2 left-3 font-display text-lg font-bold text-[#F2D27A] drop-shadow-md">
                       {numStr}
                     </span>
-                    <IconComp size={18} className="text-[#D9A21B]" />
+                    <div className="absolute top-2 right-2 w-7 h-7 rounded-full bg-[#1E130C]/80 backdrop-blur-sm border border-white/20 flex items-center justify-center">
+                      <IconComp size={14} className="text-[#F2D27A]" />
+                    </div>
                   </div>
 
-                  <div>
-                    <h5 className="font-sans text-sm font-bold text-white mb-1">
+                  <div className="p-4 space-y-1">
+                    <h5 className="font-sans text-sm font-bold text-white line-clamp-1 group-hover:text-[#F2D27A] transition-colors">
                       {item.name}
                     </h5>
                     <p className="text-xs text-[#EADFCB]/70 font-sans line-clamp-2 leading-relaxed">
