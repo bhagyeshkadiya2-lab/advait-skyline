@@ -34,9 +34,9 @@ export async function generateMetadata({
   return createPageMetadata({
     locale,
     path: '/directions',
-    customTitle: 'Directions & Commute Guide to Advait Skyline | Naroli–Bhilad Checkpost',
+    customTitle: 'Directions & Commute Guide | Advait Skyline Naroli–Bhilad',
     customDescription:
-      'Step-by-step directions to Advait Skyline on Naroli–Silvassa Main Road, 200m from Naroli–Bhilad Checkpost (DNH). Travel times from Bhilad Station (5.1 km), Silvassa (9.8 km) and Vapi (16 km).',
+      'Driving directions to Advait Skyline: 200m from Naroli–Bhilad Checkpost. Commute times from Bhilad Station (5.1 km), Silvassa (9.8 km) and Vapi (16 km).',
   });
 }
 

@@ -16,9 +16,9 @@ export async function generateMetadata({
   return createPageMetadata({
     locale,
     path: '/project-location',
-    customTitle: 'Project Location & Connectivity | Advait Skyline Naroli–Bhilad Checkpost',
+    customTitle: 'Location & Connectivity | Advait Skyline Naroli–Silvassa',
     customDescription:
-      'Explore location advantage of Advait Skyline: 200m from Naroli–Bhilad Checkpost on Naroli–Silvassa main road. Transit times to Bhilad Station, Vapi, Silvassa Stadium, and NH-48.',
+      'Explore location benefits of Advait Skyline: 200m from Naroli–Bhilad Checkpost on main road. Rapid transit to Bhilad Station, Vapi, and central Silvassa.',
   });
 }
 

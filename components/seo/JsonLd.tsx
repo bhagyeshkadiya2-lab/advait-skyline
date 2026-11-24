@@ -53,7 +53,7 @@ export default function JsonLd({
   ];
 
   // Global Schemas (Rendered in Layout) — Unified @graph for entity clustering
-  if (type === 'global') {
+  if (type === 'global' && !breadcrumbs && !unitData && !customFaqs && !faqItems) {
     const organizationSchema = {
       '@type': 'Organization',
       '@id': `${BASE_URL}/#organization`,

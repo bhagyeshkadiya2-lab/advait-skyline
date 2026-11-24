@@ -15,9 +15,9 @@ export async function generateMetadata({
   return createPageMetadata({
     locale,
     path: '/floor-plans',
-    customTitle: 'Advait Skyline Floor Plans | 1 & 2 BHK Layouts, Shops & Offices Naroli',
+    customTitle: '1 & 2 BHK Floor Plans & Layouts | Advait Skyline Naroli',
     customDescription:
-      'View technical 2D and 3D architectural floor plans for 1 BHK (511 sq. ft.), 2 BHK (573 sq. ft.), ground floor retail shops 1–20, and 2nd floor offices at Advait Skyline.',
+      'View technical 2D and 3D architectural floor plans for 1 BHK (575 sq. ft.), 2 BHK (652 sq. ft.), and commercial shops at Advait Skyline, Naroli near Silvassa.',
   });
 }
 

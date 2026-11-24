@@ -19,9 +19,9 @@ export async function generateMetadata({
   return createPageMetadata({
     locale,
     path: '/contact',
-    customTitle: 'Contact Advait Skyline | Site Visits & Sales Office Naroli–Bhilad',
+    customTitle: 'Contact Sales Office & Site Visits | Advait Skyline Naroli',
     customDescription:
-      'Contact Dhanasvi Infra for Advait Skyline: schedule site visits, get price on WhatsApp (+91 99090 72390), or visit our sales gallery at Naroli–Bhilad Checkpost, Dadra & Nagar Haveli.',
+      'Connect with Advait Skyline sales team: book sample flat visits, get price on WhatsApp (+91 99090 72390), or visit our on-site sales office in Naroli.',
   });
 }
 
