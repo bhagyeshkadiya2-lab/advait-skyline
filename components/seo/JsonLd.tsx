@@ -23,8 +23,10 @@ export interface UnitData {
 }
 
 export interface JsonLdProps {
-  locale: string;
+  locale?: string;
   type?: 'global' | 'home' | 'unit' | 'breadcrumbs' | 'faq';
+  path?: string;
+  pageType?: string;
   unitData?: UnitData;
   breadcrumbs?: BreadcrumbItem[];
   customFaqs?: { question: string; answer: string }[];
@@ -32,8 +34,10 @@ export interface JsonLdProps {
 }
 
 export default function JsonLd({
-  locale,
+  locale = 'en',
   type = 'global',
+  path,
+  pageType,
   unitData,
   breadcrumbs,
   customFaqs,
@@ -126,7 +130,7 @@ export default function JsonLd({
         latitude: SITE_CONFIG.geo.latitude,
         longitude: SITE_CONFIG.geo.longitude,
       },
-      numberOfAccommodationUnits: 150,
+      numberOfAccommodationUnits: SITE_CONFIG.specs.totalUnits,
       amenityFeature: PROJECT_DATA.amenities
         .filter((a) => a.confirmedInBrochure)
         .map((a) => ({
@@ -137,24 +141,26 @@ export default function JsonLd({
       containsPlace: [
         {
           '@type': 'Apartment',
-          name: '1 BHK',
+          name: '1 BHK Residence',
           numberOfBedrooms: 1,
           numberOfBathroomsTotal: 2,
           floorSize: {
             '@type': 'QuantitativeValue',
-            value: 511,
+            value: 575,
             unitCode: 'FTK',
+            description: `${SITE_CONFIG.specs.carpetArea['1bhk']} carpet area (sanctioned plan, subject to document verification)`,
           },
         },
         {
           '@type': 'Apartment',
-          name: '2 BHK',
+          name: '2 BHK Residence',
           numberOfBedrooms: 2,
           numberOfBathroomsTotal: 2,
           floorSize: {
             '@type': 'QuantitativeValue',
-            value: 573,
+            value: 652,
             unitCode: 'FTK',
+            description: `${SITE_CONFIG.specs.carpetArea['2bhk']} carpet area (sanctioned plan, subject to document verification)`,
           },
         },
       ],
@@ -255,7 +261,19 @@ export default function JsonLd({
       },
       {
         question: 'What configurations are offered at Advait Skyline?',
-        answer: 'Advait Skyline offers 1 BHK (approx. 511 sq. ft. carpet) and 2 BHK (approx. 573 sq. ft. carpet) residential residences, as well as ground and first floor commercial retail shops and second-floor office suites.',
+        answer: 'Advait Skyline offers 1 BHK (575 sq. ft. built-up, 511 sq. ft. carpet) and 2 BHK (652 sq. ft. built-up, 573 sq. ft. carpet) residences across 3 towers of G+14 floors with 328 total units, as well as ground and first floor commercial retail shops and second-floor office suites.',
+      },
+      {
+        question: 'What is the possession date for Advait Skyline?',
+        answer: 'The possession target is before March 2028 as per construction scheduling and registered agreement for sale terms.',
+      },
+      {
+        question: 'What is the price of 1 & 2 BHK flats at Advait Skyline?',
+        answer: 'Advait Skyline offers affordable residential pricing for 1 & 2 BHK homes in Naroli near Silvassa. Transparent milestone payments and current unit quotations are available directly from the sales desk on WhatsApp at +91 99090 72390.',
+      },
+      {
+        question: 'Is individual parking available at Advait Skyline?',
+        answer: 'Yes, individual parking is available across the development subject to allocation terms and registered agreement specifications.',
       },
       {
         question: 'What is the RERA registration number of Advait Skyline?',
@@ -267,11 +285,11 @@ export default function JsonLd({
       },
       {
         question: 'What is the carpet area of the 1 BHK flats?',
-        answer: 'The 1 BHK apartments feature a thoughtful carpet area of approximately 511 sq. ft. (47.47 sq. m.) with a spacious living room, private balcony, 2 bathrooms, and a modern kitchen.',
+        answer: 'The 1 BHK apartments feature a built-up area of 575 sq. ft. and a sanctioned carpet area of approximately 511 sq. ft. (47.47 sq. m., subject to document verification) with a spacious living room, private balcony, 2 bathrooms, and a modern kitchen.',
       },
       {
         question: 'What is the carpet area of the 2 BHK flats?',
-        answer: 'The 2 BHK residences feature an expansive carpet area of approximately 573 sq. ft. (53.23 sq. m.) with two generous bedrooms, a 16-foot living hall, a 5\'6" wide sunset balcony, and 2 bathrooms.',
+        answer: 'The 2 BHK residences feature a built-up area of 652 sq. ft. and an expansive sanctioned carpet area of approximately 573 sq. ft. (53.23 sq. m., subject to document verification) with two generous bedrooms, a 16-foot living hall, a 5\'6" wide sunset balcony, and 2 bathrooms.',
       },
       {
         question: 'How can I book a site visit to Advait Skyline?',

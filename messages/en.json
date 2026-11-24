@@ -46,16 +46,17 @@
   },
   "hero": {
     "eyebrow": "Naroli–Silvassa Main Road · 200 m from Naroli–Bhilad Checkpost",
-    "h1Prefix": "1 & 2 BHK Flats in",
-    "h1Highlight": "Naroli, Silvassa (Dadra & Nagar Haveli)",
-    "subheading": "A G+14 residential and commercial landmark with 39+ amenities on Naroli–Silvassa main road. Advait Skyline is in Naroli, near Silvassa, Dadra & Nagar Haveli (not Narol, Ahmedabad).",
+    "h1Prefix": "Affordable 1 & 2 BHK Flats in",
+    "h1Highlight": "Naroli near Silvassa",
+    "supportingHeadline": "Premium Lifestyle. Affordable Homes.",
+    "subheading": "Advait Skyline by Dhanasvi Infra is a residential and commercial development on Naroli–Silvassa Main Road, approximately 200 metres from the Naroli–Bhilad Checkpost. The development offers affordable 1 BHK homes with 575 sq. ft. built-up area and 2 BHK homes with 652 sq. ft. built-up area, along with 39+ lifestyle amenities and individual parking. The development comprises 328 units, with possession targeted before March 2028.",
     "amenitiesChip": "Amenities",
     "amenitiesCount": "39+",
     "floorsChip": "Tower Height",
     "floorsCount": "G+14",
     "distanceChip": "From Bhilad Checkpost",
     "distanceCount": "200 m",
-    "ctaWhatsApp": "Get Price on WhatsApp",
+    "ctaWhatsApp": "Get Latest Price",
     "ctaVisit": "Book a Site Visit",
     "ctaBrochure": "Download Brochure",
     "reraBadge": "RERA PM3000002600013"
@@ -190,7 +191,7 @@
     "legalHeading": "Legal & Compliance",
     "privacyPolicy": "Privacy Policy",
     "termsDisclaimer": "Terms & Disclaimer",
-    "fullDisclaimer": "Disclaimer: Artistic Rendering — for information, presentation & guidance only. Specifications, amenities, layout plans, and dimensions shown on this website and in project collaterals are indicative and subject to change without prior notice as per competent authority guidelines. Starting from {price} onwards. Get the full price sheet on WhatsApp. Advait Skyline is in Naroli, near Silvassa, Dadra & Nagar Haveli (not Narol, Ahmedabad). All rights reserved by Dhanasvi Infra."
+    "fullDisclaimer": "Disclaimer: Artistic Rendering — for information, presentation & guidance only. Specifications, amenities, layout plans, and dimensions shown on this website and in project collaterals are indicative and subject to change without prior notice as per competent authority guidelines. Affordable pricing — contact our sales team on WhatsApp at +91 99090 72390 for current prices and availability. Advait Skyline is in Naroli, near Silvassa, Dadra & Nagar Haveli (not Narol, Ahmedabad). All rights reserved by Dhanasvi Infra."
   },
   "whatsappMessages": {
     "default": "Hello, I am interested in Advait Skyline (Naroli). Please share details.",

@@ -9,6 +9,7 @@ import { createPageMetadata } from '@/lib/seo';
 import JsonLd from '@/components/seo/JsonLd';
 import LeadForm from '@/components/lead/LeadForm';
 import ProjectFactSheet from '@/components/sections/ProjectFactSheet';
+import PropertyComparisonTable from '@/components/sections/PropertyComparisonTable';
 import { buildWhatsAppLink } from '@/lib/tracking';
 
 export async function generateMetadata({
@@ -20,9 +21,9 @@ export async function generateMetadata({
   return createPageMetadata({
     locale,
     path: '/2-bhk-flats-naroli',
-    customTitle: '2 BHK Flat in Naroli, Silvassa – 573 sq ft | Advait Skyline',
+    customTitle: 'Affordable 2 BHK Flats in Naroli near Silvassa | Advait Skyline',
     customDescription:
-      '573 sq ft carpet 2 BHK flats on Naroli–Silvassa road near Bhilad checkpost, DNH. 16ft living hall, 5\'6" sunset balcony, 2 bathrooms, 3 AC points.',
+      'Affordable 2 BHK flats in Naroli near Silvassa with 652 sq. ft. built-up area (573 sq. ft. carpet). 16ft living hall, sunset balcony, 39+ amenities & individual parking.',
     ogImage: '/2bhk-layout.jpg',
   });
 }
@@ -56,8 +57,8 @@ export default async function TwoBhkPage({
       answer: 'The 2 BHK layout features 2 bathrooms (an attached master bathroom 7\'0" × 4\'0" and a common bathroom 4\'0" × 6\'0") along with 3 dedicated pre-installed AC electrical points.',
     },
     {
-      question: 'What is the starting price for a 2 BHK apartment?',
-      answer: 'Starting from {price} onwards. Interested home buyers can obtain the verified developer-direct price quote, floor-wise cost breakdown, and payment milestones by contacting the sales team directly on WhatsApp.',
+      question: 'What is the price of a 2 BHK apartment at Advait Skyline?',
+      answer: 'Advait Skyline offers 2 BHK homes positioned at affordable prices. Interested homebuyers can obtain the developer-direct price quote, floor-wise cost breakdown, and approved payment milestones by contacting the sales team on WhatsApp at +91 99090 72390.',
     },
     {
       question: 'Are home loans pre-approved for Advait Skyline?',
@@ -75,8 +76,8 @@ export default async function TwoBhkPage({
         locale={locale}
         type="unit"
         unitData={{
-          name: '2 BHK Flat in Naroli, Silvassa – 573 sq ft | Advait Skyline',
-          description: 'Spacious 2 BHK flat with 573 sq. ft. carpet area, 16ft living hall, 5\'6" sunset balcony, and 2 bathrooms at Naroli–Bhilad Checkpost, near Silvassa.',
+          name: 'Affordable 2 BHK Flats in Naroli near Silvassa | Advait Skyline',
+          description: 'Affordable 2 BHK flat with 652 sq. ft. built-up area (573 sq. ft. carpet), 16ft living hall, 5\'6" sunset balcony, individual parking, and 2 bathrooms at Naroli–Bhilad Checkpost, near Silvassa.',
           numberOfRooms: '2 BHK',
           floorSizeSqFt: 573,
         }}
@@ -92,15 +93,15 @@ export default async function TwoBhkPage({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 space-y-6">
           <div className="inline-flex items-center gap-2 text-xs font-sans uppercase tracking-[0.2em] text-[#F2D27A] font-bold">
             <span className="w-8 h-[1.5px] bg-[#D9A21B]" />
-            <span>Luxury Collection · G+14</span>
+            <span>Affordable Housing · G+14</span>
           </div>
 
           <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-white leading-[1.08] max-w-4xl">
-            2 BHK Flats in <span className="text-gold-gradient">Naroli, Silvassa</span> (573 Sq. Ft.)
+            Affordable 2 BHK Flats in <span className="text-gold-gradient">Naroli</span> — 652 Sq. Ft. Built-up Area
           </h1>
 
           <p className="font-sans text-base sm:text-xl text-[#EADFCB]/85 max-w-3xl leading-relaxed">
-            Generous 573 sq. ft. carpet residences featuring a 16-foot long grand living room, 5&apos;6&quot; wide sundeck balcony, 3 pre-installed AC points, and 2 bathrooms. Located on Naroli–Silvassa main road, 200 m from Naroli–Bhilad Checkpost. Advait Skyline is in Naroli, near Silvassa, Dadra &amp; Nagar Haveli (not Narol, Ahmedabad).
+            Generous 652 sq. ft. built-up residences (573 sq. ft. carpet area, subject to document verification) featuring a 16-foot long grand living room, 5&apos;6&quot; wide sundeck balcony, 3 pre-installed AC points, individual parking, and 2 full bathrooms. Located on Naroli–Silvassa main road, 200 m from Naroli–Bhilad Checkpost, offering 39+ lifestyle amenities across 328 units with possession targeted before March 2028.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 pt-4">
@@ -367,6 +368,9 @@ export default async function TwoBhkPage({
           </div>
         </section>
 
+        {/* Configuration Comparison Table */}
+        <PropertyComparisonTable />
+
         {/* Section 7: Lead Enquiry Form Embed */}
         <section className="pt-6 border-t border-[#7B4F2E]/20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-4">
@@ -374,7 +378,7 @@ export default async function TwoBhkPage({
               Request 2 BHK Price &amp; Sanctioned Drawings
             </h3>
             <p className="text-sm font-sans text-[#2A1F18]/80 leading-relaxed">
-              We provide transparent developer-direct pricing, bank loan assistance from nationalized banks (SBI, BOB, HDFC), and on-site inspection tours. Starting from &#123;price&#125; onwards. Get the full price sheet on WhatsApp.
+              We provide transparent developer-direct pricing, individual parking, bank loan assistance from nationalized banks (SBI, BOB, HDFC), and on-site inspection tours. Affordable pricing positioned for modern growing families. Get the full price sheet on WhatsApp.
             </p>
             <div className="p-4 rounded-xl border border-[#7B4F2E]/20 bg-white space-y-2 text-xs font-sans">
               <p>✓ 16-foot long grand living room with ample entertainment wall space.</p>

@@ -9,6 +9,7 @@ import { createPageMetadata } from '@/lib/seo';
 import JsonLd from '@/components/seo/JsonLd';
 import LeadForm from '@/components/lead/LeadForm';
 import ProjectFactSheet from '@/components/sections/ProjectFactSheet';
+import PropertyComparisonTable from '@/components/sections/PropertyComparisonTable';
 import { buildWhatsAppLink } from '@/lib/tracking';
 
 export async function generateMetadata({
@@ -20,9 +21,9 @@ export async function generateMetadata({
   return createPageMetadata({
     locale,
     path: '/1-bhk-flats-naroli',
-    customTitle: '1 BHK Flat in Naroli, Silvassa – 511 sq ft | Advait Skyline',
+    customTitle: 'Affordable 1 BHK Flats in Naroli near Silvassa | Advait Skyline',
     customDescription:
-      '511 sq ft carpet 1 BHK flats on Naroli–Silvassa road near Bhilad checkpost, DNH. 2 bathrooms, private balcony, modern layout, 39+ lifestyle amenities.',
+      'Affordable 1 BHK flats in Naroli near Silvassa with 575 sq. ft. built-up area (511 sq. ft. carpet). 39+ amenities, individual parking and verified connectivity.',
     ogImage: '/1bhk-layout.jpg',
   });
 }
@@ -60,8 +61,8 @@ export default async function OneBhkPage({
       answer: 'Advait Skyline is located on the Naroli–Silvassa main road, just 200 meters from the Naroli–Bhilad Checkpost, 5.1 km (~10 minutes) from Bhilad Railway Station, and roughly 10 km (~13 minutes) from central Silvassa.',
     },
     {
-      question: 'What is the starting price of a 1 BHK flat?',
-      answer: 'Starting from {price} onwards. Interested home buyers can obtain the verified developer-direct price quote, floor-wise cost breakdown, and payment milestones by contacting the sales team directly on WhatsApp.',
+      question: 'What is the price of a 1 BHK flat at Advait Skyline?',
+      answer: 'Advait Skyline offers 1 BHK homes positioned at affordable prices. Interested homebuyers can obtain the developer-direct price quote, floor-wise cost breakdown, and approved payment milestones by contacting the sales team on WhatsApp at +91 99090 72390.',
     },
     {
       question: 'How do I schedule a personal site visit to view the 1 BHK layout?',
@@ -75,8 +76,8 @@ export default async function OneBhkPage({
         locale={locale}
         type="unit"
         unitData={{
-          name: '1 BHK Flat in Naroli, Silvassa – 511 sq ft | Advait Skyline',
-          description: 'Spacious 1 BHK flat with 511 sq. ft. carpet area, 2 bathrooms, private balcony, and modern kitchen at Naroli–Bhilad Checkpost, near Silvassa.',
+          name: 'Affordable 1 BHK Flats in Naroli near Silvassa | Advait Skyline',
+          description: 'Affordable 1 BHK flat with 575 sq. ft. built-up area (511 sq. ft. carpet), 2 bathrooms, private balcony, individual parking, and modern kitchen at Naroli–Bhilad Checkpost, near Silvassa.',
           numberOfRooms: '1 BHK',
           floorSizeSqFt: 511,
         }}
@@ -92,15 +93,15 @@ export default async function OneBhkPage({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 space-y-6">
           <div className="inline-flex items-center gap-2 text-xs font-sans uppercase tracking-[0.2em] text-[#F2D27A] font-bold">
             <span className="w-8 h-[1.5px] bg-[#D9A21B]" />
-            <span>Residential Configurations · G+14</span>
+            <span>Affordable Housing · G+14</span>
           </div>
 
           <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-white leading-[1.08] max-w-4xl">
-            1 BHK Flats in <span className="text-gold-gradient">Naroli, Silvassa</span> (511 Sq. Ft.)
+            Affordable 1 BHK Flats in <span className="text-gold-gradient">Naroli</span> — 575 Sq. Ft. Built-up Area
           </h1>
 
           <p className="font-sans text-base sm:text-xl text-[#EADFCB]/85 max-w-3xl leading-relaxed">
-            Thoughtfully planned 511 sq. ft. carpet apartments on Naroli–Silvassa main road, 200 m from the Naroli–Bhilad Checkpost. Features a private foyer, grand living room, 2 full bathrooms, dedicated utility wash area, and complete access to 39+ lifestyle amenities. Advait Skyline is in Naroli, near Silvassa, Dadra &amp; Nagar Haveli (not Narol, Ahmedabad).
+            Thoughtfully planned affordable 1 BHK homes offering 575 sq. ft. built-up area and 511 sq. ft. approved carpet area (subject to document verification) on Naroli–Silvassa main road, 200 m from Naroli–Bhilad Checkpost. Features individual parking, 2 full bathrooms, private balcony, and 39+ amenities across 328 units with possession targeted before March 2028.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 pt-4">
@@ -367,6 +368,9 @@ export default async function OneBhkPage({
           </div>
         </section>
 
+        {/* Configuration Comparison Table */}
+        <PropertyComparisonTable />
+
         {/* Section 7: Lead Enquiry Form Embed */}
         <section className="pt-6 border-t border-[#7B4F2E]/20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-4">
@@ -374,7 +378,7 @@ export default async function OneBhkPage({
               Request 1 BHK Price &amp; Sanctioned Drawings
             </h3>
             <p className="text-sm font-sans text-[#2A1F18]/80 leading-relaxed">
-              We provide transparent developer-direct pricing, bank loan assistance from nationalized banks (SBI, BOB, HDFC), and on-site inspection tours. Starting from &#123;price&#125; onwards. Get the full price sheet on WhatsApp.
+              We provide transparent developer-direct pricing, individual parking, bank loan assistance from nationalized banks (SBI, BOB, HDFC), and on-site inspection tours. Affordable pricing positioned for smart home ownership. Get the full price sheet on WhatsApp.
             </p>
             <div className="p-4 rounded-xl border border-[#7B4F2E]/20 bg-white space-y-2 text-xs font-sans">
               <p>✓ Home loans available from leading banks (subject to eligibility).</p>

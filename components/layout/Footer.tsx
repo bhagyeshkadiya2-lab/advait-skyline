@@ -193,6 +193,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/1-bhk-vs-2-bhk" className="hover:text-[#F2D27A] transition-colors">
+                  1 BHK vs 2 BHK Comparison
+                </Link>
+              </li>
+              <li>
                 <Link href="/flats-near-silvassa" className="hover:text-[#F2D27A] transition-colors">
                   Flats Near Silvassa
                 </Link>

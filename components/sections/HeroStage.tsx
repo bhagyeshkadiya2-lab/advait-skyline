@@ -129,6 +129,11 @@ export default function HeroStage() {
             </span>
           </h1>
 
+          {/* Supporting Headline */}
+          <div className="text-sm sm:text-base font-sans font-bold uppercase tracking-[0.16em] text-[#F2D27A]">
+            {t('supportingHeadline')}
+          </div>
+
           {/* Subheading */}
           <p className="font-sans text-base sm:text-lg text-[#EADFCB]/85 leading-relaxed max-w-xl">
             {t('subheading')}

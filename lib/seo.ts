@@ -19,44 +19,58 @@ interface MetaInfo {
 const ROUTE_METADATA: Record<string, Record<string, MetaInfo>> = {
   '/': {
     en: {
-      title: 'Flats in Naroli, Silvassa | 1 & 2 BHK – Advait Skyline',
-      description: '1 & 2 BHK flats (511 & 573 sq ft carpet) on Naroli–Silvassa road (DNH), 200 m from Bhilad checkpost. 39+ amenities by Dhanasvi Infra. Book a site visit today.',
+      title: '1 & 2 BHK Flats in Naroli near Silvassa | Advait Skyline',
+      description: 'Discover affordable 1 & 2 BHK flats in Naroli near Silvassa. Explore 575 and 652 sq. ft. built-up homes, 39+ amenities, individual parking and book your site visit.',
     },
     hi: {
-      title: 'नरोली, सिलवासा में 1 व 2 BHK फ्लैट्स – अद्वैत स्काईलाइन',
-      description: 'नरोली–सिलवासा मुख्य मार्ग (दादरा एवं नगर हवेली) पर 1 व 2 बीएचके फ्लैट्स (511 व 573 वर्ग फुट), चेकपोस्ट से 200 मीटर। धनस्वी इन्फ्रा द्वारा 39+ सुविधाएं।',
+      title: 'नरोली, सिलवासा के पास 1 व 2 BHK फ्लैट्स | अद्वैत स्काईलाइन',
+      description: 'नरोली में किफायती 1 और 2 BHK फ्लैट्स। 575 व 652 वर्ग फुट बिल्ट-अप घर, 39+ प्रीमियम सुविधाएं, इंडिविजुअल पार्किंग और आज ही साइट विजिट बुक करें।',
     },
     gu: {
-      title: 'નરોલી, સેલવાસમાં 1 અને 2 BHK ફ્લેટ્સ – અદ્વૈત સ્કાયલાઇન',
-      description: 'નરોલી–સેલવાસ મેઇન રોડ (દાદરા અને નગર હવેલી) પર 1 અને 2 BHK ફ્લેટ્સ (511 અને 573 ચોરસ ફૂટ), ચેકપોસ્ટથી 200 મીટર. ધનસ્વી ઇન્ફ્રા દ્વારા 39+ સુવિધાઓ.',
+      title: 'નરોલી, સેલવાસ નજીક 1 અને 2 BHK ફ્લેટ્સ | અદ્વૈત સ્કાયલાઇન',
+      description: 'નરોલીમાં કિફાયતી 1 અને 2 BHK ફ્લેટ. 575 અને 652 ચો.ફૂટ બિલ્ટ-અપ ઘર, 39+ આધુનિક સુવિધાઓ, ઇન્ડિવિજ્યુઅલ પાર્કિંગ અને સાઇટ વિઝિટ બુક કરો.',
     },
   },
   '/1-bhk-flats-naroli': {
     en: {
-      title: '1 BHK Flat in Naroli, Silvassa – 511 sq ft | Advait Skyline',
-      description: '511 sq ft carpet 1 BHK flats on Naroli–Silvassa road near Bhilad checkpost, DNH. 2 bathrooms, private balcony, modern layout, 39+ lifestyle amenities.',
+      title: 'Affordable 1 BHK Flats in Naroli near Silvassa | Advait Skyline',
+      description: 'Affordable 1 BHK flats in Naroli near Silvassa with 575 sq. ft. built-up area (511 sq. ft. carpet). 39+ lifestyle amenities, individual parking and verified connectivity.',
     },
     hi: {
-      title: 'नरोली, सिलवासा में 1 BHK फ्लैट (511 वर्ग फुट) | अद्वैत स्काईलाइन',
-      description: '511 वर्ग फुट कारपेट 1 बीएचके फ्लैट्स नरोली–सिलवासा रोड, चेकपोस्ट के पास (DNH)। 2 बाथरूम, बालकनी और 39+ आधुनिक सुविधाएं।',
+      title: 'नरोली में किफायती 1 BHK फ्लैट (575 वर्ग फुट) | अद्वैत स्काईलाइन',
+      description: 'नरोली–सिलवासा रोड पर किफायती 1 बीएचके फ्लैट्स — 575 वर्ग फुट बिल्ट-अप (511 कारपेट), 2 बाथरूम, प्राइवेट बालकनी, इंडिविजुअल पार्किंग और 39+ सुविधाएं।',
     },
     gu: {
-      title: 'નરોલી, સેલવાસમાં 1 BHK ફ્લેટ (511 ચો.ફૂટ) | અદ્વૈત સ્કાયલાઇન',
-      description: '511 ચોરસ ફૂટ કાર્પેટ 1 BHK ફ્લેટ્સ નરોલી–સેલવાસ રોડ, ચેકપોસ્ટ પાસે (DNH). 2 બાથરૂમ, પ્રાઇવેટ બાલ્કની અને 39+ સુવિધાઓ.',
+      title: 'નરોલીમાં કિફાયતી 1 BHK ફ્લેટ (575 ચો.ફૂટ) | અદ્વૈત સ્કાયલાઇન',
+      description: 'નરોલી–સેલવાસ રોડ પર કિફાયતી 1 BHK ફ્લેટ — 575 ચો.ફૂટ બિલ્ટ-અપ (511 કાર્પેટ), 2 બાથરૂમ, પ્રાઇવેટ બાલ્કની, ઇન્ડિવિજ્યુઅલ પાર્કિંગ અને 39+ સુવિધાઓ.',
     },
   },
   '/2-bhk-flats-naroli': {
     en: {
-      title: '2 BHK Flat in Naroli, Silvassa – 573 sq ft | Advait Skyline',
-      description: '573 sq ft carpet 2 BHK flats on Naroli–Silvassa road near Bhilad checkpost, DNH. 16ft living hall, 5\'6" sunset balcony, 2 bathrooms, 3 AC points.',
+      title: 'Affordable 2 BHK Flats in Naroli near Silvassa | Advait Skyline',
+      description: 'Affordable 2 BHK flats in Naroli near Silvassa with 652 sq. ft. built-up area (573 sq. ft. carpet). 16ft living hall, 5\'6" sunset balcony, 39+ amenities & individual parking.',
     },
     hi: {
-      title: 'नरोली, सिलवासा में 2 BHK फ्लैट (573 वर्ग फुट) | अद्वैत स्काईलाइन',
-      description: '573 वर्ग फुट कारपेट 2 बीएचके फ्लैट्स नरोली–सिलवासा मेन रोड (DNH)। 16 फुट का हॉल, 5\'6" चौड़ी बालकनी, 2 बाथरूम, 3 एसी पॉइंट्स।',
+      title: 'नरोली में किफायती 2 BHK फ्लैट (652 वर्ग फुट) | अद्वैत स्काईलाइन',
+      description: 'नरोली–सिलवासा मेन रोड पर किफायती 2 बीएचके फ्लैट्स — 652 वर्ग फुट बिल्ट-अप (573 कारपेट), 16 फुट का हॉल, 5\'6" बालकनी, 39+ सुविधाएं व इंडिविजुअल पार्किंग।',
     },
     gu: {
-      title: 'નરોલી, સેલવાસમાં 2 BHK ફ્લેટ (573 ચો.ફૂટ) | અદ્વૈત સ્કાયલાઇન',
-      description: '573 ચોરસ ફૂટ કાર્પેટ 2 BHK ફ્લેટ્સ નરોલી–સેલવાસ મેઇન રોડ (DNH). 16 ફૂટ લિવિંગ હોલ, 5\'6" બાલ્કની, 2 બાથરૂમ, 3 એસી પોઇન્ટ્સ.',
+      title: 'નરોલીમાં કિફાયતી 2 BHK ફ્લેટ (652 ચો.ફૂટ) | અદ્વૈત સ્કાયલાઇન',
+      description: 'નરોલી–સેલવાસ મેઇન રોડ પર કિફાયતી 2 BHK ફ્લેટ — 652 ચો.ફૂટ બિલ્ટ-અપ (573 કાર્પેટ), 16 ફૂટ લિવિંગ હોલ, 5\'6" બાલ્કની, 39+ સુવિધાઓ અને ઇન્ડિવિજ્યુઅલ પાર્કિંગ.',
+    },
+  },
+  '/1-bhk-vs-2-bhk': {
+    en: {
+      title: '1 BHK vs 2 BHK Flats in Naroli Comparison Guide | Advait Skyline',
+      description: 'Compare 1 BHK (575 sq. ft. built-up) vs 2 BHK (652 sq. ft. built-up) at Advait Skyline, Naroli. Floor plan differences, affordability, rental yield, and floor matrix.',
+    },
+    hi: {
+      title: '1 BHK बनाम 2 BHK फ्लैट्स तुलनात्मक गाइड | अद्वैत स्काईलाइन नरोली',
+      description: 'अद्वैत स्काईलाइन नरोली में 1 BHK (575 वर्ग फुट) बनाम 2 BHK (652 वर्ग फुट) फ्लैट्स की संपूर्ण तुलना। फ्लोर प्लान, बजट, निवेश एवं परिवार की आवश्यकताओं का विश्लेषण।',
+    },
+    gu: {
+      title: '1 BHK વિરુદ્ધ 2 BHK ફ્લેટ્સ સરખામણી ગાઇડ | અદ્વૈત સ્કાયલાઇન નરોલી',
+      description: 'અદ્વૈત સ્કાયલાઇન નરોલી ખાતે 1 BHK (575 ચો.ફૂટ) વિરુદ્ધ 2 BHK (652 ચો.ફૂટ) ફ્લેટ્સની વિગતવાર સરખામણી. ફ્લોર પ્લાન, બજેટ, રોકાણ અને પરિવારની જરૂરિયાતોનું વિશ્લેષણ.',
     },
   },
   '/flats-near-silvassa': {
@@ -103,16 +117,16 @@ const ROUTE_METADATA: Record<string, Record<string, MetaInfo>> = {
   },
   '/price-and-payment-plan': {
     en: {
-      title: 'Price & Payment Plan | Advait Skyline Naroli–Silvassa',
-      description: 'Transparent pricing structure and flexible payment milestones for 1 & 2 BHK flats at Advait Skyline, Naroli. Starting from {price} onwards. Inquire on WhatsApp.',
+      title: 'Affordable Price & Payment Plan | Advait Skyline Naroli–Silvassa',
+      description: 'Affordable 1 & 2 BHK flats (575 & 652 sq. ft. built-up) at Advait Skyline, Naroli. Transparent payment milestones, individual parking, and latest prices on WhatsApp.',
     },
     hi: {
-      title: 'मूल्य एवं भुगतान योजना | अद्वैत स्काईलाइन नरोली–सिलवासा',
-      description: 'अद्वैत स्काईलाइन नरोली में 1 व 2 बीएचके फ्लैट्स की पारदर्शी मूल्य सूची व निर्माण आधारित किश्त योजना। {price} से शुरू। व्हाट्सएप पर विवरण लें।',
+      title: 'किफायती मूल्य एवं भुगतान योजना | अद्वैत स्काईलाइन नरोली–सिलवासा',
+      description: 'अद्वैत स्काईलाइन नरोली में किफायती 1 व 2 BHK फ्लैट्स (575 व 652 वर्ग फुट)। पारदर्शी निर्माण आधारित किश्त योजना और व्हाट्सएप पर तत्काल मूल्य सूची प्राप्त करें।',
     },
     gu: {
-      title: 'કિંમત અને ચુકવણી યોજના | અદ્વૈત સ્કાયલાઇન નરોલી–સેલવાસ',
-      description: 'અદ્વૈત સ્કાયલાઇનમાં 1 અને 2 BHK ફ્લેટ્સ માટે પારદર્શક પ્રાઇસ લિસ્ટ અને કન્સ્ટ્રક્શન-લિંક્ડ પેમેન્ટ પ્લાન. {price} થી શરૂ. વોટ્સએપ પર મેળવો.',
+      title: 'કિફાયતી કિંમત અને ચુકવણી યોજના | અદ્વૈત સ્કાયલાઇન નરોલી–સેલવાસ',
+      description: 'અદ્વૈત સ્કાયલાઇન નરોલીમાં કિફાયતી 1 અને 2 BHK ફ્લેટ્સ (575 અને 652 ચો.ફૂટ). પારદર્શક પેમેન્ટ પ્લાન અને વોટ્સએપ પર વર્તમાન પ્રાઇસ લિસ્ટ મેળવો.',
     },
   },
   '/blog': {

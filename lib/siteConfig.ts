@@ -1,6 +1,6 @@
 /**
  * Advait Skyline — Centralized Site Configuration & Verified Constants
- * Single source of truth for location coordinates, contact lines, GBP, and brochures.
+ * Single source of truth for location coordinates, contact lines, GBP, brochures, and master project specs.
  */
 
 export const SITE_CONFIG = {
@@ -9,6 +9,30 @@ export const SITE_CONFIG = {
   developerTagline: 'Where Quality Meets Trust',
   projectTagline: 'Elevate Your Everyday',
   siteUrl: 'https://www.advaitskyline.com',
+
+  // Master Project Specifications (Owner-Supplied Verified Data)
+  specs: {
+    totalUnits: 328,
+    totalUnitsLabel: '328 Units',
+    floors: 'G+14 Floors',
+    totalTowers: '3 Towers',
+    amenitiesCount: '39+',
+    possessionTarget: 'Before March 2028',
+    possessionNote: 'Target possession before March 2028. Subject to registered agreement for sale terms.',
+    parking: 'Individual Parking',
+    parkingNote: 'Individual parking provided, subject to allocation terms.',
+    pricingPositioning: 'Affordable Pricing',
+    pricingNote: 'Affordable Pricing — Contact Us for Current Prices',
+    builtUpArea: {
+      '1bhk': '575 sq. ft.',
+      '2bhk': '652 sq. ft.',
+    },
+    carpetArea: {
+      '1bhk': '511 sq. ft.',
+      '2bhk': '573 sq. ft.',
+      note: 'Carpet area subject to document verification.',
+    },
+  },
 
   // Regulatory Compliance
   reraNumber: 'PM3000002600013',

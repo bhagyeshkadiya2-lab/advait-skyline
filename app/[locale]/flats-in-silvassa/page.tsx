@@ -68,7 +68,7 @@ export default async function FlatsInSilvassaGuidePage({
     {
       attribute: 'Value per Square Foot',
       silvassaCity: 'Premium land costs with higher entry ticket size',
-      naroliRoad: 'High-value developer pricing: starting from {price} onwards',
+      naroliRoad: 'High-value affordable pricing with individual parking and 39+ amenities',
       winner: 'Advait Skyline (superior carpet area for budget)',
     },
   ];
@@ -236,9 +236,9 @@ export default async function FlatsInSilvassaGuidePage({
               <span className="px-3 py-1 rounded bg-[#EADFCB] text-[#7B4F2E] text-xs font-bold uppercase tracking-wider">
                 1 BHK Residence
               </span>
-              <h3 className="font-display text-2xl font-bold text-[#1E130C]">511 Sq. Ft. Carpet Area</h3>
+              <h3 className="font-display text-2xl font-bold text-[#1E130C]">575 Sq. Ft. Built-up Area</h3>
               <p className="text-xs sm:text-sm text-[#2A1F18]/80 font-sans leading-relaxed">
-                2 bathrooms, private entrance foyer, 4-foot wide balcony, utility wash area, and 2 AC points. Starting from &#123;price&#125; onwards.
+                511 sq. ft. carpet area, 2 full bathrooms, private entrance foyer, 4-foot wide balcony, utility wash area, individual parking, and affordable pricing.
               </p>
               <Link
                 href="/1-bhk-flats-naroli"
@@ -253,9 +253,9 @@ export default async function FlatsInSilvassaGuidePage({
               <span className="px-3 py-1 rounded bg-[#EADFCB] text-[#7B4F2E] text-xs font-bold uppercase tracking-wider">
                 2 BHK Residence
               </span>
-              <h3 className="font-display text-2xl font-bold text-[#1E130C]">573 Sq. Ft. Carpet Area</h3>
+              <h3 className="font-display text-2xl font-bold text-[#1E130C]">652 Sq. Ft. Built-up Area</h3>
               <p className="text-xs sm:text-sm text-[#2A1F18]/80 font-sans leading-relaxed">
-                16-foot long living hall, 5&apos;6&quot; wide sunset balcony, 2 bathrooms, utility wash area, and 3 AC points. Starting from &#123;price&#125; onwards.
+                573 sq. ft. carpet area, 16-foot long living hall, 5&apos;6&quot; wide sunset balcony, 2 bathrooms, utility wash area, individual parking, and affordable pricing.
               </p>
               <Link
                 href="/2-bhk-flats-naroli"

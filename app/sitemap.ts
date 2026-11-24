@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/1-bhk-flats-naroli',
     '/2-bhk-flats-naroli',
+    '/1-bhk-vs-2-bhk',
     '/flats-in-silvassa',
     '/flats-near-silvassa',
     '/flats-near-bhilad-vapi',

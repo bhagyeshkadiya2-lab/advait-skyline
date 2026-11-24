@@ -19,6 +19,7 @@ import {
   Train,
   BookOpen,
   Navigation,
+  Scale,
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/routing';
@@ -66,6 +67,7 @@ export default function Header() {
   const isResidencesActive =
     pathname === '/1-bhk-flats-naroli' ||
     pathname === '/2-bhk-flats-naroli' ||
+    pathname === '/1-bhk-vs-2-bhk' ||
     pathname === '/floor-plans' ||
     pathname === '/flats-in-silvassa' ||
     pathname === '/flats-near-silvassa' ||
@@ -205,6 +207,28 @@ export default function Header() {
                       </span>
                       <span className="text-[11px] text-[#EADFCB]/70 leading-normal mt-0.5">
                         {t('twoBhkSub')}
+                      </span>
+                    </div>
+                  </Link>
+
+                  {/* 1 BHK vs 2 BHK Comparison Link */}
+                  <Link
+                    href="/1-bhk-vs-2-bhk"
+                    className={`flex items-start gap-3 p-2.5 rounded-lg transition-all ${
+                      pathname === '/1-bhk-vs-2-bhk'
+                        ? 'bg-[#2E1E14] border border-[#D9A21B]/40 text-[#F2D27A]'
+                        : 'hover:bg-[#2A1B12] text-[#EADFCB] hover:text-[#F2D27A]'
+                    }`}
+                  >
+                    <div className="p-2 rounded-md bg-[#382317] border border-[#D9A21B]/30 text-[#F2D27A] shrink-0 mt-0.5">
+                      <Scale size={15} />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-sm font-semibold leading-tight">
+                        1 BHK vs 2 BHK Guide
+                      </span>
+                      <span className="text-[11px] text-[#EADFCB]/70 leading-normal mt-0.5">
+                        Compare layouts, areas &amp; value
                       </span>
                     </div>
                   </Link>
@@ -525,7 +549,7 @@ export default function Header() {
                     className="flex items-center justify-between py-1 text-sm text-[#EADFCB] hover:text-[#F2D27A]"
                   >
                     <span>{t('oneBhk')}</span>
-                    <span className="text-[10px] text-[#D9A21B] font-mono">511 sq.ft</span>
+                    <span className="text-[10px] text-[#D9A21B] font-mono">575 sq.ft</span>
                   </Link>
                   <Link
                     href="/2-bhk-flats-naroli"
@@ -533,7 +557,15 @@ export default function Header() {
                     className="flex items-center justify-between py-1 text-sm text-[#EADFCB] hover:text-[#F2D27A]"
                   >
                     <span>{t('twoBhk')}</span>
-                    <span className="text-[10px] text-[#D9A21B] font-mono">573 sq.ft</span>
+                    <span className="text-[10px] text-[#D9A21B] font-mono">652 sq.ft</span>
+                  </Link>
+                  <Link
+                    href="/1-bhk-vs-2-bhk"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center justify-between py-1 text-sm text-[#EADFCB] hover:text-[#F2D27A]"
+                  >
+                    <span>1 BHK vs 2 BHK Guide</span>
+                    <span className="text-[10px] text-[#D9A21B]">Comparison</span>
                   </Link>
                   <Link
                     href="/flats-near-silvassa"

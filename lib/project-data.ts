@@ -29,8 +29,11 @@ export interface ConnectivityPoint {
 export interface UnitLayout {
   type: '1-bhk' | '2-bhk';
   title: string;
+  builtUpAreaSqFt: number;
+  builtUpAreaSqM: number;
   carpetAreaSqFt: number;
   carpetAreaSqM: number;
+  carpetAreaNote?: string;
   balconyWidth: string;
   washAreaWidth: string;
   bathrooms: number;
@@ -54,15 +57,15 @@ export const PROJECT_DATA = {
     projectType: 'Residential & Commercial Mixed Landmark',
     structure: 'G+14 Floors, 3 Towers, Ground Floor Retail Shops (1–20), 2nd Floor Offices (1–6), Residential Above',
     totalTowers: '3 Towers',
-    totalUnits: '{FILL_UNITS}', // TODO(FACT): Total residential units count
+    totalUnits: '328 Units',
     reraNumber: 'PM3000002600013',
     reraAuthorityName: 'MAHA RERA (PM3000002600013)',
     reraPendingVerification: false,
-    possessionDate: '{FILL_POSSESSION}', // TODO(FACT): Official RERA completion/possession month & year
-    possessionNote: 'Under construction. Delivery timeline as per registered RERA agreement.',
-    startingPrice1BHK: '{FILL_PRICE_1BHK}', // TODO(FACT): Starting price for 1 BHK (e.g. ₹XX Lakhs)
-    startingPrice2BHK: '{FILL_PRICE_2BHK}', // TODO(FACT): Starting price for 2 BHK (e.g. ₹XX Lakhs)
-    parkingAllocation: '{FILL_PARKING}', // TODO(FACT): Stilt/basement covered and open parking spaces count
+    possessionDate: 'Before March 2028',
+    possessionNote: 'Target possession before March 2028. Delivery timeline subject to registered RERA agreement terms.',
+    startingPrice1BHK: 'Affordable Pricing',
+    startingPrice2BHK: 'Affordable Pricing',
+    parkingAllocation: 'Individual Parking (Subject to allocation terms)',
     founderFace: {
       name: 'Dr. Divyraj Rathod',
       title: 'Founder & Visionary',
@@ -111,8 +114,11 @@ export const PROJECT_DATA = {
     oneBhk: {
       type: '1-bhk',
       title: '1 BHK Premium Residence',
+      builtUpAreaSqFt: 575,
+      builtUpAreaSqM: 53.42,
       carpetAreaSqFt: 511,
       carpetAreaSqM: 47.47,
+      carpetAreaNote: 'Carpet area 511 sq. ft. subject to document verification',
       balconyWidth: "4'0\" Wide",
       washAreaWidth: "4'0\" Wide",
       bathrooms: 2,
@@ -144,8 +150,11 @@ export const PROJECT_DATA = {
     twoBhk: {
       type: '2-bhk',
       title: '2 BHK Luxury Residence',
+      builtUpAreaSqFt: 652,
+      builtUpAreaSqM: 60.57,
       carpetAreaSqFt: 573,
       carpetAreaSqM: 53.23,
+      carpetAreaNote: 'Carpet area 573 sq. ft. subject to document verification',
       balconyWidth: "5'6\" Wide",
       washAreaWidth: "3'6\" Wide",
       bathrooms: 2,

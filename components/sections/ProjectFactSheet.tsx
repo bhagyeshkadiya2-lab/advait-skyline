@@ -14,8 +14,7 @@ export default function ProjectFactSheet({ compact = false, highlightUnit }: Pro
     {
       label: 'RERA Registration No.',
       value: PROJECT_DATA.identity.reraNumber,
-      // TODO(FACT): Confirm regulatory authority (e.g. MahaRERA or DNH RERA portal)
-      note: 'Registered project under PM3000002600013 (// TODO(FACT): Authority portal link)',
+      note: 'Registered project under PM3000002600013',
     },
     {
       label: 'Site Address',
@@ -29,45 +28,57 @@ export default function ProjectFactSheet({ compact = false, highlightUnit }: Pro
     },
     {
       label: 'Building Structure',
-      // TODO(FACT): Confirm whether 3 towers or single G+14 development
-      value: `G+14 Floors (${PROJECT_DATA.identity.totalTowers || '{FILL_TOWERS}'})`,
+      value: 'G+14 Floors (3 Towers)',
       note: 'Podium commercial retail shops 1–20, offices, and residential towers above',
     },
     {
       label: 'Total Units',
-      // TODO(FACT): Total residential units count
-      value: PROJECT_DATA.identity.totalUnits || '{FILL_UNITS}',
-      note: 'Subject to final RERA quarterly disclosure',
+      value: '328 Units',
+      note: 'Residential and commercial development',
+    },
+    {
+      label: '1 BHK Built-up Area',
+      value: '575 Sq. Ft.',
+      note: 'Thoughtfully designed affordable layout with balcony and 2 bathrooms',
+      isHighlighted: highlightUnit === '1-bhk',
     },
     {
       label: '1 BHK Carpet Area',
       value: '511 Sq. Ft. (47.47 Sq. M.)',
-      note: 'As per approved plan: hall, bedroom, kitchen, 2 bathrooms, foyer & balcony',
+      note: 'Approved plan carpet area (Subject to document verification)',
       isHighlighted: highlightUnit === '1-bhk',
+    },
+    {
+      label: '2 BHK Built-up Area',
+      value: '652 Sq. Ft.',
+      note: 'Spacious layout with grand 16-foot living hall and sunset balcony',
+      isHighlighted: highlightUnit === '2-bhk',
     },
     {
       label: '2 BHK Carpet Area',
       value: '573 Sq. Ft. (53.23 Sq. M.)',
-      note: 'As per approved plan: 16ft living hall, 2 bedrooms, kitchen, 2 bathrooms & 5\'6" sunset balcony',
+      note: 'Approved plan carpet area (Subject to document verification)',
       isHighlighted: highlightUnit === '2-bhk',
     },
     {
-      label: 'Starting Price',
-      // TODO(FACT): Starting prices for 1 BHK & 2 BHK
-      value: `1 BHK: ${PROJECT_DATA.identity.startingPrice1BHK || '{FILL_PRICE_1BHK}'} | 2 BHK: ${PROJECT_DATA.identity.startingPrice2BHK || '{FILL_PRICE_2BHK}'}`,
-      note: 'Starting from {price} onwards. Get the full price sheet on WhatsApp.',
+      label: 'Pricing Positioning',
+      value: 'Affordable Pricing',
+      note: 'Contact sales team on WhatsApp at +91 99090 72390 for current price list and payment plans',
     },
     {
-      label: 'Possession Timeline',
-      // TODO(FACT): Official RERA possession date
-      value: PROJECT_DATA.identity.possessionDate || '{FILL_POSSESSION}',
-      note: 'Under active construction as per registered RERA schedule',
+      label: 'Possession Target',
+      value: 'Before March 2028',
+      note: 'Target delivery before March 2028 (refer to registered agreement for sale terms)',
     },
     {
-      label: 'Parking Allocation',
-      // TODO(FACT): Parking spaces allocation
-      value: PROJECT_DATA.identity.parkingAllocation || '{FILL_PARKING}',
-      note: 'Covered stilt and open vehicle parking bays',
+      label: 'Parking Provision',
+      value: 'Individual Parking',
+      note: 'Individual parking provided, subject to allocation terms',
+    },
+    {
+      label: 'Lifestyle Amenities',
+      value: '39+ Amenities',
+      note: 'Swimming pool, dual gyms, clubhouse, box cricket, gardens & 24x7 gated security',
     },
     {
       label: 'Architectural Consultant',
