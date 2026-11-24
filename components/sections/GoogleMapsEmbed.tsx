@@ -6,13 +6,12 @@ import {
   Navigation,
   ArrowUpRight,
   Phone,
-  MessageSquare,
   Share2,
   CheckCircle2,
   ExternalLink,
 } from 'lucide-react';
-import { PROJECT_DATA, GBP_MAPS_URL } from '@/lib/project-data';
-import { pushDataLayerEvent, buildWhatsAppLink } from '@/lib/tracking';
+import { SITE_CONFIG } from '@/lib/siteConfig';
+import { trackEvent } from '@/lib/tracking';
 
 interface GoogleMapsEmbedProps {
   className?: string;
@@ -27,34 +26,41 @@ export default function GoogleMapsEmbed({
   const [copied, setCopied] = useState(false);
 
   const handleShare = async () => {
-    pushDataLayerEvent('share_location_click');
-    if (navigator.share) {
+    trackEvent('share_location', {
+      source: 'maps_embed',
+      url: SITE_CONFIG.geo.googleBusinessProfileUrl,
+    });
+
+    if (typeof navigator !== 'undefined' && navigator.share) {
       try {
         await navigator.share({
-          title: 'Advait Skyline Sales Office Location',
-          text: 'Visit Advait Skyline sales office on Naroli–Silvassa Main Road, 200m from Naroli–Bhilad Checkpost.',
-          url: GBP_MAPS_URL,
+          title: 'Advait Skyline Sales & Experience Centre',
+          text: `Visit Advait Skyline on Naroli–Silvassa Main Road, 200m from Naroli–Bhilad Checkpost.`,
+          url: SITE_CONFIG.geo.googleBusinessProfileUrl,
         });
         return;
       } catch {
         // Fallback to clipboard
       }
     }
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(GBP_MAPS_URL);
+    if (typeof navigator !== 'undefined' && navigator.clipboard) {
+      await navigator.clipboard.writeText(SITE_CONFIG.geo.googleBusinessProfileUrl);
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     }
   };
 
-  const waShareUrl = buildWhatsAppLink({
-    phone: PROJECT_DATA.contact.whatsappLeadNumber,
-    message: 'Hello, please share the exact Google Maps location pin and driving directions for Advait Skyline.',
-    sourceRef: 'maps-embed-whatsapp',
-  });
+  const handleDirectionsClick = () => {
+    trackEvent('directions_click', {
+      source: 'maps_embed',
+      destination: `${SITE_CONFIG.geo.latitude},${SITE_CONFIG.geo.longitude}`,
+    });
+  };
 
   return (
-    <div className={`w-full rounded-3xl overflow-hidden border border-[#7B4F2E]/30 bg-[#271910] shadow-xl ${className}`}>
+    <div
+      className={`w-full rounded-3xl overflow-hidden border border-[#7B4F2E]/30 bg-[#271910] shadow-xl ${className}`}
+    >
       {/* Top Banner Accent */}
       <div className="h-1.5 w-full bg-gold-gradient" />
 
@@ -73,7 +79,7 @@ export default function GoogleMapsEmbed({
                   Advait Skyline Sales Office
                 </h3>
                 <p className="text-xs text-[#F2D27A] font-sans font-medium mt-1">
-                  by Dhanasvi Infra · Elevate Your Everyday
+                  by {SITE_CONFIG.legalEntity} · {SITE_CONFIG.projectTagline}
                 </p>
               </div>
 
@@ -81,11 +87,12 @@ export default function GoogleMapsEmbed({
                 <div className="flex items-start gap-2.5">
                   <MapPin size={16} className="text-[#D9A21B] shrink-0 mt-0.5" />
                   <span>
-                    Naroli–Silvassa Main Road, Opp. Vadfaliya, 200 m from Naroli–Bhilad Checkpost, Dadra &amp; Nagar Haveli – 396235
+                    {SITE_CONFIG.address.street}, {SITE_CONFIG.address.landmark}, {SITE_CONFIG.address.locality},{' '}
+                    {SITE_CONFIG.address.region} – {SITE_CONFIG.address.postalCode}
                   </span>
                 </div>
-                <div className="text-[11px] text-[#EADFCB]/60 pl-6">
-                  Coordinates: 20.2798943° N, 72.920547° E
+                <div className="text-[11px] text-[#EADFCB]/60 pl-6 font-mono">
+                  GPS: {SITE_CONFIG.geo.latitude}° N, {SITE_CONFIG.geo.longitude}° E
                 </div>
               </div>
 
@@ -113,21 +120,23 @@ export default function GoogleMapsEmbed({
             {/* Action Buttons */}
             <div className="space-y-2.5 pt-4">
               <a
-                href={GBP_MAPS_URL}
+                href={SITE_CONFIG.geo.directionsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => pushDataLayerEvent('google_maps_directions_click', { cta_location: 'maps_embed' })}
-                className="w-full py-3 px-5 rounded-xl bg-gold-gradient text-[#1E130C] font-sans font-bold text-xs uppercase tracking-wider shadow-lg hover:brightness-105 active:scale-[0.99] transition-all flex items-center justify-center gap-2"
+                onClick={handleDirectionsClick}
+                className="w-full min-h-[44px] py-3 px-5 rounded-xl bg-gold-gradient text-[#1E130C] font-sans font-bold text-xs uppercase tracking-wider shadow-lg hover:brightness-105 active:scale-[0.99] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-[#D9A21B]"
+                aria-label="Get driving directions to Advait Skyline on Google Maps"
               >
                 <Navigation size={14} className="fill-[#1E130C]" />
-                <span>Open in Google Maps (Live Navigation)</span>
+                <span>Get Driving Directions</span>
                 <ArrowUpRight size={14} />
               </a>
 
               <div className="grid grid-cols-2 gap-2">
                 <a
-                  href={`tel:${PROJECT_DATA.contact.primaryCallNumber}`}
-                  className="py-2.5 px-3 rounded-lg bg-[#271910] border border-[#7B4F2E]/50 hover:bg-[#7B4F2E] text-white text-[11px] font-sans font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 transition-colors"
+                  href={`tel:${SITE_CONFIG.contact.salesHotline}`}
+                  className="min-h-[44px] py-2.5 px-3 rounded-lg bg-[#271910] border border-[#7B4F2E]/50 hover:bg-[#7B4F2E] text-white text-[11px] font-sans font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#D9A21B]"
+                  aria-label={`Call Sales Desk at ${SITE_CONFIG.contact.salesHotline}`}
                 >
                   <Phone size={13} className="text-[#F2D27A]" />
                   <span>Call Desk</span>
@@ -136,22 +145,36 @@ export default function GoogleMapsEmbed({
                 <button
                   type="button"
                   onClick={handleShare}
-                  className="py-2.5 px-3 rounded-lg bg-[#271910] border border-[#7B4F2E]/50 hover:bg-[#7B4F2E] text-white text-[11px] font-sans font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 transition-colors"
+                  className="min-h-[44px] py-2.5 px-3 rounded-lg bg-[#271910] border border-[#7B4F2E]/50 hover:bg-[#7B4F2E] text-white text-[11px] font-sans font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#D9A21B]"
+                  aria-label="Share location pin of Advait Skyline"
                 >
                   <Share2 size={13} className="text-[#F2D27A]" />
                   <span>{copied ? 'Link Copied!' : 'Share Pin'}</span>
                 </button>
               </div>
+
+              <a
+                href={SITE_CONFIG.geo.googleBusinessProfileUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full text-center text-[11px] text-[#EADFCB]/70 hover:text-[#F2D27A] font-sans transition-colors inline-block pt-1 underline decoration-dotted"
+              >
+                View Verified Google Business Profile ↗
+              </a>
             </div>
           </div>
         )}
 
-        {/* Right Map Canvas (Interactive Lazy-Loaded Embed) */}
-        <div className={`${showCard ? 'lg:col-span-7' : 'w-full'} min-h-[360px] sm:min-h-[440px] relative bg-[#1E130C] flex items-center justify-center`}>
+        {/* Right Map Canvas (Interactive Lazy-Loaded Embed Facade) */}
+        <div
+          className={`${
+            showCard ? 'lg:col-span-7' : 'w-full'
+          } min-h-[360px] sm:min-h-[440px] relative bg-[#1E130C] flex items-center justify-center`}
+        >
           {mapLoaded ? (
             <iframe
               title="Advait Skyline Official Google Maps Location"
-              src={PROJECT_DATA.contact.geoCoordinates.embedIframeUrl}
+              src={SITE_CONFIG.geo.embedIframeUrl}
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -179,19 +202,19 @@ export default function GoogleMapsEmbed({
                 <button
                   type="button"
                   onClick={() => {
-                    pushDataLayerEvent('map_load_click', { cta_location: 'maps_embed_component' });
+                    trackEvent('map_load_click', { cta_location: 'maps_embed_component' });
                     setMapLoaded(true);
                   }}
-                  className="w-full sm:w-auto px-6 py-3 rounded-xl bg-gold-gradient text-[#1E130C] font-sans text-xs font-bold uppercase tracking-wider shadow-md hover:brightness-105 transition-all"
+                  className="w-full sm:w-auto min-h-[44px] px-6 py-3 rounded-xl bg-gold-gradient text-[#1E130C] font-sans text-xs font-bold uppercase tracking-wider shadow-md hover:brightness-105 transition-all focus:outline-none focus:ring-2 focus:ring-[#D9A21B]"
                 >
                   Click to Load Live Map
                 </button>
 
                 <a
-                  href={GBP_MAPS_URL}
+                  href={SITE_CONFIG.geo.googleBusinessProfileUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto px-5 py-3 rounded-xl bg-[#271910] border border-[#D9A21B]/40 hover:bg-[#7B4F2E] text-white font-sans text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5"
+                  className="w-full sm:w-auto min-h-[44px] px-5 py-3 rounded-xl bg-[#271910] border border-[#D9A21B]/40 hover:bg-[#7B4F2E] text-white font-sans text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-[#D9A21B]"
                 >
                   <span>Open Map Direct</span>
                   <ExternalLink size={13} className="text-[#F2D27A]" />

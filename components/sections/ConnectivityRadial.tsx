@@ -41,7 +41,7 @@ export default function ConnectivityRadial() {
     PROJECT_DATA.connectivity.find((p) => p.name === selectedPoint) || PROJECT_DATA.connectivity[0];
 
   return (
-    <section className="py-24 sm:py-32 bg-[#FBF8F2] text-[#2A1F18] relative overflow-hidden">
+    <section id="project-fact-sheet" className="py-24 sm:py-32 bg-[#FBF8F2] text-[#2A1F18] relative overflow-hidden">
       <div className="absolute inset-0 bg-texture-cream opacity-70 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 space-y-16">
@@ -58,7 +58,7 @@ export default function ConnectivityRadial() {
             <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-[#1E130C] leading-[1.12]">
               {t('title')}
             </h2>
-            <p className="font-sans text-sm sm:text-base text-[#2A1F18]/80 max-w-2xl leading-relaxed">
+            <p className="speakable-summary font-sans text-sm sm:text-base text-[#2A1F18]/80 max-w-2xl leading-relaxed">
               {t('subtitle')}
             </p>
           </div>

@@ -88,6 +88,7 @@ export default function ProjectFactSheet({ compact = false, highlightUnit }: Pro
 
   return (
     <section
+      id="project-fact-sheet"
       aria-label="Advait Skyline Project Fact Sheet"
       className="w-full my-8 bg-white border border-[#7B4F2E]/25 rounded-2xl p-6 sm:p-8 shadow-sm overflow-hidden"
     >
@@ -101,7 +102,7 @@ export default function ProjectFactSheet({ compact = false, highlightUnit }: Pro
         <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-[#1E130C]">
           Advait Skyline at a Glance — Project Fact Sheet
         </h2>
-        <p className="font-sans text-xs sm:text-sm text-[#2A1F18]/75 leading-relaxed max-w-3xl">
+        <p className="speakable-summary font-sans text-xs sm:text-sm text-[#2A1F18]/75 leading-relaxed max-w-3xl">
           Single source of truth for RERA credentials, approved carpet areas, structural details, and contact coordinates. Advait Skyline is in Naroli, near Silvassa, Dadra &amp; Nagar Haveli (not Narol, Ahmedabad).
         </p>
       </div>

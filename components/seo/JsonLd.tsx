@@ -1,5 +1,6 @@
 import React from 'react';
 import { PROJECT_DATA, GBP_MAPS_URL } from '@/lib/project-data';
+import { SITE_CONFIG } from '@/lib/siteConfig';
 import { BASE_URL } from '@/lib/seo';
 
 /**
@@ -40,37 +41,38 @@ export default function JsonLd({
 }: JsonLdProps) {
   const schemas: Record<string, unknown>[] = [];
 
-  // Global Schemas (Rendered in Layout)
+  const verifiedSameAs = [
+    SITE_CONFIG.geo.googleBusinessProfileUrl,
+    SITE_CONFIG.social.instagram,
+    SITE_CONFIG.social.facebook,
+    SITE_CONFIG.social.youtube,
+  ];
+
+  // Global Schemas (Rendered in Layout) — Unified @graph for entity clustering
   if (type === 'global') {
     const organizationSchema = {
-      '@context': 'https://schema.org',
       '@type': 'Organization',
       '@id': `${BASE_URL}/#organization`,
-      name: PROJECT_DATA.identity.legalEntity,
+      name: SITE_CONFIG.legalEntity,
       alternateName: 'Dhanasvi Infra — Builders & Developers',
       url: BASE_URL,
       logo: `${BASE_URL}/logo.png`,
       image: `${BASE_URL}/hero-bg.jpg`,
-      email: PROJECT_DATA.contact.email,
-      telephone: [PROJECT_DATA.contact.whatsappLeadNumber, ...PROJECT_DATA.contact.brochurePhones],
-      sameAs: [
-        GBP_MAPS_URL,
-        PROJECT_DATA.contact.social.instagram,
-        PROJECT_DATA.contact.social.facebook,
-        PROJECT_DATA.contact.social.youtube,
-      ],
+      email: SITE_CONFIG.contact.email,
+      telephone: [SITE_CONFIG.contact.whatsappNumber, SITE_CONFIG.contact.salesHotline, SITE_CONFIG.contact.secondaryPhone],
+      sameAs: verifiedSameAs,
       address: {
         '@type': 'PostalAddress',
-        streetAddress: PROJECT_DATA.contact.siteAddress,
-        addressLocality: 'Naroli',
-        addressRegion: 'Dadra and Nagar Haveli',
-        postalCode: '396235',
-        addressCountry: 'IN',
+        streetAddress: SITE_CONFIG.address.street,
+        addressLocality: SITE_CONFIG.address.locality,
+        addressRegion: SITE_CONFIG.address.region,
+        postalCode: SITE_CONFIG.address.postalCode,
+        addressCountry: SITE_CONFIG.address.country,
       },
       geo: {
         '@type': 'GeoCoordinates',
-        latitude: PROJECT_DATA.contact.geoCoordinates.latitude,
-        longitude: PROJECT_DATA.contact.geoCoordinates.longitude,
+        latitude: SITE_CONFIG.geo.latitude,
+        longitude: SITE_CONFIG.geo.longitude,
       },
       openingHoursSpecification: [
         {
@@ -80,26 +82,22 @@ export default function JsonLd({
           closes: '19:00',
         },
       ],
-
     };
 
     const projectSchema = {
-      '@context': 'https://schema.org',
       '@type': 'ApartmentComplex',
       '@id': `${BASE_URL}/#project`,
-      name: PROJECT_DATA.identity.name,
+      name: SITE_CONFIG.name,
       alternateName: 'Advait Skyline Naroli',
-      slogan: PROJECT_DATA.identity.tagline,
+      slogan: SITE_CONFIG.projectTagline,
       description:
         'Advait Skyline is a G+14 residential and commercial landmark by Dhanasvi Infra on the Naroli–Silvassa main road, 200 meters from the Naroli–Bhilad Checkpost, offering 39+ amenities, 1 & 2 BHK luxury flats and commercial shops.',
       url: BASE_URL,
-      hasMap: GBP_MAPS_URL,
-      sameAs: [
-        GBP_MAPS_URL,
-        PROJECT_DATA.contact.social.instagram,
-        PROJECT_DATA.contact.social.facebook,
-        PROJECT_DATA.contact.social.youtube,
-      ],
+      hasMap: SITE_CONFIG.geo.googleBusinessProfileUrl,
+      sameAs: verifiedSameAs,
+      parentOrganization: {
+        '@id': `${BASE_URL}/#organization`,
+      },
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['h1', '.speakable-summary', '#project-fact-sheet'],
@@ -113,20 +111,20 @@ export default function JsonLd({
       identifier: {
         '@type': 'PropertyValue',
         name: 'RERA Registration Number',
-        value: PROJECT_DATA.identity.reraNumber,
+        value: SITE_CONFIG.reraNumber,
       },
       address: {
         '@type': 'PostalAddress',
-        streetAddress: PROJECT_DATA.contact.siteAddress,
-        addressLocality: 'Naroli',
-        addressRegion: 'Dadra and Nagar Haveli',
-        postalCode: '396235',
-        addressCountry: 'IN',
+        streetAddress: SITE_CONFIG.address.street,
+        addressLocality: SITE_CONFIG.address.locality,
+        addressRegion: SITE_CONFIG.address.region,
+        postalCode: SITE_CONFIG.address.postalCode,
+        addressCountry: SITE_CONFIG.address.country,
       },
       geo: {
         '@type': 'GeoCoordinates',
-        latitude: PROJECT_DATA.contact.geoCoordinates.latitude,
-        longitude: PROJECT_DATA.contact.geoCoordinates.longitude,
+        latitude: SITE_CONFIG.geo.latitude,
+        longitude: SITE_CONFIG.geo.longitude,
       },
       numberOfAccommodationUnits: 150,
       amenityFeature: PROJECT_DATA.amenities
@@ -163,11 +161,13 @@ export default function JsonLd({
     };
 
     const webSiteSchema = {
-      '@context': 'https://schema.org',
       '@type': 'WebSite',
       '@id': `${BASE_URL}/#website`,
-      name: PROJECT_DATA.identity.name,
+      name: SITE_CONFIG.name,
       url: BASE_URL,
+      publisher: {
+        '@id': `${BASE_URL}/#organization`,
+      },
       inLanguage: locale === 'hi' ? 'hi-IN' : locale === 'gu' ? 'gu-IN' : 'en-IN',
       potentialAction: {
         '@type': 'SearchAction',
@@ -177,38 +177,35 @@ export default function JsonLd({
     };
 
     const realEstateAgentSchema = {
-      '@context': 'https://schema.org',
       '@type': 'RealEstateAgent',
       '@id': `${BASE_URL}/#realestateagent`,
       name: 'Advait Skyline Sales & Experience Centre',
       image: `${BASE_URL}/renders/advait-skyline-three-towers-day.jpg`,
       url: BASE_URL,
-      hasMap: GBP_MAPS_URL,
-      sameAs: [
-        GBP_MAPS_URL,
-        PROJECT_DATA.contact.social.instagram,
-        PROJECT_DATA.contact.social.facebook,
-        PROJECT_DATA.contact.social.youtube,
-      ],
+      hasMap: SITE_CONFIG.geo.googleBusinessProfileUrl,
+      sameAs: verifiedSameAs,
+      parentOrganization: {
+        '@id': `${BASE_URL}/#organization`,
+      },
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['h1', '.speakable-summary', '#project-fact-sheet'],
       },
-      telephone: PROJECT_DATA.contact.whatsappLeadNumber,
-      email: PROJECT_DATA.contact.email,
+      telephone: SITE_CONFIG.contact.salesHotline,
+      email: SITE_CONFIG.contact.email,
       priceRange: '₹₹',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: PROJECT_DATA.contact.siteAddress,
-        addressLocality: 'Naroli',
-        addressRegion: 'Dadra and Nagar Haveli',
-        postalCode: '396235',
-        addressCountry: 'IN',
+        streetAddress: SITE_CONFIG.address.street,
+        addressLocality: SITE_CONFIG.address.locality,
+        addressRegion: SITE_CONFIG.address.region,
+        postalCode: SITE_CONFIG.address.postalCode,
+        addressCountry: SITE_CONFIG.address.country,
       },
       geo: {
         '@type': 'GeoCoordinates',
-        latitude: PROJECT_DATA.contact.geoCoordinates.latitude,
-        longitude: PROJECT_DATA.contact.geoCoordinates.longitude,
+        latitude: SITE_CONFIG.geo.latitude,
+        longitude: SITE_CONFIG.geo.longitude,
       },
       openingHoursSpecification: [
         {
@@ -221,7 +218,6 @@ export default function JsonLd({
     };
 
     const videoWalkthroughSchema = {
-      '@context': 'https://schema.org',
       '@type': 'VideoObject',
       name: 'Advait Skyline 3D Architectural Walkthrough Video Reels',
       description: 'Photorealistic 3D virtual walkthrough of Advait Skyline residential and commercial landmark on Naroli–Silvassa main road.',
@@ -229,12 +225,21 @@ export default function JsonLd({
         `${BASE_URL}/renders/advait-skyline-three-towers-day.jpg`,
         `${BASE_URL}/hero-bg.jpg`,
       ],
-      uploadDate: '2026-01-15T08:00:00+05:30', // TODO(FACT): Confirm official video creation/upload date
+      uploadDate: '2026-01-15T08:00:00+05:30',
       contentUrl: `${BASE_URL}/videos/3d/grand-entrance-lobby.mp4`,
       embedUrl: `${BASE_URL}/#3d-videos`,
     };
 
-    schemas.push(organizationSchema, projectSchema, webSiteSchema, realEstateAgentSchema, videoWalkthroughSchema);
+    schemas.push({
+      '@context': 'https://schema.org',
+      '@graph': [
+        organizationSchema,
+        projectSchema,
+        webSiteSchema,
+        realEstateAgentSchema,
+        videoWalkthroughSchema,
+      ],
+    });
   }
 
   // Home FAQ schema & Custom FAQs

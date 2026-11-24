@@ -58,6 +58,14 @@ export function pushDataLayerEvent(event: string, params: TrackingParams = {}) {
 }
 
 /**
+ * Unified event tracker conforming to global tracking guidelines.
+ * Events: whatsapp_click, brochure_download_request, generate_lead, emi_calculated, directions_click, share_location.
+ */
+export function trackEvent(name: string, params: TrackingParams = {}) {
+  pushDataLayerEvent(name, params);
+}
+
+/**
  * Capture UTM and Meta Click ID (fbclid) parameters from the query string
  * and store in a 30-day first-party cookie for CRM attribution.
  */

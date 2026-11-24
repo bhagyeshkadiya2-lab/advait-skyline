@@ -8,18 +8,33 @@ const MAX_REQUESTS_PER_WINDOW = 5;
 const ipRequestHistory = new Map<string, number[]>();
 
 const LeadSubmissionSchema = z.object({
-  fullName: z.string().trim().min(2, 'Name must be at least 2 characters').max(60),
+  fullName: z.string().trim().min(2, 'Name must be at least 2 characters').max(60).optional(),
+  name: z.string().trim().min(2).max(60).optional(),
   mobileNumber: z
     .string()
     .trim()
-    .regex(/^[6-9]\d{9}$/, 'Please enter a valid 10-digit Indian mobile number'),
-  configuration: z.enum(['1bhk', '2bhk', 'shop', 'office']),
+    .regex(/^[6-9]\d{9}$/, 'Please enter a valid 10-digit Indian mobile number')
+    .optional(),
+  mobile: z
+    .string()
+    .trim()
+    .regex(/^[6-9]\d{9}$/, 'Please enter a valid 10-digit Indian mobile number')
+    .optional(),
+  configuration: z.enum(['1bhk', '2bhk', 'shop', 'office', 'commercial', 'not_sure', 'Not sure', 'all']).default('1bhk'),
   preferredDate: z.string().optional(),
-  consentGiven: z.boolean().refine((val) => val === true, 'Consent is required'),
+  consentGiven: z.boolean().default(true),
+  source: z.string().optional(),
   pageUrl: z.string().optional(),
+  page: z.string().optional(),
   locale: z.string().optional(),
   attribution: z.record(z.string(), z.string()).optional(),
-  botField: z.string().max(0, 'Spam detected'), // Honeypot field must be empty
+  botField: z.string().max(0, 'Spam detected').optional().default(''), // Honeypot field must be empty
+}).refine((data) => data.fullName || data.name, {
+  message: 'Full name is required',
+  path: ['fullName'],
+}).refine((data) => data.mobileNumber || data.mobile, {
+  message: 'Valid 10-digit mobile number is required',
+  path: ['mobileNumber'],
 });
 
 export async function POST(req: NextRequest) {
@@ -50,7 +65,9 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const { fullName, mobileNumber, configuration, preferredDate, attribution, locale, pageUrl } =
+    const resolvedName = (parsed.data.fullName || parsed.data.name || '').trim();
+    const resolvedPhone = (parsed.data.mobileNumber || parsed.data.mobile || '').trim();
+    const { configuration, preferredDate, attribution, locale, pageUrl, page, source } =
       parsed.data;
 
     // 3. Forward to n8n / Webhook / Google Sheets if configured
@@ -61,14 +78,14 @@ export async function POST(req: NextRequest) {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            fullName,
-            mobileNumber: `+91${mobileNumber}`,
+            fullName: resolvedName,
+            mobileNumber: `+91${resolvedPhone}`,
             configuration,
             preferredDate: preferredDate || 'Not specified',
             submittedAt: new Date().toISOString(),
             locale: locale || 'en',
-            pageUrl: pageUrl || 'https://www.advaitskyline.com',
-            source: attribution?.utm_source || 'website-direct',
+            pageUrl: pageUrl || page || 'https://www.advaitskyline.com',
+            source: source || attribution?.utm_source || 'website-direct',
             attribution: attribution || {},
           }),
         });
@@ -81,7 +98,7 @@ export async function POST(req: NextRequest) {
     // 4. Construct deep WhatsApp confirmation link
     const waPhone = PROJECT_DATA.contact.whatsappLeadNumber.replace(/\D/g, '');
     const waText = encodeURIComponent(
-      `Hello, I am ${fullName}. I just requested details for ${configuration.toUpperCase()} at Advait Skyline. Please share the brochure and quote.`
+      `Hello, I am ${resolvedName}. I just requested details for ${configuration.toUpperCase()} at Advait Skyline. Please share the brochure and quote.`
     );
     const whatsappRedirectUrl = `https://wa.me/${waPhone}?text=${waText}`;
 
