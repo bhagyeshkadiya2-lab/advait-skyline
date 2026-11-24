@@ -332,8 +332,8 @@ export function BrochureDownloadModal({
                       <span className="text-[#EADFCB]/60 text-[10px]">3 Towers</span>
                     </div>
                     <div className="border-x border-[#7B4F2E]/30">
-                      <span className="font-bold text-[#F2D27A] block">511 &amp; 573 sq ft</span>
-                      <span className="text-[#EADFCB]/60 text-[10px]">Carpet Area</span>
+                      <span className="font-bold text-[#F2D27A] block">575 &amp; 652 sq ft</span>
+                      <span className="text-[#EADFCB]/60 text-[10px]">Built-up Area</span>
                     </div>
                     <div>
                       <span className="font-bold text-[#F2D27A] block">MAHA RERA</span>

@@ -27,10 +27,10 @@ export default function WhatsAppFab() {
   let sourceRef = 'fab-home';
 
   if (pathname.includes('1-bhk')) {
-    message = 'Hello, I am interested in the 1 BHK luxury flats at Advait Skyline (Naroli). Please share floor plans and price details.';
+    message = 'Hello, I am interested in the 1 BHK flats with 575 sq. ft. built-up area at Advait Skyline (Naroli). Please share floor plans and affordable pricing details.';
     sourceRef = 'fab-1bhk-page';
   } else if (pathname.includes('2-bhk')) {
-    message = 'Hello, I am interested in the 2 BHK luxury flats at Advait Skyline (Naroli). Please share floor plans and price details.';
+    message = 'Hello, I am interested in the 2 BHK flats with 652 sq. ft. built-up area at Advait Skyline (Naroli). Please share floor plans and affordable pricing details.';
     sourceRef = 'fab-2bhk-page';
   } else if (pathname.includes('commercial')) {
     message = 'Hello, I am interested in the commercial retail shops and offices at Advait Skyline (Naroli). Please share availability and details.';

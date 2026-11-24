@@ -19,7 +19,7 @@ export default function ResidenceShowcase() {
 
   const waLeadUrl = buildWhatsAppLink({
     phone: PROJECT_DATA.contact.whatsappLeadNumber,
-    message: `Hello, I am interested in the ${activeUnit.title} (carpet area: ${activeUnit.carpetAreaSqFt} sq. ft.) at Advait Skyline. Please share pricing and booking details.`,
+    message: `Hello, I am interested in the ${activeUnit.title} (${activeUnit.builtUpAreaSqFt} sq. ft. built-up area) at Advait Skyline. Please share affordable pricing and booking details.`,
     sourceRef: `residences-toggle-${activeTab}`,
   });
 
@@ -90,8 +90,9 @@ export default function ResidenceShowcase() {
                   className="object-contain p-2 group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
                 
-                <div className="absolute top-4 left-4 bg-[#1E130C]/80 backdrop-blur-md px-3 py-1.5 rounded-md border border-[#D9A21B]/40 text-[#F2D27A] text-xs font-sans font-bold">
-                  {activeUnit.carpetAreaSqFt} Sq. Ft. Carpet
+                <div className="absolute top-4 left-4 bg-[#1E130C]/85 backdrop-blur-md px-3 py-1.5 rounded-md border border-[#D9A21B]/40 text-[#F2D27A] text-xs font-sans font-bold flex items-center gap-1.5">
+                  <span>{activeUnit.builtUpAreaSqFt} Sq. Ft. Built-up</span>
+                  <span className="text-[#EADFCB]/60 font-normal">({activeUnit.carpetAreaSqFt} Carpet)</span>
                 </div>
 
                 <button

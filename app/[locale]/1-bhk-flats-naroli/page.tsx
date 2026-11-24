@@ -39,7 +39,7 @@ export default async function OneBhkPage({
   const unit = PROJECT_DATA.residential.oneBhk;
   const waUrl = buildWhatsAppLink({
     phone: PROJECT_DATA.contact.whatsappLeadNumber,
-    message: 'Hello, I am interested in the 1 BHK flats (511 sq. ft. carpet) at Advait Skyline, Naroli. Please share current availability and booking details.',
+    message: 'Hello, I am interested in the 1 BHK flats with 575 sq. ft. built-up area at Advait Skyline, Naroli. Please share affordable pricing, availability and booking details.',
     sourceRef: '1bhk-page',
   });
 
@@ -325,7 +325,7 @@ export default async function OneBhkPage({
               <div>
                 <span className="text-xs text-[#F2D27A] font-bold block mb-1">Upgrade to 2 BHK</span>
                 <p className="text-sm text-white font-semibold group-hover:text-[#F2D27A] transition-colors">
-                  573 Sq. Ft. Luxury Residences
+                  652 Sq. Ft. Built-up Luxury Residences
                 </p>
                 <p className="text-xs text-[#EADFCB]/70 mt-1">16-foot living hall &amp; sunset balcony.</p>
               </div>

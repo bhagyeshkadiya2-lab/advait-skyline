@@ -39,7 +39,7 @@ export default async function TwoBhkPage({
   const unit = PROJECT_DATA.residential.twoBhk;
   const waUrl = buildWhatsAppLink({
     phone: PROJECT_DATA.contact.whatsappLeadNumber,
-    message: 'Hello, I am interested in the 2 BHK flats (573 sq. ft. carpet) at Advait Skyline, Naroli. Please share current availability and booking details.',
+    message: 'Hello, I am interested in the 2 BHK flats with 652 sq. ft. built-up area at Advait Skyline, Naroli. Please share affordable pricing, availability and booking details.',
     sourceRef: '2bhk-page',
   });
 
@@ -134,7 +134,7 @@ export default async function TwoBhkPage({
               Family Living &amp; Prestige
             </span>
             <h2 className="font-display text-2xl sm:text-4xl font-bold text-[#1E130C]">
-              Who Is the 573 Sq. Ft. 2 BHK Ideal For?
+              Who Is the 652 Sq. Ft. Built-up 2 BHK Ideal For?
             </h2>
             <p className="font-sans text-sm sm:text-base text-[#2A1F18]/80 leading-relaxed max-w-4xl">
               Engineered for growing families and modern households requiring independent bedrooms, entertaining space, and dedicated work-from-home versatility. The 2 BHK residence at Advait Skyline combines generous room volumes with high cross-ventilation and panoramic countryside views.
@@ -192,7 +192,7 @@ export default async function TwoBhkPage({
             <div className="lg:col-span-6 relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-[#7B4F2E]/30 bg-[#1E130C] shadow-xl">
               <Image
                 src={unit.renderPath}
-                alt="Advait Skyline 2 BHK 573 sq ft carpet architectural floor plan layout Naroli"
+                alt="Advait Skyline 2 BHK 652 sq ft built-up architectural floor plan layout Naroli"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-contain p-4"
@@ -205,7 +205,7 @@ export default async function TwoBhkPage({
                   Approved Dimensions
                 </span>
                 <h3 className="font-display text-2xl font-bold text-[#1E130C]">
-                  573 Sq. Ft. Room Schedule
+                  652 Sq. Ft. Built-up Room Schedule (573 Sq. Ft. Carpet)
                 </h3>
               </div>
 

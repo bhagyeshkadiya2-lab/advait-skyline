@@ -266,9 +266,9 @@ export default async function FlatsNearSilvassaPage({
               <span className="px-3 py-1 rounded bg-[#EADFCB] text-[#7B4F2E] text-xs font-bold font-sans uppercase tracking-wider">
                 1 BHK Residence
               </span>
-              <h3 className="font-display text-2xl font-bold text-[#1E130C]">511 Sq. Ft. Carpet Area</h3>
+              <h3 className="font-display text-2xl font-bold text-[#1E130C]">575 Sq. Ft. Built-up Area</h3>
               <p className="text-xs sm:text-sm text-[#2A1F18]/80 font-sans leading-relaxed">
-                Spacious 1 BHK with 2 full bathrooms, private entrance foyer, 4-foot wide balcony, utility wash area, and 2 AC points.
+                Spacious 1 BHK (511 sq. ft. carpet area) with 2 full bathrooms, private entrance foyer, 4-foot wide balcony, utility wash area, and 2 AC points.
               </p>
               <div className="pt-2 flex items-center gap-4">
                 <Link
@@ -285,9 +285,9 @@ export default async function FlatsNearSilvassaPage({
               <span className="px-3 py-1 rounded bg-[#EADFCB] text-[#7B4F2E] text-xs font-bold font-sans uppercase tracking-wider">
                 2 BHK Residence
               </span>
-              <h3 className="font-display text-2xl font-bold text-[#1E130C]">573 Sq. Ft. Carpet Area</h3>
+              <h3 className="font-display text-2xl font-bold text-[#1E130C]">652 Sq. Ft. Built-up Area</h3>
               <p className="text-xs sm:text-sm text-[#2A1F18]/80 font-sans leading-relaxed">
-                Luxury 2 BHK featuring a 16-foot long grand living room, 5&apos;6&quot; wide sunset balcony, 2 bathrooms, utility area, and 3 AC points.
+                Luxury 2 BHK (573 sq. ft. carpet area) featuring a 16-foot long grand living room, 5&apos;6&quot; wide sunset balcony, 2 bathrooms, utility area, and 3 AC points.
               </p>
               <div className="pt-2 flex items-center gap-4">
                 <Link
